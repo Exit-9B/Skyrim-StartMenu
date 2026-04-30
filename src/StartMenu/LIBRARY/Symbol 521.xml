@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" duration="2" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 520" name="DURANGO_Y" centerPoint3DX="13" centerPoint3DY="13">
+                <DOMSymbolInstance libraryItemName="Buttons/Symbol 520" name="DURANGO_Y" centerPoint3DX="13" centerPoint3DY="13">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -19,7 +19,7 @@
           <frames>
             <DOMFrame index="0" duration="2" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 517" name="PS_Y" centerPoint3DX="13" centerPoint3DY="13">
+                <DOMSymbolInstance libraryItemName="Buttons/Symbol 517" name="PS_Y" centerPoint3DX="13" centerPoint3DY="13">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -32,7 +32,7 @@
           <frames>
             <DOMFrame index="0" duration="2" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Symbol 514" name="KEY_T" centerPoint3DX="13" centerPoint3DY="13">
+                <DOMSymbolInstance libraryItemName="Buttons/Symbol 514" name="KEY_T" centerPoint3DX="13" centerPoint3DY="13">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>

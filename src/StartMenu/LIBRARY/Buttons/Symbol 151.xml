@@ -1,0 +1,85 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Symbol 151" itemID="69f37a00-0000007c" symbolType="graphic" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 151">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F4FFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!8380 2120|6020 8660!6020 8660|5520 8660!5520 8660|7880 2120!7880 2120|8380 2120"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!8580 2000|6240 8540!6240 8540|5740 8540!5740 8540|8080 2000!8080 2000|8580 2000"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!2120 3700[2140 3060 2280 2820!2280 2820[2480 2420 3040 2420!3040 2420[3720 2420 3940 2900!3940 2900[4080 3220 4080 4000!4080 4000|4000 4880!4000 4880[3840 5400 3360 5400!3360 5400|3360 6520!3360 6520|2760 6520!2760 6520|2760 4920!2760
+ 4920|2900 4940!2900 4940[3260 4940 3360 4660!3360 4660|3420 4080!3420 4080|3400 3460!3400 3460[3320 3020 3080 3020!3080 3020[2860 3020 2800 3260!2800 3260|2780 3660!2780 3660|2780 3800!2780 3800|2120 3800!2120 3800|2120 3700!2760 7100
+[2880 6960 3040 6960!3040 6960[3220 6960 3340 7100!3340 7100[3480 7220 3480 7400!3480 7400|3340 7700!3340 7700|3040 7820!3040 7820|2760 7700!2760 7700[2620 7560 2620 7400!2620 7400[2620 7220 2760 7100"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!4180 3100[4320 3440 4320 4200!4320 4200|4240 5100!4240 5100[4060 5620 3580 5600!3580 5600|3580 6700!3580 6700|2980 6700!2980 6700|2980 5140!2980 5140|3140 5140!3140 5140[3480 5140 3580 4880!3580 4880|3660 4280!3660 4280[3660 3220 3300
+ 3220!3300 3220[3020 3220 3020 3860!3020 3860|3020 4000!3020 4000|2360 4000!2360 4000|2360 3900!2360 3900[2360 3280 2520 3020!2520 3020[2720 2620 3280 2620!3280 2620[3940 2620 4180 3100!3000 7300[3100 7180 3280 7180!3280 7180[3460 7180
+ 3560 7300!3560 7300[3700 7420 3700 7600!3700 7600|3560 7900!3560 7900|3280 8000!3280 8000|3000 7900!3000 7900[2860 7760 2860 7600!2860 7600[2860 7420 3000 7300"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

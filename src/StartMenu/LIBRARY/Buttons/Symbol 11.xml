@@ -1,0 +1,84 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Symbol 11" itemID="69f37a00-0000000d" symbolType="graphic" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 11">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F4FFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!7980 3360|7140 3360!7140 3360|7140 8380!7140 8380|6380 8380!6380 8380|6380 3360!6380 3360|5500 3360!5500 3360|5500 2720!5500 2720|7980 2720!7980 2720|7980 3360"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!3760 3360|3760 5220!3760 5220[4520 5280 4520 4320!4520 4320|4420 3640!4420 3640[4260 3340 3880 3360!3880 3360|3760 3360!4800 2900[5300 3220 5300 4160!5300 4160[5300 4660 5140 5040!5140 5040[4940 5540 4520 5620!4520 5620|5560 8380!5560
+ 8380|4780 8380!4780 8380|3760 5600!3760 5600|3760 8380!3760 8380|3000 8380!3000 8380|3000 2720!3000 2720|3900 2720!3900 2720[4520 2720 4800 2900"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!8280 3540|7440 3540!7440 3540|7440 8540!7440 8540|6680 8540!6680 8540|6680 3540!6680 3540|5800 3540!5800 3540|5800 2900!5800 2900|8280 2900!8280 2900|8280 3540"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!4060 3520|4060 5400!4060 5400[4820 5460 4820 4500!4820 4500|4720 3800!4720 3800[4560 3520 4180 3520!4180 3520|4060 3520!4200 2900[4820 2900 5100 3080!5100 3080[5600 3400 5600 4340!5600 4340[5600 5640 4820 5800!4820 5800|5860 8540!5860
+ 8540|5080 8540!5080 8540|4060 5780!4060 5780|4060 8540!4060 8540|3300 8540!3300 8540|3300 2900!3300 2900|4200 2900"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

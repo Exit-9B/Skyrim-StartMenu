@@ -1,0 +1,59 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Symbol 227" itemID="69f37a00-000000b3" linkageExportForAS="true" linkageIdentifier="NumPadDec" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 227">
+      <layers>
+        <DOMLayer name="Layer 1" color="#F457C5">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#CCCCCC"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!413 141|418 151!418 151[425 166 425 192!425 192[425 234 407 253!407 253[389 272 347 271!347 271|347 391!347 391|321 391"/>
+                    <Edge fillStyle0="1" edges="!321 391|321 401!321 401|357 401!357 401|357 281!357 281[399 282 417 263!417 263[435 244 435 202!435 202[435 176 428 161!428 161|413 141"/>
+                    <Edge fillStyle0="2" edges="!493 364|488 357!488 357[482 351 473 351!473 351[464 351 458 357!458 357|451 372!451 372|458 388!458 388|464 392"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!464 392|473 394!473 394[482 394 488 388!488 388|495 372!495 372|493 364"/>
+                    <Edge fillStyle1="1" edges="!493 364|498 367!498 367[505 373 505 382!505 382|498 398!498 398[492 404 483 404!483 404|468 398!468 398|464 392"/>
+                    <Edge fillStyle0="2" edges="!413 141|401 130!401 130|378 121!378 121|354 120!354 120|311 120!311 120|311 391!311 391|321 391!276 130|276 120!276 120|240 120!240 120|248 304"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!248 304|249 325!249 325|248 326!248 326|188 130"/>
+                    <Edge fillStyle0="2" edges="!188 130|185 120!185 120|150 120!150 120|150 391!150 391|160 391"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!160 391|186 391!186 391|181 200!181 200|178 183!178 183|179 182!179 182|192 223"/>
+                    <Edge fillStyle0="2" edges="!192 223|242 391!242 391|249 391"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!249 391|276 391!276 391|276 130"/>
+                    <Edge fillStyle0="1" edges="!249 391|252 401!252 401|286 401!286 401|286 130!286 130|276 130!357 240|357 160!357 160|362 160!362 160|380 164"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!380 164|373 156!373 156[366 150 352 150!352 150|347 150!347 150|347 240!347 240|357 240"/>
+                    <Edge fillStyle1="2" edges="!357 240[372 239 378 230!378 230[387 218 387 195!387 195|384 173!384 173|380 164"/>
+                    <Edge fillStyle0="1" edges="!248 304|195 130!195 130|188 130!160 391|160 401!160 401|196 401!196 401|192 223"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#C34C72" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Buttons/Symbol 225" centerPoint3DX="17.85" centerPoint3DY="13">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

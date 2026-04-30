@@ -1,0 +1,67 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Symbol 253" itemID="69f37a00-000000c2" linkageExportForAS="true" linkageIdentifier="Mouse5" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 253">
+      <layers>
+        <DOMLayer name="Layer 1" color="#AFC2F1">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!418 133|418 127!418 127|332 127!332 127|316 258!316 258|327 256!327 256|328 256"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!328 256|338 255!338 255[357 255 368 264"/>
+                    <Edge fillStyle0="1" edges="!368 264|374 270!374 270[385 284 385 308!385 308|383 328!383 328|376 348!376 348|364 363!364 363[356 369 344 369!344 369|328 366!328 366|323 364!323 364|312 358!312 358|304 387"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!304 387|303 390!303 390|305 391"/>
+                    <Edge fillStyle0="1" edges="!305 391|315 395"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!315 395|324 398!324 398|345 401!345 401|382 393!382 393|405 371!405 371|418 339!418 339|422 303!422 303[422 280 414 262!414 262|395 238"/>
+                    <Edge fillStyle0="1" edges="!395 238|391 235!391 235[379 228 363 227"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!363 227|351 226!351 226|359 158!359 158|418 158!418 158|418 133"/>
+                    <Edge fillStyle1="2" edges="!418 133|429 133!429 133|429 164!429 164|370 164!370 164|363 227"/>
+                    <Edge fillStyle0="2" edges="!315 395|314 396!314 396|335 404!335 404|356 407!356 407|393 399!393 399|416 377!416 377|429 345!429 345|433 309!433 309[433 286 425 268!425 268[417 251 402 241!402 241|395 238!304 387|279 143!279 143|267 143"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!267 143|291 395!291 395|270 395"/>
+                    <Edge fillStyle0="2" edges="!270 395|270 406!270 406|297 406!297 406|306 405!306 405|305 391"/>
+                    <Edge fillStyle0="1" edges="!267 143|266 132!266 132|235 132!235 132|206 293"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!206 293|201 322!201 322|166 143"/>
+                    <Edge fillStyle0="1" edges="!166 143|163 132!163 132|134 132!134 132|113 395!113 395|127 395"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!127 395|145 395!145 395|155 214!155 214|156 214!156 214|166 266"/>
+                    <Edge fillStyle0="1" edges="!166 266|190 395!190 395|200 395"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!200 395|214 395!214 395|247 214!247 214|251 274"/>
+                    <Edge fillStyle0="1" edges="!251 274|257 395!257 395|270 395"/>
+                    <Edge fillStyle0="2" edges="!206 293|176 143!176 143|166 143!200 395|202 406!202 406|226 406!226 406|251 274!127 395|126 406!126 406|158 406!158 406|166 266!328 256|327 264!327 264|338 262!338 262|349 261!349 261|368 264"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#BEAFC8" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Buttons/Symbol 251" centerPoint3DX="13.6" centerPoint3DY="13">
+                  <matrix>
+                    <Matrix tx="0.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

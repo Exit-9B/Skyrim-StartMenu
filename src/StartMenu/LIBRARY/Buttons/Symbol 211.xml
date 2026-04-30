@@ -1,0 +1,48 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Symbol 211" itemID="69f37a00-000000a8" symbolType="graphic" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 211">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F4FFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!6560 7140[6240 8220 5280 8220!5280 8220[4320 8220 4000 7140!4000 7140[3800 6520 3800 5300!3800 5300[3800 4080 4000 3460!4000 3460[4320 2400 5280 2400!5280 2400[6240 2400 6560 3460!6560 3460[6740 4060 6740 5300!6740 5300[6740 6540 6560
+ 7140!5280 3100[4860 3100 4720 3760!4720 3760[4600 4240 4600 5300!4600 5300[4600 6360 4720 6860!4720 6860[4860 7500 5280 7500!5280 7500[5960 7500 5960 5300!5960 5300[5960 4260 5840 3760!5840 3760[5680 3100 5280 3100"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!6800 7360[6480 8440 5520 8440!5520 8440[4560 8440 4240 7360!4240 7360[4040 6740 4040 5520!4040 5520[4040 4300 4240 3680!4240 3680[4560 2600 5520 2600!5520 2600[6480 2600 6800 3680!6800 3680[7000 4300 7000 5520!7000 5520[7000 6740 6800
+ 7360!6080 3980[5940 3320 5520 3320!5520 3320[5100 3320 4960 3980!4960 3980[4840 4460 4840 5520!4840 5520[4840 6580 4960 7080!4960 7080[5100 7720 5520 7720!5520 7720[5940 7720 6080 7080!6080 7080[6200 6580 6200 5520!6200 5520[6200 4460
+ 6080 3980"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

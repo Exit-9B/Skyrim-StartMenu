@@ -1,0 +1,83 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Symbol 451" itemID="69f37a00-00000151" symbolType="graphic" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 451">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F4FFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!3120 2140[2660 3360 2660 4300!2660 4300[2660 5400 3120 6600!3120 6600|2620 6720!2620 6720[2140 5520 2140 4340!2140 4340[2140 3120 2620 2020!2620 2020|3120 2140"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!2320 4500[2320 3300 2800 2180!2800 2180|3300 2300!3300 2300[2840 3520 2840 4460!2840 4460[2840 5560 3300 6760!3300 6760|2800 6900!2800 6900[2320 5720 2320 4500"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!8140 3740[8320 4120 8320 4940!8320 4940[8320 5720 8120 6420!8120 6420|7520 7820!7520 7820|7220 8440!7220 8440|6460 8440!6460 8440|7500 6260!7500 6260|7480 6240!7480 6240[7280 6440 6960 6440!6960 6440[6060 6440 6060 4940!6060 4940[6060
+ 4120 6220 3740!6220 3740[6460 3140 7180 3140!7180 3140[7880 3140 8140 3740!7600 4780[7600 3780 7180 3780!7180 3780[6760 3780 6760 4820!6760 4820[6760 5820 7180 5820!7180 5820[7460 5820 7560 5420!7560 5420|7600 4780"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!8360 3940[8540 4300 8540 5120!8540 5120[8540 5920 8340 6620!8340 6620|7760 8020!7760 8020|7440 8640!7440 8640|6700 8640!6700 8640|7740 6460!7740 6460|7720 6440!7720 6440[7520 6660 7180 6660!7180 6660[6280 6660 6280 5140!6280 5140[6280
+ 4320 6460 3940!6460 3940[6700 3360 7420 3360!7420 3360[8120 3360 8360 3940!7000 5020[7000 6020 7420 6020!7420 6020[7840 6020 7840 5000!7840 5000[7840 3980 7420 3980!7420 3980[7000 3980 7000 5020"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

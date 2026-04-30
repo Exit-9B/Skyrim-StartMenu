@@ -1,0 +1,71 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Symbol 241" itemID="69f37a00-000000bc" linkageExportForAS="true" linkageIdentifier="Mouse8" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 241">
+      <layers>
+        <DOMLayer name="Layer 1" color="#C5F8FF">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!420 133[430 140 434 152!434 152[440 167 439 189!439 189|437 213!437 213|429 235!429 235|410 250!410 250|422 256"/>
+                    <Edge fillStyle0="2" edges="!422 256|440 241!440 241|448 219!448 219|450 195!450 195[451 173 445 158!445 158[440 143 427 136!427 136|420 133"/>
+                    <Edge fillStyle0="1" edges="!420 133|416 130!416 130|405 125!405 125|381 122!381 122|360 125!360 125[353 127 348 131!348 131[336 140 331 155!331 155[326 170 327 189!327 189|329 213!329 213|337 235!337 235|355 249"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!355 249|356 249!356 249|356 250"/>
+                    <Edge fillStyle0="1" edges="!356 250[341 254 334 266!334 266[327 278 326 292!326 292|324 321!324 321|329 359!329 359[334 377 346 389!346 389|359 396"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!359 396|383 400!383 400[408 400 421 388!421 388[434 375 438 356!438 356|442 316!442 316|440 289!440 289|431 265!431 265|424 257"/>
+                    <Edge fillStyle0="1" edges="!424 257|422 256"/>
+                    <Edge fillStyle0="2" edges="!359 396[371 406 394 406!394 406[419 406 432 394!432 394[445 381 449 362!449 362|453 322!453 322|451 295!451 295|442 271!442 271|424 257"/>
+                    <Edge fillStyle0="1" edges="!396 275|403 290!403 290|405 308!405 308|405 323!405 323|404 341!404 341|398 360!398 360[393 368 383 368!383 368|381 368"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!381 368[372 367 368 360!368 360|362 341!362 341|361 323!361 323|361 308!361 308|363 290!363 290[365 281 370 275!370 275[374 269 383 269!383 269[391 269 396 275"/>
+                    <Edge fillStyle1="2" edges="!275 142|287 142!287 142|314 404!314 404|305 405!305 405|278 405!278 405|278 394"/>
+                    <Edge fillStyle1="1" edges="!278 394|265 394!265 394|259 273"/>
+                    <Edge fillStyle1="2" edges="!259 273|234 405!234 405|210 405!210 405|208 394"/>
+                    <Edge fillStyle1="1" edges="!208 394|198 394!198 394|174 265"/>
+                    <Edge fillStyle1="2" edges="!174 265|166 405!166 405|134 405!134 405|135 394"/>
+                    <Edge fillStyle1="1" edges="!135 394|121 394!121 394|142 131!142 131|171 131!171 131|174 142"/>
+                    <Edge fillStyle1="2" edges="!174 142|184 142!184 142|214 292"/>
+                    <Edge fillStyle1="1" edges="!214 292|243 131!243 131|274 131!274 131|275 142"/>
+                    <Edge fillStyle0="2" edges="!382 234|381 232!381 232|375 215!375 215|374 198!374 198|375 183!375 183|381 167!381 167[385 161 394 161!394 161|396 161"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!396 161[392 155 383 155!383 155[374 155 370 161!370 161|364 177!364 177|363 192!363 192|364 209!364 209|370 226!370 226[374 234 382 234"/>
+                    <Edge fillStyle1="1" edges="!382 234|383 234!383 234[392 234 396 226!396 226|402 209!402 209|403 192!403 192|402 177!402 177|396 161"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!135 394|153 394!153 394|163 213!163 213|164 213!164 213|174 265"/>
+                    <Edge fillStyle0="2" edges="!381 368|379 366!379 366|373 347!373 347|372 329!372 329|372 314!372 314|374 296!374 296|381 281!381 281[385 275 394 275!394 275|396 275!355 249|356 250"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!214 292|209 321!209 321|174 142!208 394|222 394!222 394|255 213!255 213|259 273!278 394|299 394!299 394|275 142"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#9ABBB7" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Buttons/Symbol 239" centerPoint3DX="14.2" centerPoint3DY="13">
+                  <matrix>
+                    <Matrix tx="1.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

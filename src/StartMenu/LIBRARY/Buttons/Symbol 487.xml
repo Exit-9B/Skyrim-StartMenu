@@ -1,0 +1,83 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Symbol 487" itemID="69f37a00-0000016c" symbolType="graphic" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 487">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F4FFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!3220 4360[3220 3420 2760 2220!2760 2220|3260 2100!3260 2100[3720 3200 3720 4380!3720 4380[3720 5580 3260 6720!3260 6720|2760 6600!2760 6600[3220 5420 3220 4360"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!3440 6860|2940 6740!2940 6740[3400 5560 3400 4500!3400 4500[3400 3560 2940 2380!2940 2380|3440 2260!3440 2260[3900 3340 3900 4540!3900 4540[3900 5700 3440 6860"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!7700 5620[7700 6740 7560 7240!7560 7240[7300 8260 6520 8260!6520 8260[5740 8260 5480 7240!5480 7240[5360 6740 5360 5620!5360 5620[5360 4520 5480 4020!5480 4020[5740 3000 6520 3000!6520 3000[7300 3000 7560 4020!7560 4020[7700 4520 7700
+ 5620!6940 4220[6840 3620 6520 3620!6520 3620[6180 3620 6080 4220!6080 4220[6000 4640 6020 5620!6020 5620[6000 6600 6080 7040!6080 7040[6180 7640 6520 7640!6520 7640[6840 7640 6940 7040!6940 7040|7020 5620!7020 5620|6940 4220"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!7960 5840[7960 6960 7840 7440!7840 7440[7580 8460 6780 8460!6780 8460[6000 8460 5760 7440!5760 7440[5620 6960 5620 5840!5620 5840[5620 4720 5760 4240!5760 4240[6000 3220 6780 3220!6780 3220[7580 3220 7840 4240!7840 4240[7960 4720 7960
+ 5840!7220 4420[7120 3840 6780 3840!6780 3840[6460 3840 6340 4420!6340 4420|6300 5840!6300 5840|6340 7240!6340 7240[6460 7840 6780 7840!6780 7840[7120 7840 7220 7240!7220 7240|7300 5840!7300 5840|7220 4420"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

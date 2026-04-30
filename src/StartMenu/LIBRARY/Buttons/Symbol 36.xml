@@ -1,0 +1,87 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Symbol 36" itemID="69f37a00-00000022" symbolType="graphic" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 36">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F4FFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!6720 4100[6720 3300 6120 3320!6120 3320|5980 3320!5980 3320|5980 5040!5980 5040[6440 5060 6600 4800!6600 4800|6720 4100!6740 5300[7480 5560 7480 6540!7480 6540[7480 7300 7200 7640!7200 7640[6880 7980 6180 7980!6180 7980|5340 7980!5340
+ 7980|5340 2720!5340 2720|6200 2720!6200 2720[6880 2720 7180 3100!7180 3100[7420 3440 7420 4140!7420 4140[7420 5100 6740 5300!6740 6520[6740 6040 6620 5820!6620 5820[6460 5580 5980 5580!5980 5580|5980 7380!5980 7380[6440 7400 6600 7180
+!6600 7180[6740 6980 6740 6520"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!4900 7380|4900 7980!4900 7980|3020 7980!3020 7980|3020 2720!3020 2720|3720 2720!3720 2720|3720 7380!3720 7380|4900 7380"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!7440 3260[7700 3600 7700 4280!7700 4280[7700 5280 7020 5460!7020 5460|7020 5480!7020 5480[7760 5720 7760 6700!7760 6700[7760 7440 7480 7800!7480 7800[7160 8140 6460 8140!6460 8140|5620 8140!5620 8140|5620 2900!5620 2900|6480 2900!6480
+ 2900[7160 2900 7440 3260!7000 4280[7000 3480 6400 3500!6400 3500|6260 3500!6260 3500|6260 5200!6260 5200[6720 5220 6880 4960!6880 4960[7000 4760 7000 4280!6900 6000[6720 5740 6260 5760!6260 5760|6260 7560!6260 7560[6720 7580 6880 7360
+!6880 7360[7020 7140 7020 6680!7020 6680[7020 6200 6900 6000"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!4000 2900|4000 7540!4000 7540|5180 7540!5180 7540|5180 8140!5180 8140|3300 8140!3300 8140|3300 2900!3300 2900|4000 2900"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

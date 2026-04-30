@@ -1,0 +1,68 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Buttons/Symbol 257" itemID="69f37a00-000000c4" linkageExportForAS="true" linkageIdentifier="Mouse4" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 257">
+      <layers>
+        <DOMLayer name="Layer 1" color="#CDC6BF">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="2" edges="!437 293|437 129!437 129|426 129"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!426 129|426 293!426 293|437 293"/>
+                    <Edge fillStyle1="1" edges="!328 319|317 319!317 319|317 289!317 289|390 123!390 123|426 123!426 123|426 129!437 293|443 293!443 293|443 299"/>
+                    <Edge fillStyle1="2" edges="!443 299|454 299!454 299|454 325!454 325|437 325!437 325|437 400!437 400|401 400!401 400|401 394"/>
+                    <Edge fillStyle1="1" edges="!401 394|390 394!390 394|390 325"/>
+                    <Edge fillStyle1="2" edges="!390 325|328 325!328 325|328 319"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!401 394|426 394!426 394|426 319!426 319|443 319!443 319|443 299"/>
+                    <Edge fillStyle1="1" edges="!216 292|245 131!245 131|276 131!276 131|277 142"/>
+                    <Edge fillStyle1="2" edges="!277 142|289 142!289 142|316 403!316 403|307 405!307 405|280 405!280 405|280 394"/>
+                    <Edge fillStyle1="1" edges="!280 394|267 394!267 394|261 273"/>
+                    <Edge fillStyle1="2" edges="!261 273|236 405!236 405|212 405!212 405|210 394"/>
+                    <Edge fillStyle1="1" edges="!210 394|200 394!200 394|176 265"/>
+                    <Edge fillStyle1="2" edges="!176 265|168 405!168 405|136 405!136 405|137 394"/>
+                    <Edge fillStyle1="1" edges="!137 394|123 394!123 394|144 131!144 131|173 131!173 131|176 142"/>
+                    <Edge fillStyle1="2" edges="!176 142|186 142!186 142|216 292"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!360 293|346 293!346 293|390 178!390 178|390 213"/>
+                    <Edge fillStyle0="1" edges="!390 213|390 293!390 293|360 293"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!137 394|155 394!155 394|165 213!165 213|166 213!166 213|176 265!328 319|390 319!390 319|390 325"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!176 142|211 321!211 321|216 292"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!210 394|224 394!224 394|257 213!257 213|261 273!280 394|301 394!301 394|277 142"/>
+                    <Edge fillStyle1="2" edges="!390 213|360 293"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#D29288" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Buttons/Symbol 255" centerPoint3DX="14.2" centerPoint3DY="13.1">
+                  <matrix>
+                    <Matrix tx="1.2" ty="0.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

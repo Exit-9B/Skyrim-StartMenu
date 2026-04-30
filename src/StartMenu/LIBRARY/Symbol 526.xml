@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 526" itemID="69f37a00-00000181" linkageExportForAS="true" linkageIdentifier="GamepadButton" linkageClassName="Components.CrossPlatformButtons" lastModified="1777564107">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 526" itemID="69f37a00-00000181" linkageExportForAS="true" linkageIdentifier="GamepadButton" linkageClassName="Components.CrossPlatformButtons" lastModified="1777584464">
   <timeline>
     <DOMTimeline name="Symbol 526">
       <layers>
@@ -71,11 +71,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 3" color="#C38592">
+        <DOMLayer name="Layer 3" color="#C38592" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="30" keyMode="9728">
               <elements>
-                <DOMDynamicText name="textField" width="146" height="26.4" isSelectable="false" renderAsHTML="true">
+                <DOMDynamicText name="textField" selected="true" width="146" height="23.95" isSelectable="false" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="2" ty="3"/>
                   </matrix>
@@ -83,7 +83,7 @@
                     <DOMTextRun>
                       <characters></characters>
                       <textAttrs>
-                        <DOMTextAttrs aliasText="false" autoKern="false" rotation="true" lineSpacing="2.25" size="22" bitmapSize="440" face="$EverywhereFont*" fillColor="#FFFFFF"/>
+                        <DOMTextAttrs aliasText="false" autoKern="false" rotation="true" lineSpacing="2.25" size="20" bitmapSize="400" face="$EverywhereFont*" fillColor="#FFFFFF"/>
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
@@ -115,7 +115,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 4" color="#48B0BF" current="true" isSelected="true">
+        <DOMLayer name="Layer 4" color="#48B0BF">
           <frames>
             <DOMFrame index="0" duration="40" keyMode="9728">
               <elements>

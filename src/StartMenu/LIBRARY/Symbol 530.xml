@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 530" itemID="69f37a00-00000182" linkageExportForAS="true" linkageIdentifier="MouseButton" linkageClassName="Components.CrossPlatformButtons" lastModified="1777576564">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 530" itemID="69f37a00-00000182" linkageExportForAS="true" linkageIdentifier="MouseButton" linkageClassName="Components.CrossPlatformButtons" lastModified="1777584472">
   <timeline>
-    <DOMTimeline name="Symbol 530" currentFrame="10">
+    <DOMTimeline name="Symbol 530">
       <layers>
         <DOMLayer name="Labels Layer" color="#958ECD">
           <frames>

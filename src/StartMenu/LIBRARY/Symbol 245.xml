@@ -1,0 +1,63 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 245" itemID="69f37a00-000000be" linkageExportForAS="true" linkageIdentifier="Mouse7" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 245">
+      <layers>
+        <DOMLayer name="Layer 1" color="#CA92F8">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="2" edges="!401 157|401 155!401 155|326 155!326 155|326 124!326 124|447 124!447 124|445 130"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!445 130|365 395!365 395|339 395"/>
+                    <Edge fillStyle0="1" edges="!339 395|337 401!337 401|376 401!376 401|458 130!458 130|445 130"/>
+                    <Edge fillStyle1="1" edges="!278 142|290 142!290 142|317 404!317 404|308 405!308 405|281 405!281 405|281 394"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!281 394|302 394!302 394|278 142"/>
+                    <Edge fillStyle0="2" edges="!278 142|277 131!277 131|246 131!246 131|217 292"/>
+                    <Edge fillStyle0="1" edges="!217 292|187 142!187 142|177 142"/>
+                    <Edge fillStyle0="2" edges="!177 142|174 131!174 131|145 131!145 131|124 394!124 394|138 394"/>
+                    <Edge fillStyle0="1" edges="!138 394|137 405!137 405|169 405!169 405|177 265"/>
+                    <Edge fillStyle0="2" edges="!177 265|201 394!201 394|211 394"/>
+                    <Edge fillStyle0="1" edges="!211 394|213 405!213 405|237 405!237 405|262 273"/>
+                    <Edge fillStyle0="2" edges="!262 273|268 394!268 394|281 394"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!401 157|399 163"/>
+                    <Edge fillStyle1="1" edges="!399 163|337 163!337 163|337 157!337 157|401 157"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!138 394|156 394!156 394|166 213!166 213|167 213!167 213|177 265!217 292|212 321!212 321|177 142!211 394|225 394!225 394|258 213!258 213|262 273"/>
+                    <Edge fillStyle1="2" edges="!339 395|326 395!326 395|399 163"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#F4F375" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 243" centerPoint3DX="14.2" centerPoint3DY="13">
+                  <matrix>
+                    <Matrix tx="1.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

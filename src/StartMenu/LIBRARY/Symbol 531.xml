@@ -1,0 +1,239 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 531" itemID="69f37a00-00000183" linkageExportForAS="true" linkageIdentifier="SaveLoadPanel" linkageClassName="SaveLoadPanel" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 531">
+      <layers>
+        <DOMLayer name="Layer 1" color="#EA71CB">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 530" name="BackMouseButton" centerPoint3DX="279" centerPoint3DY="757.85">
+                  <matrix>
+                    <Matrix tx="204" ty="743.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   XBoxArt = "360_B";
+   disableConstraints = false;
+   disabled = false;
+   disableFocus = false;
+   labelID = "$Back";
+   PCArt = "Tab";
+   PS3Art = "PS3_B";
+   toggle = false;
+   visible = true;
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#EB03EE">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 530" name="SelectMouseButton" centerPoint3DX="129" centerPoint3DY="757.85">
+                  <matrix>
+                    <Matrix tx="54" ty="743.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   XBoxArt = "360_A";
+   disableConstraints = false;
+   disabled = false;
+   disableFocus = false;
+   labelID = "$Select";
+   PCArt = "Enter";
+   PS3Art = "PS3_A";
+   toggle = false;
+   visible = true;
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#FFC4DA">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 526" name="BackGamepadButton" centerPoint3DX="292.75" centerPoint3DY="758.1">
+                  <matrix>
+                    <Matrix tx="204" ty="743.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   XBoxArt = "360_B";
+   disableConstraints = false;
+   disabled = false;
+   disableFocus = false;
+   labelID = "$Back";
+   PCArt = "Tab";
+   PS3Art = "PS3_B";
+   toggle = false;
+   visible = true;
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#E191E5">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 526" name="SelectGamepadButton" centerPoint3DX="142.75" centerPoint3DY="758.1">
+                  <matrix>
+                    <Matrix tx="54" ty="743.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   XBoxArt = "360_A";
+   disableConstraints = false;
+   disabled = false;
+   disableFocus = false;
+   labelID = "$Select";
+   PCArt = "Enter";
+   PS3Art = "PS3_A";
+   toggle = false;
+   visible = true;
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 5" color="#FDF89E">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 521" name="CharacterSelectionHint_mc" centerPoint3DX="41.35" centerPoint3DY="721.95">
+                  <matrix>
+                    <Matrix tx="28.35" ty="708.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 6" color="#A8B77F">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 510" name="ScreenshotHolder" centerPoint3DX="169.25" centerPoint3DY="211.45">
+                  <matrix>
+                    <Matrix tx="38.5" ty="136"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 7" color="#B09AC8">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 509" name="PlayerInfoText" centerPoint3DX="162.5" centerPoint3DY="337.2">
+                  <matrix>
+                    <Matrix tx="10" ty="293"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 8" color="#E77E79">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 502" name="List_mc" centerPoint3DX="168.95" centerPoint3DY="551.4">
+                  <matrix>
+                    <Matrix tx="20" ty="395"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   textOption = "Shrink To Fit";
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 9" color="#F9C044">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 504" name="ScreenShotRect_mc" centerPoint3DX="168.65" centerPoint3DY="211.4">
+                  <matrix>
+                    <Matrix tx="35.25" ty="134.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 10" color="#A4A9B2" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.592156862745098"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#999999" alpha="0.4"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!6545 15|6545 6870!6545 6870|6545 7410!6545 7410|6545 14438!6545 14438|6545 15418!6545 15418|6545 16693!6545 16693|0 16693!0 16693|0 7410!0 7410|0 6870!0 6870|0 15!0 15|0 1!0 1|194 1!194 1|194 0!194 0|6545 0!6545 0|6545 15"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!61 74|61 6870!61 6870|61 7410!61 7410|61 10002!61 10002|61 10073!61 10073|61 16552!61 16552|102 16552!102 16552|102 10073!102 10073|102 10002!102 10002|102 7410!102 7410|102 6870!102 6870|102 74!102 74|61 74"/>
+                    <Edge fillStyle0="1" edges="!705 5780|705 2681!705 2681|6042 2681!6042 2681|6042 5780!6042 5780|5980 5780!5980 5780|5980 5775!5980 5775|5939 5775!5939 5775|5939 5780!5939 5780|803 5780!803 5780|803 5775!803 5775|762 5775!762 5775|762 5780!762 5780|705 5780"/>
+                    <Edge fillStyle1="1" edges="!551 7786|6042 7786!6042 7786|6042 7745!6042 7745|551 7745!551 7745|551 7786"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!6484 90|6484 16552!6484 16552|6443 16552!6443 16552|6443 90!6443 90|6484 90"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

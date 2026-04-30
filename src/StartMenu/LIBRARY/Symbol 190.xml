@@ -1,0 +1,49 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 190" itemID="69f37a00-00000099" symbolType="graphic" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 190">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F4FFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!6740 5300[6740 6840 6400 7520!6400 7520|6920 8240!6920 8240|6420 8580!6420 8580|6020 7980!6020 7980[5760 8220 5260 8220!5260 8220[4300 8220 3980 7140!3980 7140[3800 6540 3800 5300!3800 5300[3800 4060 3980 3460!3980 3460[4300 2400 5260
+ 2400!5260 2400[6220 2400 6540 3460!6540 3460[6740 4080 6740 5300!5260 3100[4860 3100 4700 3760!4700 3760[4580 4260 4580 5300!4580 5300[4580 7500 5260 7500!5260 7500|5580 7380!5580 7380|5100 6700!5100 6700|5560 6340!5560 6340|5840 6740
+!5840 6740|5860 6740!5860 6740|5940 5300!5940 5300[5940 4240 5820 3760!5820 3760[5680 3100 5260 3100"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!6660 7740|7160 8440!7160 8440|6680 8800!6680 8800|6280 8200!6280 8200[5980 8440 5520 8440!5520 8440[4560 8440 4240 7360!4240 7360[4040 6740 4040 5520!4040 5520[4040 4300 4240 3680!4240 3680[4560 2600 5520 2600!5520 2600[6480 2600 6800
+ 3680!6800 3680[6980 4280 6980 5520!6980 5520[6980 7060 6660 7740!6080 3980[5920 3320 5520 3320!5520 3320[5100 3320 4960 3980!4960 3980[4840 4460 4840 5520!4840 5520[4840 6580 4960 7080!4960 7080[5100 7720 5520 7720!5520 7720[5700 7720
+ 5820 7600!5820 7600|5340 6920!5340 6920|5800 6560!5800 6560|6100 6960!6100 6960|6200 5520!6200 5520[6200 4480 6080 3980"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

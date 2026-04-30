@@ -1,0 +1,50 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 568" itemID="69f37a00-00000198" lastModified="1777576667">
+  <timeline>
+    <DOMTimeline name="Symbol 568">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F63EF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="Header_tf" selected="true" fontRenderingMode="standard" width="261" height="73.7" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="951.9" ty="25.7"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$CREATION CLUB NEWS</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" rotation="true" letterSpacing="0.5" lineSpacing="0" size="33" bitmapSize="660" face="$EverywhereFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#F985A6">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="Motd_tf" fontRenderingMode="standard" width="261.5" height="189" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="951.9" ty="87"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Flash Sale: Creation Credits are now 50% off</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" rotation="true" letterSpacing="0.5" lineSpacing="0" size="18" bitmapSize="360" face="$EverywhereFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

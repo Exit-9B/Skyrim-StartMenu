@@ -1,0 +1,85 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 359" itemID="69f37a00-0000010b" symbolType="graphic" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 359">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F4FFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!6620 3260|6440 4680!6440 4680[7200 4660 7580 5100!7580 5100[7940 5520 7940 6280!7940 6280[7940 7160 7600 7700!7600 7700[7180 8340 6340 8340!6340 8340|5460 8100!5460 8100|5660 7440!5660 7440[6060 7660 6320 7660!6320 7660[6760 7660 6980
+ 7220!6980 7220[7160 6880 7160 6400!7160 6400[7160 5280 6180 5280!6180 5280|5720 5360!5720 5360|6040 2600!6040 2600|7860 2600!7860 2600|7860 3260!7860 3260|6620 3260"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!5060 3260|3780 3260!3780 3260|3780 5040!3780 5040|4940 5040!4940 5040|4940 5700!4940 5700|3780 5700!3780 5700|3780 8280!3780 8280|3020 8280!3020 8280|3020 2600!3020 2600|5060 2600!5060 2600|5060 3260"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!8100 3460|6880 3460!6880 3460|6700 4900!6700 4900[7440 4880 7820 5320!7820 5320[8180 5740 8180 6500!8180 6500[8180 7380 7840 7920!7840 7920[7420 8560 6580 8560!6580 8560[6220 8560 5700 8320!5700 8320|5900 7660!5900 7660[6300 7880 6560
+ 7880!6560 7880[7000 7880 7240 7440!7240 7440[7420 7100 7420 6620!7420 6620[7420 5500 6420 5500!6420 5500|5960 5560!5960 5560|6300 2820!6300 2820|8100 2820!8100 2820|8100 3460"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!5320 3460|4020 3460!4020 3460|4020 5260!4020 5260|5180 5260!5180 5260|5180 5900!5180 5900|4020 5900!4020 5900|4020 8480!4020 8480|3280 8480!3280 8480|3280 2820!3280 2820|5320 2820!5320 2820|5320 3460"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

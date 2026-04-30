@@ -1,0 +1,47 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 513" itemID="69f37a00-00000178" symbolType="graphic" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 513">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F4FFF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!4720 2500|5080 3500!5080 3500|5380 4540!5380 4540|5400 4540!5400 4540|6000 2500!6000 2500|6760 2500!6760 2500|5720 5280!5720 5280|6760 8160!6760 8160|6000 8160!6000 8160|5660 7180!5660 7180[5400 6500 5340 6040!5340 6040|5180 6700!5180
+ 6700|4720 8160!4720 8160|3900 8160!3900 8160|4980 5280!4980 5280|3980 2500!3980 2500|4720 2500"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#4F4FFF">
+          <frames>
+            <DOMFrame index="0" motionTweenScale="false" keyMode="8192">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!5340 3720|5640 4760!5640 4760|6240 2700!6240 2700|7020 2700!7020 2700|5980 5500!5980 5500|7020 8380!7020 8380|6240 8380!6240 8380|5900 7380!5900 7380[5640 6580 5600 6260!5600 6260|5580 6260!5580 6260|5440 6920!5440 6920|4980 8380!4980
+ 8380|4160 8380!4160 8380|5240 5500!5240 5500|4220 2700!4220 2700|4980 2700!4980 2700|5340 3720"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

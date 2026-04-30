@@ -1,0 +1,50 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Symbol 52" itemID="69f37a00-00000030" linkageExportForAS="true" linkageIdentifier="PS3_Y" lastModified="1777564107">
+  <timeline>
+    <DOMTimeline name="Symbol 52">
+      <layers>
+        <DOMLayer name="Layer 1" color="#489BE4">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!271 114|275 106!275 106|423 361!423 361|128 361!128 361|135 349"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!135 349|407 349!407 349|271 114"/>
+                    <Edge fillStyle0="2" edges="!271 114|259 93!259 93|111 349!111 349|135 349"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!271 186|259 165!259 165|174 313!174 313|197 313"/>
+                    <Edge fillStyle1="2" edges="!197 313|345 313!345 313|271 186"/>
+                    <Edge fillStyle1="1" edges="!271 186|197 313"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#35CDE9" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Symbol 50" centerPoint3DX="13" centerPoint3DY="13">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.6015625"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

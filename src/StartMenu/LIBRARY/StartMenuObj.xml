@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StartMenuObj" itemID="69f3eb2d-00000541" linkageExportForAS="true" linkageIdentifier="StartMenuObj" linkageClassName="StartMenu" lastModified="1777593133">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StartMenuObj" itemID="69f3eb2d-00000541" linkageExportForAS="true" linkageIdentifier="StartMenuObj" linkageClassName="StartMenu" lastModified="1777630139">
   <timeline>
-    <DOMTimeline name="StartMenuObj">
+    <DOMTimeline name="StartMenuObj" currentFrame="40">
       <layers>
         <DOMLayer name="Labels Layer" color="#B3FD2D">
           <frames>
@@ -117,7 +117,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Script Layer" color="#DEA3B8">
+        <DOMLayer name="Script Layer" color="#DEA3B8" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <Actionscript>
@@ -201,35 +201,29 @@ stop();
 stop();
 MovieClip.prototype.bringToFront = function(optionsObj)
 {
-   var _loc6_ = new Array();
-   var _loc3_;
-   var _loc2_;
-   for(var _loc4_ in this._parent)
+   var movieclips = new Array();
+   for (var prop in this._parent)
    {
-      if(typeof this._parent[_loc4_] == "movieclip" && this._parent[_loc4_]._parent == this._parent && this._parent[_loc4_].getDepth() > this.getDepth())
+      if (typeof this._parent[prop] == "movieclip" && this._parent[prop]._parent == this._parent && this._parent[prop].getDepth() > this.getDepth())
       {
-         _loc3_ = true;
-         _loc2_ = 0;
-         while(_loc2_ < optionsObj.protect.length)
+         var shouldSwap = true;
+         for (var i = 0; i < optionsObj.protect.length; i++)
          {
-            if(this._parent[_loc4_] == optionsObj.protect[_loc2_])
+            if (this._parent[prop] == optionsObj.protect[i])
             {
-               _loc3_ = false;
+               shouldSwap = false;
                break;
             }
-            _loc2_++;
          }
-         if(_loc3_)
+         if (shouldSwap)
          {
-            _loc6_.push(this._parent[_loc4_]);
+            movieclips.push(this._parent[prop]);
          }
       }
    }
-   var i = _loc6_.length - 1;
-   while(i >= 0)
+   for (var i = movieclips.length - 1; i >= 0; i--)
    {
-      this.swapDepths(_loc6_[i]);
-      i--;
+      this.swapDepths(movieclips[i]);
    }
 };
 CharacterSelectionHint.bringToFront();
@@ -374,11 +368,11 @@ stop();
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 3" color="#9347D5" current="true" isSelected="true">
+        <DOMLayer name="Layer 3" color="#9347D5">
           <frames>
             <DOMFrame index="0" duration="120" keyMode="9728">
               <elements>
-                <DOMDynamicText name="Error_NeedUpdateOrbis" selected="true" width="463.95" height="11.95" renderAsHTML="true">
+                <DOMDynamicText name="Error_NeedUpdateOrbis" width="463.95" height="11.95" renderAsHTML="true">
                   <matrix>
                     <Matrix tx="-1093.9" ty="77.6"/>
                   </matrix>

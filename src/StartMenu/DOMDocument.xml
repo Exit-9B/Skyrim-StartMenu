@@ -1,10 +1,10 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" nextSceneIdentifier="31" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveHasPrompted="true">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" nextSceneIdentifier="34" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveHasPrompted="true">
      <folders>
           <DOMFolderItem name="Buttons" itemID="69f3e891-0000037d"/>
      </folders>
      <fonts>
-          <DOMFontItem name="$EverywhereMediumFont" itemID="69f37a1a-0000037c" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereMediumFont" linkageURL="gfxfontlib.swf" font="Futura-Condensed-Normal" size="0" id="2" sourceLastImported="1777564186" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿˆ˜–—‘’‚“”„†‡•…‰‹›€™" embedRanges="1|2|3|4|5"/>
           <DOMFontItem name="$EverywhereFont" itemID="69f37a15-0000037a" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereFont" linkageURL="gfxfontlib.swf" font="Futura-CondensedLight-Normal" size="0" id="1" sourceLastImported="1777564181" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿˆ˜–—‘’‚“”„†‡•…‰‹›€™" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="$EverywhereMediumFont" itemID="69f37a1a-0000037c" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereMediumFont" linkageURL="gfxfontlib.swf" font="Futura-Condensed-Normal" size="0" id="2" sourceLastImported="1777564186" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿˆ˜–—‘’‚“”„†‡•…‰‹›€™" embedRanges="1|2|3|4|5"/>
      </fonts>
      <media>
           <DOMBitmapItem name="Bitmap 532.png" itemID="69f37a00-00000004" sourceLastImported="1777564107" externalFileSize="1719" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Bitmap 532.png" bitmapDataHRef="M 1 1777564107.dat" frameRight="2560" frameBottom="2560"/>
@@ -421,7 +421,7 @@
           <Include href="ScrollIndicator_upArrow.xml" itemID="69f3eb0a-00000538" lastModified="1777593098"/>
           <Include href="SelectionArrow.xml" loadImmediate="false" itemID="69f3eccb-0000055a" lastModified="1777593547"/>
           <Include href="Sky10Text.xml" loadImmediate="false" itemID="69f3f170-0000056d" lastModified="1777594736"/>
-          <Include href="StartMenuObj.xml" itemID="69f3eb2d-00000541" lastModified="1777593133"/>
+          <Include href="StartMenuObj.xml" itemID="69f3eb2d-00000541" lastModified="1777630139"/>
           <Include href="StatusIcon.xml" itemID="69f3eaf5-00000535" lastModified="1777593077"/>
           <Include href="TitlePrompt.xml" loadImmediate="false" itemID="69f3f103-0000056c" lastModified="1777594627"/>
           <Include href="upArrow.xml" loadImmediate="false" itemID="69f3ebfa-00000554" lastModified="1777593338"/>
@@ -455,7 +455,7 @@ stop();
                          <frames>
                               <DOMFrame index="0" duration="2" keyMode="9728">
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="MenuHolder" name="MenuHolder" selected="true" centerPoint3DX="2212.5" centerPoint3DY="1524.3">
+                                        <DOMSymbolInstance libraryItemName="MenuHolder" name="MenuHolder" centerPoint3DX="2212.5" centerPoint3DY="1524.3">
                                              <matrix>
                                                   <Matrix tx="1280" ty="720"/>
                                              </matrix>
@@ -472,6 +472,10 @@ stop();
      </timelines>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="86696" publishTime="1777630163"/>
+          <PublishItem publishSize="5498" publishTime="1777629717"/>
+          <PublishItem publishSize="1402" publishTime="1777629709"/>
+          <PublishItem publishSize="5491" publishTime="1777629709"/>
           <PublishItem publishSize="5498" publishTime="1777594796"/>
           <PublishItem publishSize="1374" publishTime="1777593244"/>
           <PublishItem publishSize="5500" publishTime="1777593228"/>
@@ -488,9 +492,5 @@ stop();
           <PublishItem publishSize="1369" publishTime="1777592710"/>
           <PublishItem publishSize="1369" publishTime="1777592608"/>
           <PublishItem publishSize="1399" publishTime="1777592458"/>
-          <PublishItem publishSize="5489" publishTime="1777592458"/>
-          <PublishItem publishSize="87904" publishTime="1777584477"/>
-          <PublishItem publishSize="1400" publishTime="1777584433"/>
-          <PublishItem publishSize="5489" publishTime="1777584433"/>
      </publishHistory>
 </DOMDocument>

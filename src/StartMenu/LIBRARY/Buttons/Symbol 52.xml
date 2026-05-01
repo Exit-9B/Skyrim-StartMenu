@@ -16,12 +16,12 @@
                     </FillStyle>
                   </fills>
                   <edges>
-                    <Edge fillStyle0="2" edges="!271 114|259 93!259 93|111 349!111 349|135 349"/>
-                    <Edge fillStyle0="2" fillStyle1="1" edges="!135 349|407 349!407 349|271 114"/>
                     <Edge fillStyle1="1" edges="!271 114|275 106!275 106|423 361!423 361|128 361!128 361|135 349"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!135 349|407 349!407 349|271 114"/>
+                    <Edge fillStyle0="2" edges="!271 114|259 93!259 93|111 349!111 349|135 349"/>
                     <Edge fillStyle0="1" fillStyle1="2" edges="!271 186|259 165!259 165|174 313!174 313|197 313"/>
-                    <Edge fillStyle0="1" edges="!197 313|271 186"/>
                     <Edge fillStyle1="2" edges="!197 313|345 313!345 313|271 186"/>
+                    <Edge fillStyle1="1" edges="!271 186|197 313"/>
                   </edges>
                 </DOMShape>
               </elements>

@@ -1,0 +1,59 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MainConfirmPanel" itemID="69f3ed8c-0000055c" lastModified="1777593740">
+  <timeline>
+    <DOMTimeline name="MainConfirmPanel">
+      <layers>
+        <DOMLayer name="Layer 1" color="#9CDBA0" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="textField" selected="true" width="208.45" height="133.05" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="16.3" ty="562.9"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Start a New Game?</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" rotation="true" letterSpacing="0.8" lineSpacing="2.25" size="18" bitmapSize="360" face="$EverywhereFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="44.9992520943067" blurX="2" blurY="2" distance="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#F46472">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#999999" alpha="0.4"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor alpha="0.592156862745098"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!4724 90|4724 16552!4724 16552|4683 16552!4683 16552|4683 90!4683 90|4724 90"/>
+                    <Edge fillStyle1="2" edges="!4785 0|4785 1969!4785 1969|4785 2274!4785 2274|4785 2370!4785 2370|4785 3593!4785 3593|4785 3994!4785 3994|4785 5503!4785 5503|4784 8508!4784 8508|4784 9714!4784 9714|4784 9777!4784 9777|4784 10822!4784 10822|4785 16693!4785 16693|4179
+ 16693!4179 16693|3133 16693!3133 16693|2921 16693!2921 16693|1985 16693!1985 16693|1875 16693!1875 16693|0 16693!0 16693|0 5503!0 5503|0 3994!0 3994|0 3879!0 3879|0 3593!0 3593|0 3478!0 3478|0 2370!0 2370|0 2274!0 2274|0 1969!0 1969
+|0 0!0 0|1875 0!1875 0|1985 0!1985 0|2921 0!2921 0|3133 0!3133 0|4179 0!4179 0|4785 0"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="
+!61 90|61 1969!61 1969|61 2274!61 2274|61 3478!61 3478|61 3593!61 3593|61 3879!61 3879|61 3994!61 3994|61 5503!61 5503|61 16552!61 16552|102 16552!102 16552|102 5503!102 5503|102 3994!102 3994|102 3879!102 3879|102 3593!102 3593|102 3478
+!102 3478|102 2370!102 2370|102 2274!102 2274|102 1969!102 1969|102 90!102 90|61 90"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

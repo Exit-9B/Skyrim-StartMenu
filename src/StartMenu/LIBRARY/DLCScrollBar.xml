@@ -1,0 +1,72 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="DLCScrollBar" itemID="69f3eb22-0000053d" linkageExportForAS="true" linkageIdentifier="DLCScrollBar" linkageClassName="gfx.controls.ScrollBar" scaleGridLeft="4.5" scaleGridRight="10" scaleGridTop="20" scaleGridBottom="160" lastModified="1777593122">
+  <timeline>
+    <DOMTimeline name="DLCScrollBar">
+      <layers>
+        <DOMLayer name="Layer 1" color="#75CF57">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ScrollBar_thumb" name="thumb" centerPoint3DX="5.35" centerPoint3DY="24">
+                  <matrix>
+                    <Matrix tx="0.9" ty="17"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#9FB5BC">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ScrollIndicator_upArrow" name="upArrow" centerPoint3DX="5.95" centerPoint3DY="9.15">
+                  <matrix>
+                    <Matrix ty="0.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#13FD9C">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ScrollIndicator_downArrow" name="downArrow" centerPoint3DX="5.95" centerPoint3DY="169">
+                  <matrix>
+                    <Matrix ty="160.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#DE1ACB" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ScrollBar_track" name="track" centerPoint3DX="5.7" centerPoint3DY="29.55">
+                  <matrix>
+                    <Matrix d="5.73309326171875" ty="17"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

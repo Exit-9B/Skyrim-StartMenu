@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ScrollDown" itemID="69f3ec83-00000559" lastModified="1777593475">
+  <timeline>
+    <DOMTimeline name="ScrollDown">
+      <layers>
+        <DOMLayer name="Layer 1" color="#B36E6D" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#BBBDBF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!677 28|387 251!387 251|97 28!97 28|178 28!178 28|387 189!387 189|596 28!596 28|677 28"/>
+                    <Edge fillStyle0="1" edges="!574 1|387 144!387 144|201 1!201 1|1 1!1 1|387 298!387 298|773 1!773 1|574 1"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

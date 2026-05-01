@@ -1,0 +1,29 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="GamerTag" itemID="69f3f06e-00000566" lastModified="1777594478">
+  <timeline>
+    <DOMTimeline name="GamerTag">
+      <layers>
+        <DOMLayer name="Layer 1" color="#C5C30F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="GamerTagText_tf" width="672" height="29" isSelectable="false" renderAsHTML="true">
+                  <matrix>
+                    <Matrix tx="-142" ty="32.95"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" rotation="true" lineSpacing="1.65" size="22" bitmapSize="440" face="$EverywhereFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

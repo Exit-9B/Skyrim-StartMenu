@@ -1,0 +1,133 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="DLCPanel" itemID="69f3f0e6-0000056b" lastModified="1777594598">
+  <timeline>
+    <DOMTimeline name="DLCPanel">
+      <layers>
+        <DOMLayer name="Layer 1" color="#A7DE0E">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="NewContentText" width="246" height="28.75" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="47" ty="302"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" rotation="true" lineSpacing="2.25" size="24" bitmapSize="480" face="$EverywhereFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="44.9992520943067" blurX="2" blurY="2" distance="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#F89312" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="warningText" selected="true" width="246" height="51" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="47" ty="382"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>$Loading downloadable content...</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" rotation="true" letterSpacing="0.8" lineSpacing="2.25" size="18" bitmapSize="360" face="$EverywhereFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="44.9992520943067" blurX="2" blurY="2" distance="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#2FFA6B">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="DLCList" name="DLCList" centerPoint3DX="186.05" centerPoint3DY="518.65">
+                  <matrix>
+                    <Matrix tx="47" ty="379.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   textOption = "Shrink To Fit";
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#F5BD6D">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GamepadButton" name="MarketplaceButton" centerPoint3DX="523.75" centerPoint3DY="749.4">
+                  <matrix>
+                    <Matrix tx="435" ty="735"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   XBoxArt = "360_Y";
+   disableConstraints = false;
+   disabled = true;
+   disableFocus = true;
+   labelID = "$Marketplace";
+   PCArt = "M";
+   PS3Art = "PS3_Y";
+   toggle = false;
+   visible = false;
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 5" color="#F2EA7E">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.592156862745098"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#999999" alpha="0.4"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!6721 16552|6680 16552!6680 16552|6680 90!6680 90|6721 90"/>
+                    <Edge fillStyle0="1" edges="!6721 90|6724 90!6724 90|6724 16552!6724 16552|6721 16552"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!61 90|61 16552!61 16552|102 16552!102 16552|102 90!102 90|61 90!650 7201|6150 7201!6150 7201|6150 7160!6150 7160|650 7160!650 7160|650 7201"/>
+                    <Edge fillStyle1="1" edges="!6785 0|6785 16693!6785 16693|0 16693!0 16693|0 0!0 0|6785 0"/>
+                    <Edge fillStyle0="2" edges="!6721 16552|6721 90"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

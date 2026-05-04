@@ -95,40 +95,33 @@ class BottomButtons extends MovieClip
 	{
 		this._platform = aiPlatform;
 		this._ps3Switch = abPS3Switch;
-		var _loc2_ = 0;
-		while (_loc2_ < this._buttons.length)
+		for (var _loc2_ = 0; _loc2_ < this._buttons.length; _loc2_++)
 		{
 			this._buttons[_loc2_].SetPlatform(this._platform, this._ps3Switch);
-			_loc2_++;
 		}
 	}
 
 	function SetButtons(buttons)
 	{
 		var _loc6_ = buttons.length != this._lastSetButtons.length;
-		var _loc3_ = 0;
-		while (!_loc6_ && _loc3_ < buttons.length)
+		for (var _loc3_ = 0; !_loc6_ && _loc3_ < buttons.length; _loc3_++)
 		{
 			_loc6_ = buttons[_loc3_].Label != this._lastSetButtons[_loc3_].Label;
-			_loc3_++;
 		}
 		var _loc5_;
 		var _loc2_;
 		if (_loc6_)
 		{
 			this._lastSetButtons = buttons;
-			_loc3_ = 0;
-			while (_loc3_ < this._buttons.length)
+			for (var _loc3_ = 0; _loc3_ < this._buttons.length; _loc3_++)
 			{
 				_loc5_ = this._buttons[_loc3_];
 				_loc5_.removeAllEventListeners();
 				_loc5_.removeMovieClip();
-				_loc3_++;
 			}
 			this._buttons.splice(0);
 			this._buttonMap = {};
-			_loc3_ = 0;
-			while (_loc3_ < buttons.length)
+			for (var _loc3_ = 0; _loc3_ < buttons.length; _loc3_++)
 			{
 				_loc2_ = Components.CrossPlatformButtons(this.attachMovie(this.GetButtonID(this._platform), this.GetButtonID(this._platform) + "_" + _loc3_, this.getNextHighestDepth()));
 				_loc2_.addEventListener("stateChange", Proxy.create(this, this.ButtonStateChange));
@@ -143,7 +136,6 @@ class BottomButtons extends MovieClip
 				_loc2_.SetPlatform(this._platform, this._ps3Switch);
 				this._buttons.push(_loc2_);
 				this._buttonMap[_loc2_] = buttons[_loc3_];
-				_loc3_++;
 			}
 			if (this._buttons.length > 0)
 			{
@@ -173,9 +165,8 @@ class BottomButtons extends MovieClip
 	{
 		var _loc7_ = 0;
 		var _loc6_ = 0;
-		var _loc4_ = 0;
 		var _loc3_;
-		while (_loc4_ < this._buttons.length)
+		for (var _loc4_ = 0; _loc4_ < this._buttons.length; _loc4_++)
 		{
 			if (this._buttons[_loc4_]._visible)
 			{
@@ -183,7 +174,6 @@ class BottomButtons extends MovieClip
 				_loc7_ += _loc3_.xMax - _loc3_.xMin;
 				_loc6_++;
 			}
-			_loc4_++;
 		}
 		if (_loc6_ > 0)
 		{
@@ -203,9 +193,8 @@ class BottomButtons extends MovieClip
 		this.bg_mc._width = _loc9_;
 		var _loc8_ = this.bg_mc._y + (this.bg_mc._height - this._buttons[0]._height) / 2;
 		_loc5_ += this._buttonBgSide;
-		_loc4_ = 0;
 		var _loc2_;
-		while (_loc4_ < this._buttons.length)
+		for (var _loc4_ = 0; _loc4_ < this._buttons.length; _loc4_++)
 		{
 			_loc2_ = this._buttons[_loc4_];
 			if (_loc2_._visible)
@@ -215,7 +204,6 @@ class BottomButtons extends MovieClip
 				_loc2_._y = _loc8_;
 				_loc5_ += _loc3_.xMax - _loc3_.xMin + BottomButtons.BUTTON_HORIZONTAL_SPACING;
 			}
-			_loc4_++;
 		}
 	}
 

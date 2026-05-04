@@ -136,8 +136,7 @@ class Shared.BSScrollingList extends MovieClip
 		var _loc2_;
 		if (!this.bDisableInput)
 		{
-			_loc2_ = Mouse.getTopMostEntity();
-			while (_loc2_ && _loc2_ != undefined)
+			for (_loc2_ = Mouse.getTopMostEntity(); _loc2_ && _loc2_ != undefined; _loc2_ = _loc2_._parent)
 			{
 				if (_loc2_ == this)
 				{
@@ -151,7 +150,6 @@ class Shared.BSScrollingList extends MovieClip
 						this.scrollPosition -= 1;
 					}
 				}
-				_loc2_ = _loc2_._parent;
 			}
 		}
 	}
@@ -314,16 +312,13 @@ class Shared.BSScrollingList extends MovieClip
 	{
 		var _loc6_ = this.GetClipByIndex(0)._y;
 		var _loc5_ = 0;
-		var _loc2_ = 0;
-		while (_loc2_ < this.iScrollPosition)
+		for (var _loc2_ = 0; _loc2_ < this.iScrollPosition; _loc2_++)
 		{
 			this.EntriesA[_loc2_].clipIndex = undefined;
-			_loc2_++;
 		}
 		this.iListItemsShown = 0;
-		_loc2_ = this.iScrollPosition;
 		var _loc3_;
-		while (_loc2_ < this.EntriesA.length && this.iListItemsShown < this.iMaxItemsShown && _loc5_ <= this.fListHeight)
+		for (var _loc2_ = this.iScrollPosition; _loc2_ < this.EntriesA.length && this.iListItemsShown < this.iMaxItemsShown && _loc5_ <= this.fListHeight; _loc2_++)
 		{
 			_loc3_ = this.GetClipByIndex(this.iListItemsShown);
 			this.SetEntry(_loc3_, this.EntriesA[_loc2_]);
@@ -336,13 +331,10 @@ class Shared.BSScrollingList extends MovieClip
 			{
 				this.iListItemsShown = this.iListItemsShown + 1;
 			}
-			_loc2_++;
 		}
-		var _loc4_ = this.iListItemsShown;
-		while (_loc4_ < this.iMaxItemsShown)
+		for (var _loc4_ = this.iListItemsShown; _loc4_ < this.iMaxItemsShown; _loc4_++)
 		{
 			this.GetClipByIndex(_loc4_)._visible = false;
-			_loc4_++;
 		}
 		if (this.ScrollUp != undefined)
 		{

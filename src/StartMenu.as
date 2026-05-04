@@ -327,14 +327,12 @@ class StartMenu extends MovieClip
 		{
 			this.MainList.entryList.push({text:"$HELP", index:StartMenu.HELP_INDEX, disabled:false, showIcon:false});
 		}
-		var _loc3_ = 0;
-		while (_loc3_ < this.MainList.entryList.length)
+		for (var _loc3_ = 0; _loc3_ < this.MainList.entryList.length; _loc3_++)
 		{
 			if (this.MainList.entryList[_loc3_].index == _loc4_)
 			{
 				this.MainList.RestoreScrollPosition(_loc3_, false);
 			}
-			_loc3_++;
 		}
 		this.MainList.InvalidateData();
 		this._NeedsLoginScreen = !arguments[_loc12_];
@@ -405,11 +403,9 @@ class StartMenu extends MovieClip
 				_loc8_ = true;
 			}
 		}
-		var _loc2_;
 		if (!aCanLoadGame)
 		{
-			_loc2_ = 0;
-			while (_loc2_ < this.MainList.maxEntries)
+			for (var _loc2_ = 0; _loc2_ < this.MainList.maxEntries; _loc2_++)
 			{
 				if (this.MainList.entryList[_loc2_].index == StartMenu.LOAD_INDEX)
 				{
@@ -418,7 +414,6 @@ class StartMenu extends MovieClip
 					this.MainList.RestoreScrollPosition(0, false);
 					break;
 				}
-				_loc2_++;
 			}
 		}
 		if (_loc8_)

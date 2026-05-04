@@ -79,17 +79,14 @@ class Shared.ListFilterer
 	function GetPrevFilterMatch(aiStartIndex)
 	{
 		var _loc3_;
-		var _loc2_;
 		if (aiStartIndex != undefined)
 		{
-			_loc2_ = aiStartIndex - 1;
-			while (_loc2_ >= 0 && _loc3_ == undefined)
+			for (var _loc2_ = aiStartIndex - 1; _loc2_ >= 0 && _loc3_ == undefined; _loc2_--)
 			{
 				if (this.EntryMatchesFunc(this._filterArray[_loc2_]))
 				{
 					_loc3_ = _loc2_;
 				}
-				_loc2_--;
 			}
 		}
 		return _loc3_;
@@ -98,17 +95,14 @@ class Shared.ListFilterer
 	function GetNextFilterMatch(aiStartIndex)
 	{
 		var _loc3_;
-		var _loc2_;
 		if (aiStartIndex != undefined)
 		{
-			_loc2_ = aiStartIndex + 1;
-			while (_loc2_ < this._filterArray.length && _loc3_ == undefined)
+			for (var _loc2_ = aiStartIndex + 1; _loc2_ < this._filterArray.length && _loc3_ == undefined; _loc2_++)
 			{
 				if (this.EntryMatchesFunc(this._filterArray[_loc2_]))
 				{
 					_loc3_ = _loc2_;
 				}
-				_loc2_++;
 			}
 		}
 		return _loc3_;

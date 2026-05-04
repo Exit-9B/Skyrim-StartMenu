@@ -7,11 +7,9 @@ class Shared.Proxy
 	static function create(oTarget, fFunction)
 	{
 		var aParameters = new Array();
-		var _loc2_ = 2;
-		while (_loc2_ < arguments.length)
+		for (var _loc2_ = 2; _loc2_ < arguments.length; _loc2_++)
 		{
 			aParameters[_loc2_ - 2] = arguments[_loc2_];
-			_loc2_++;
 		}
 		var _loc4_ = function()
 		{

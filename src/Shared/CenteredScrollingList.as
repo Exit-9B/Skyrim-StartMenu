@@ -106,14 +106,12 @@ class Shared.CenteredScrollingList extends BSScrollingList
 		var _loc6_ = 0;
 		var _loc2_ = this.filterer.ClampIndex(0);
 		this.iDividerIndex = -1;
-		var _loc7_ = 0;
-		while (_loc7_ < this.EntriesA.length)
+		for (var _loc7_ = 0; _loc7_ < this.EntriesA.length; _loc7_++)
 		{
 			if (this.IsDivider(this.EntriesA[_loc7_]))
 			{
 				this.iDividerIndex = _loc7_;
 			}
-			_loc7_++;
 		}
 		if (this.bRecenterSelection || this.iPlatform != 0)
 		{
@@ -123,18 +121,15 @@ class Shared.CenteredScrollingList extends BSScrollingList
 		{
 			this.iSelectedIndex = this.filterer.ClampIndex(this.iSelectedIndex);
 		}
-		var _loc9_ = 0;
-		while (_loc9_ < this.iScrollPosition - this.iNumTopHalfEntries)
+		for (var _loc9_ = 0; _loc9_ < this.iScrollPosition - this.iNumTopHalfEntries; _loc9_++)
 		{
 			this.EntriesA[_loc2_].clipIndex = undefined;
 			_loc2_ = this.filterer.GetNextFilterMatch(_loc2_);
-			_loc9_++;
 		}
 		this.iListItemsShown = 0;
 		this.iNumUnfilteredItems = 0;
-		var _loc4_ = 0;
 		var _loc5_;
-		while (_loc4_ < this.iNumTopHalfEntries)
+		for (var _loc4_ = 0; _loc4_ < this.iNumTopHalfEntries; _loc4_++)
 		{
 			_loc5_ = this.GetClipByIndex(_loc4_);
 			if (this.iScrollPosition - this.iNumTopHalfEntries + _loc4_ >= 0)
@@ -154,7 +149,6 @@ class Shared.CenteredScrollingList extends BSScrollingList
 			_loc5_._y = _loc10_ + _loc6_;
 			_loc6_ += _loc5_._height;
 			this.iListItemsShown++;
-			_loc4_++;
 		}
 		if (_loc2_ != undefined && (this.bRecenterSelection || this.iPlatform != 0))
 		{
@@ -176,24 +170,19 @@ class Shared.CenteredScrollingList extends BSScrollingList
 			}
 			_loc2_ = this.filterer.GetNextFilterMatch(_loc2_);
 		}
-		var _loc8_ = this.iListItemsShown;
-		while (_loc8_ < this.iMaxItemsShown)
+		for (var _loc8_ = this.iListItemsShown; _loc8_ < this.iMaxItemsShown; _loc8_++)
 		{
 			this.GetClipByIndex(_loc8_)._visible = false;
 			this.GetClipByIndex(_loc8_).itemIndex = undefined;
-			_loc8_++;
 		}
-		var _loc3_;
 		if (this.bMouseDrivenNav && !this.bRecenterSelection)
 		{
-			_loc3_ = Mouse.getTopMostEntity();
-			while (_loc3_ != undefined)
+			for (var _loc3_ = Mouse.getTopMostEntity(); _loc3_ != undefined; _loc3_ = _loc3_._parent)
 			{
 				if (_loc3_._parent == this && _loc3_._visible && _loc3_.itemIndex != undefined)
 				{
 					this.doSetSelectedIndex(_loc3_.itemIndex, 0);
 				}
-				_loc3_ = _loc3_._parent;
 			}
 		}
 		this.bRecenterSelection = false;
@@ -265,13 +254,11 @@ class Shared.CenteredScrollingList extends BSScrollingList
 
 	function onMouseWheel(delta)
 	{
-		var _loc2_;
 		var _loc4_;
 		var _loc3_;
 		if (!this.bDisableInput)
 		{
-			_loc2_ = Mouse.getTopMostEntity();
-			while (_loc2_ && _loc2_ != undefined)
+			for (var _loc2_ = Mouse.getTopMostEntity(); _loc2_ && _loc2_ != undefined; _loc2_ = _loc2_._parent)
 			{
 				if (_loc2_ == this)
 				{
@@ -306,7 +293,6 @@ class Shared.CenteredScrollingList extends BSScrollingList
 						}
 					}
 				}
-				_loc2_ = _loc2_._parent;
 			}
 			this.bMouseDrivenNav = true;
 		}

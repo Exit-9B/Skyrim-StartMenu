@@ -1,3 +1,7 @@
+import Shared.Proxy;
+import gfx.events.EventDispatcher;
+import gfx.io.GameDelegate;
+
 class SaveLoadPanel extends MovieClip
 {
 	var BackGamepadButton;
@@ -36,7 +40,7 @@ class SaveLoadPanel extends MovieClip
 	function SaveLoadPanel()
 	{
 		super();
-		gfx.events.EventDispatcher.initialize(this);
+		EventDispatcher.initialize(this);
 		this.SaveLoadList_mc = this.List_mc;
 		this.bSaving = true;
 		this.showCharacterBackHint = false;
@@ -51,10 +55,10 @@ class SaveLoadPanel extends MovieClip
 	{
 		this.ScreenshotLoader = new MovieClipLoader();
 		this.ScreenshotLoader.addListener(this);
-		gfx.io.GameDelegate.addCallBack("ConfirmOKToLoad", this, "onOKToLoadConfirm");
-		gfx.io.GameDelegate.addCallBack("onSaveLoadBatchComplete", this, "onSaveLoadBatchComplete");
-		gfx.io.GameDelegate.addCallBack("onFillCharacterListComplete", this, "onFillCharacterListComplete");
-		gfx.io.GameDelegate.addCallBack("ScreenshotReady", this, "ShowScreenshot");
+		GameDelegate.addCallBack("ConfirmOKToLoad", this, "onOKToLoadConfirm");
+		GameDelegate.addCallBack("onSaveLoadBatchComplete", this, "onSaveLoadBatchComplete");
+		GameDelegate.addCallBack("onFillCharacterListComplete", this, "onFillCharacterListComplete");
+		GameDelegate.addCallBack("ScreenshotReady", this, "ShowScreenshot");
 		this.SaveLoadList_mc.addEventListener("itemPress", this, "onSaveLoadItemPress");
 		this.SaveLoadList_mc.addEventListener("selectionChange", this, "onSaveLoadItemHighlight");
 		this.iBatchSize = this.SaveLoadList_mc.maxEntries;
@@ -109,8 +113,8 @@ class SaveLoadPanel extends MovieClip
 		{
 			this.BackMouseButton.SetPlatform(this.iPlatform);
 			this.SelectMouseButton.SetPlatform(this.iPlatform);
-			this.BackMouseButton.addEventListener("click", Shared.Proxy.create(this, this.OnBackClicked));
-			this.SelectMouseButton.addEventListener("click", Shared.Proxy.create(this, this.OnSelectClicked));
+			this.BackMouseButton.addEventListener("click", Proxy.create(this, this.OnBackClicked));
+			this.SelectMouseButton.addEventListener("click", Proxy.create(this, this.OnSelectClicked));
 			_loc2_ = this.SelectMouseButton.getBounds(this);
 			this.SelectMouseButton._x += this.CharacterSelectionHint_mc._x - _loc2_.xMin;
 		}
@@ -177,13 +181,13 @@ class SaveLoadPanel extends MovieClip
 				{
 					_loc2_ = 4294967295;
 				}
-				gfx.io.GameDelegate.call("CharacterSelected", [_loc2_, _loc3_, this.bSaving, this.SaveLoadList_mc.entryList, this.iBatchSize]);
+				GameDelegate.call("CharacterSelected", [_loc2_, _loc3_, this.bSaving, this.SaveLoadList_mc.entryList, this.iBatchSize]);
 				this.dispatchEvent({type:"OnCharacterSelected"});
 			}
 		}
 		else if (!this.bSaving)
 		{
-			gfx.io.GameDelegate.call("IsOKtoLoad", [this.SaveLoadList_mc.selectedIndex]);
+			GameDelegate.call("IsOKtoLoad", [this.SaveLoadList_mc.selectedIndex]);
 		}
 		else
 		{
@@ -213,7 +217,7 @@ class SaveLoadPanel extends MovieClip
 		this.isForceStopping = true;
 		if (this.uiSaveLoadManagerProcessedElements < this.uiSaveLoadManagerNumElementsToLoad)
 		{
-			gfx.io.GameDelegate.call("ForceStopSaveListLoading", []);
+			GameDelegate.call("ForceStopSaveListLoading", []);
 		}
 	}
 
@@ -257,11 +261,11 @@ class SaveLoadPanel extends MovieClip
 		this.iScreenshotTimerID = undefined;
 		if (this.bSaving)
 		{
-			gfx.io.GameDelegate.call("PrepSaveGameScreenshot", [this.SaveLoadList_mc.selectedIndex - 1, this.SaveLoadList_mc.selectedEntry]);
+			GameDelegate.call("PrepSaveGameScreenshot", [this.SaveLoadList_mc.selectedIndex - 1, this.SaveLoadList_mc.selectedEntry]);
 		}
 		else
 		{
-			gfx.io.GameDelegate.call("PrepSaveGameScreenshot", [this.SaveLoadList_mc.selectedIndex, this.SaveLoadList_mc.selectedEntry]);
+			GameDelegate.call("PrepSaveGameScreenshot", [this.SaveLoadList_mc.selectedIndex, this.SaveLoadList_mc.selectedEntry]);
 		}
 	}
 
@@ -403,11 +407,11 @@ class SaveLoadPanel extends MovieClip
 		{
 			if (this.bSaving)
 			{
-				gfx.io.GameDelegate.call("DeleteSave", [this.SaveLoadList_mc.selectedIndex - 1]);
+				GameDelegate.call("DeleteSave", [this.SaveLoadList_mc.selectedIndex - 1]);
 			}
 			else
 			{
-				gfx.io.GameDelegate.call("DeleteSave", [this.SaveLoadList_mc.selectedIndex]);
+				GameDelegate.call("DeleteSave", [this.SaveLoadList_mc.selectedIndex]);
 			}
 			this.SaveLoadList_mc.entryList.splice(this.SaveLoadList_mc.selectedIndex, 1);
 			this.SaveLoadList_mc.InvalidateData();

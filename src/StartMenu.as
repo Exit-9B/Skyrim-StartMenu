@@ -1,3 +1,9 @@
+import Shared.GlobalFunc;
+import Shared.Proxy;
+import gfx.io.GameDelegate;
+import gfx.ui.NavigationCode;
+import gfx.managers.FocusHandler;
+
 class StartMenu extends MovieClip
 {
 	var BottomButtons_mc;
@@ -121,8 +127,8 @@ class StartMenu extends MovieClip
 		this._Header_tf = this._MessageOfTheDay_mc.Header_tf;
 		this._Motd_tf = this._MessageOfTheDay_mc.Motd_tf;
 		_root.CodeObj = this.codeObj = new Object();
-		_root.ReleaseCodeObject = Shared.Proxy.create(this, this.ReleaseCodeObject);
-		_root.onCodeObjectInit = Shared.Proxy.create(this, this.onCodeObjectInit);
+		_root.ReleaseCodeObject = Proxy.create(this, this.ReleaseCodeObject);
+		_root.onCodeObjectInit = Proxy.create(this, this.onCodeObjectInit);
 		this.CharacterSelectionHint = this.SaveLoadListHolder.CharacterSelectionHint_mc;
 		this.ShowCharacterSelectionHint(false);
 		_root.Error_NotSignedInOrbis = this.Error_NotSignedInOrbis.text;
@@ -132,13 +138,13 @@ class StartMenu extends MovieClip
 		this.Error_AgeRestrictOrbis._x = StartMenu.OUT_OF_THE_STAGE;
 		this.Error_NeedUpdateOrbis._x = StartMenu.OUT_OF_THE_STAGE;
 		var _loc5_ = new Object();
-		_loc5_.onLoadInit = Shared.Proxy.create(this, this.OnLoginLoadInit);
+		_loc5_.onLoadInit = Proxy.create(this, this.OnLoginLoadInit);
 		var _loc4_ = new MovieClipLoader();
 		_loc4_.addListener(_loc5_);
 		_loc4_.loadClip("BethesdaNetLogin.swf", this._LoginHolder_mc);
 		this._Header_tf.textAutoSize = "shrink";
 		this.SetMotd("");
-		this.onEnterFrame = Shared.Proxy.create(this, this.Init);
+		this.onEnterFrame = Proxy.create(this, this.Init);
 	}
 
 	function Init()
@@ -152,7 +158,7 @@ class StartMenu extends MovieClip
 	function OnLoginLoadInit(mc)
 	{
 		mc._visible = false;
-		mc.onEnterFrame = Shared.Proxy.create(this, this.OnLoginLoadInitFinished, mc);
+		mc.onEnterFrame = Proxy.create(this, this.OnLoginLoadInitFinished, mc);
 	}
 
 	function OnLoginLoadInitFinished(mc)
@@ -168,8 +174,8 @@ class StartMenu extends MovieClip
 			this._LoginMenu.CodeObject = this.codeObj;
 			this._LoginMenu.SetPlatform(this.iPlatform, this.PS3Switch);
 			this._LoginMenu.SetBottomButtons(this._BottomButtons_mc);
-			this._LoginMenu.addEventListener(BethesdaNetLogin.LOGIN_CANCELED, Shared.Proxy.create(this, this.onLoginCanceled));
-			this._LoginMenu.addEventListener(BethesdaNetLogin.LOGIN_ERROR, Shared.Proxy.create(this, this.onLoginError));
+			this._LoginMenu.addEventListener(BethesdaNetLogin.LOGIN_CANCELED, Proxy.create(this, this.onLoginCanceled));
+			this._LoginMenu.addEventListener(BethesdaNetLogin.LOGIN_ERROR, Proxy.create(this, this.onLoginError));
 			this.codeObj.initLogin(this, this._LoginMenu);
 			if (this.strCurrentState == StartMenu.LOGIN_STATE)
 			{
@@ -197,7 +203,7 @@ class StartMenu extends MovieClip
 	function InitExtensions()
 	{
 		trace("StartMenu::InitExtensions");
-		Shared.GlobalFunc.SetLockFunction();
+		GlobalFunc.SetLockFunction();
 		this._parent.Lock("BR");
 		this.Logo_mc.Lock("BL");
 		this.Logo_mc._y -= 80;
@@ -207,19 +213,19 @@ class StartMenu extends MovieClip
 		this.GamerIconSize = this.GamerIcon_mc._width;
 		this.GamerIconLoader = new MovieClipLoader();
 		this.GamerIconLoader.addListener(this);
-		gfx.io.GameDelegate.addCallBack("sendMenuProperties", this, "setupMainMenu");
-		gfx.io.GameDelegate.addCallBack("ConfirmNewGame", this, "ShowConfirmScreen");
-		gfx.io.GameDelegate.addCallBack("ConfirmContinue", this, "ShowConfirmScreen");
-		gfx.io.GameDelegate.addCallBack("FadeOutMenu", this, "DoFadeOutMenu");
-		gfx.io.GameDelegate.addCallBack("FadeInMenu", this, "DoFadeInMenu");
-		gfx.io.GameDelegate.addCallBack("onProfileChange", this, "onProfileChange");
-		gfx.io.GameDelegate.addCallBack("StartLoadingDLC", this, "StartLoadingDLC");
-		gfx.io.GameDelegate.addCallBack("DoneLoadingDLC", this, "DoneLoadingDLC");
-		gfx.io.GameDelegate.addCallBack("ShowGamerTagAndIcon", this, "ShowGamerTagAndIcon");
-		gfx.io.GameDelegate.addCallBack("OnDeleteSaveUISanityCheck", this, "OnDeleteSaveUISanityCheck");
-		gfx.io.GameDelegate.addCallBack("OnSaveDataEventLoadSUCCESS", this, "OnSaveDataEventLoadSUCCESS");
-		gfx.io.GameDelegate.addCallBack("OnSaveDataEventLoadCANCEL", this, "OnSaveDataEventLoadCANCEL");
-		gfx.io.GameDelegate.addCallBack("onStartButtonProcessFinished", this, "onStartButtonProcessFinished");
+		GameDelegate.addCallBack("sendMenuProperties", this, "setupMainMenu");
+		GameDelegate.addCallBack("ConfirmNewGame", this, "ShowConfirmScreen");
+		GameDelegate.addCallBack("ConfirmContinue", this, "ShowConfirmScreen");
+		GameDelegate.addCallBack("FadeOutMenu", this, "DoFadeOutMenu");
+		GameDelegate.addCallBack("FadeInMenu", this, "DoFadeInMenu");
+		GameDelegate.addCallBack("onProfileChange", this, "onProfileChange");
+		GameDelegate.addCallBack("StartLoadingDLC", this, "StartLoadingDLC");
+		GameDelegate.addCallBack("DoneLoadingDLC", this, "DoneLoadingDLC");
+		GameDelegate.addCallBack("ShowGamerTagAndIcon", this, "ShowGamerTagAndIcon");
+		GameDelegate.addCallBack("OnDeleteSaveUISanityCheck", this, "OnDeleteSaveUISanityCheck");
+		GameDelegate.addCallBack("OnSaveDataEventLoadSUCCESS", this, "OnSaveDataEventLoadSUCCESS");
+		GameDelegate.addCallBack("OnSaveDataEventLoadCANCEL", this, "OnSaveDataEventLoadCANCEL");
+		GameDelegate.addCallBack("onStartButtonProcessFinished", this, "onStartButtonProcessFinished");
 		this.MainList.addEventListener("itemPress", this, "onMainButtonPress");
 		this.MainList.addEventListener("listPress", this, "onMainListPress");
 		this.MainList.addEventListener("listMovedUp", this, "onMainListMoveUp");
@@ -239,7 +245,7 @@ class StartMenu extends MovieClip
 		this.SaveLoadListHolder.addEventListener("saveListOnBatchAdded", this, "OnSaveListBatchAdded");
 		this.SaveLoadListHolder.addEventListener("OnCharacterSelected", this, "OnCharacterSelected");
 		this.SaveLoadListHolder.addEventListener("saveHighlighted", this, "onSaveHighlight");
-		this.SaveLoadListHolder.addEventListener("OnSaveLoadPanelBackClicked", Shared.Proxy.create(this, this.OnSaveLoadPanelBackClicked));
+		this.SaveLoadListHolder.addEventListener("OnSaveLoadPanelBackClicked", Proxy.create(this, this.OnSaveLoadPanelBackClicked));
 		this.SaveLoadListHolder.List_mc.addEventListener("listPress", this, "onSaveLoadListPress");
 		this.DeleteSaveButton._alpha = StartMenu.ALPHA_AVAILABLE;
 		this.DeleteMouseButton._alpha = StartMenu.ALPHA_AVAILABLE;
@@ -248,7 +254,7 @@ class StartMenu extends MovieClip
 		this.DeleteMouseButton._x = this.DeleteSaveButton._x;
 		this.ChangeUserButton._x = - this.ChangeUserButton.textField.textWidth - StartMenu.LOADING_ICON_OFFSET;
 		this.DLCList_mc._visible = false;
-		this.CharacterSelectionHint.addEventListener("OnMousePressCharacterChange", Shared.Proxy.create(this, this.OnMousePressCharacterChange));
+		this.CharacterSelectionHint.addEventListener("OnMousePressCharacterChange", Proxy.create(this, this.OnMousePressCharacterChange));
 	}
 
 	function setupMainMenu()
@@ -365,7 +371,7 @@ class StartMenu extends MovieClip
 	{
 		if (strGamerTag.length > 0)
 		{
-			Shared.GlobalFunc.MaintainTextFormat();
+			GlobalFunc.MaintainTextFormat();
 			this.GamerTag_mc.GamerTagText_tf.text = strGamerTag;
 			this.GamerTag_mc.visible = true;
 			this.GamerIconRect = this.GamerIcon_mc.createEmptyMovieClip("GamerIconRect", this.getNextHighestDepth());
@@ -458,7 +464,7 @@ class StartMenu extends MovieClip
 
 	function set currentState(strNewState)
 	{
-		gfx.io.GameDelegate.call("currentState", [strNewState]);
+		GameDelegate.call("currentState", [strNewState]);
 		if (strNewState == StartMenu.MAIN_STATE)
 		{
 			this.MainList.disableSelection = false;
@@ -499,24 +505,24 @@ class StartMenu extends MovieClip
 		var _loc3_;
 		if (this.IsPlatformSony() && this.currentState == StartMenu.PRESS_START_STATE)
 		{
-			if (Shared.GlobalFunc.IsKeyPressed(details))
+			if (GlobalFunc.IsKeyPressed(details))
 			{
-				gfx.io.GameDelegate.call("EndPressStartState", []);
+				GameDelegate.call("EndPressStartState", []);
 			}
 		}
 		else if (pathToFocus.length > 0 && !pathToFocus[0].handleInput(details, pathToFocus.slice(1)))
 		{
-			if (Shared.GlobalFunc.IsKeyPressed(details) && this.ShouldProcessInputs)
+			if (GlobalFunc.IsKeyPressed(details) && this.ShouldProcessInputs)
 			{
-				if (details.navEquivalent == gfx.ui.NavigationCode.ENTER)
+				if (details.navEquivalent == NavigationCode.ENTER)
 				{
 					this.onAcceptPress();
 				}
-				else if (details.navEquivalent == gfx.ui.NavigationCode.TAB)
+				else if (details.navEquivalent == NavigationCode.TAB)
 				{
 					this.onCancelPress();
 				}
-				else if ((details.navEquivalent == gfx.ui.NavigationCode.GAMEPAD_X || details.code == 88) && this.DeleteSaveButton._visible && this.DeleteSaveButton._alpha == StartMenu.ALPHA_AVAILABLE)
+				else if ((details.navEquivalent == NavigationCode.GAMEPAD_X || details.code == 88) && this.DeleteSaveButton._visible && this.DeleteSaveButton._alpha == StartMenu.ALPHA_AVAILABLE)
 				{
 					if (this.IsPlatformSony())
 					{
@@ -534,31 +540,31 @@ class StartMenu extends MovieClip
 								_loc3_ = 4294967295;
 							}
 						}
-						gfx.io.GameDelegate.call("ORBISDeleteSave", [_loc3_, _loc4_]);
+						GameDelegate.call("ORBISDeleteSave", [_loc3_, _loc4_]);
 					}
 					else
 					{
 						this.ConfirmDeleteSave();
 					}
 				}
-				else if ((details.navEquivalent == gfx.ui.NavigationCode.GAMEPAD_Y || details.code == 84) && this.strCurrentState == StartMenu.SAVE_LOAD_STATE && !this.SaveLoadListHolder.isSaving)
+				else if ((details.navEquivalent == NavigationCode.GAMEPAD_Y || details.code == 84) && this.strCurrentState == StartMenu.SAVE_LOAD_STATE && !this.SaveLoadListHolder.isSaving)
 				{
-					gfx.io.GameDelegate.call("PlaySound", ["UIMenuCancel"]);
+					GameDelegate.call("PlaySound", ["UIMenuCancel"]);
 					this.EndState();
 				}
-				else if ((details.navEquivalent == gfx.ui.NavigationCode.GAMEPAD_X || details.code == 88) && this.currentState == StartMenu.MAIN_STATE)
+				else if ((details.navEquivalent == NavigationCode.GAMEPAD_X || details.code == 88) && this.currentState == StartMenu.MAIN_STATE)
 				{
-					gfx.io.GameDelegate.call("Sky10DLCPressed", []);
+					GameDelegate.call("Sky10DLCPressed", []);
 				}
-				else if (details.navEquivalent == gfx.ui.NavigationCode.GAMEPAD_Y && this.currentState == StartMenu.DLC_STATE && this.MarketplaceButton._visible && this.MarketplaceButton._alpha == StartMenu.ALPHA_AVAILABLE)
+				else if (details.navEquivalent == NavigationCode.GAMEPAD_Y && this.currentState == StartMenu.DLC_STATE && this.MarketplaceButton._visible && this.MarketplaceButton._alpha == StartMenu.ALPHA_AVAILABLE)
 				{
 					this.SaveLoadConfirmText.textField.SetText("$Open Xbox LIVE Marketplace?");
 					this.SetPlatform(this.iPlatform, this.PS3Switch);
 					this.StartState(StartMenu.MARKETPLACE_CONFIRM_STATE);
 				}
-				else if (details.navEquivalent == gfx.ui.NavigationCode.GAMEPAD_Y && this.currentState == StartMenu.MAIN_STATE && this.ChangeUserButton._visible)
+				else if (details.navEquivalent == NavigationCode.GAMEPAD_Y && this.currentState == StartMenu.MAIN_STATE && this.ChangeUserButton._visible)
 				{
-					gfx.io.GameDelegate.call("ChangeUser", []);
+					GameDelegate.call("ChangeUser", []);
 				}
 			}
 		}
@@ -575,7 +581,7 @@ class StartMenu extends MovieClip
 
 	function onMouseButtonDeleteRollOver()
 	{
-		gfx.io.GameDelegate.call("PlaySound", ["UIMenuFocus"]);
+		GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 	}
 
 	function onStartButtonProcessFinished()
@@ -590,32 +596,32 @@ class StartMenu extends MovieClip
 			case StartMenu.MAIN_CONFIRM_STATE:
 				if (this.MainList.selectedEntry.index == StartMenu.NEW_INDEX)
 				{
-					gfx.io.GameDelegate.call("PlaySound", ["UIStartNewGame"]);
+					GameDelegate.call("PlaySound", ["UIStartNewGame"]);
 					this.FadeOutAndCall("StartNewGame");
 				}
 				else if (this.MainList.selectedEntry.index == StartMenu.CONTINUE_INDEX)
 				{
-					gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+					GameDelegate.call("PlaySound", ["UIMenuOK"]);
 					this.FadeOutAndCall("ContinueLastSavedGame");
 				}
 				else if (this.MainList.selectedEntry.index == StartMenu.QUIT_INDEX)
 				{
-					gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
-					gfx.io.GameDelegate.call("QuitToDesktop", []);
+					GameDelegate.call("PlaySound", ["UIMenuOK"]);
+					GameDelegate.call("QuitToDesktop", []);
 				}
 				break;
 			case StartMenu.CHARACTER_SELECTION_STATE:
-				gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+				GameDelegate.call("PlaySound", ["UIMenuOK"]);
 				break;
 			case StartMenu.SAVE_LOAD_CONFIRM_STATE:
-				gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+				GameDelegate.call("PlaySound", ["UIMenuOK"]);
 				this.FadeOutAndCall("LoadGame", [this.SaveLoadListHolder.selectedIndex]);
 				break;
 			case StartMenu.DELETE_SAVE_CONFIRM_STATE:
 				this.SaveLoadListHolder.DeleteSelectedSave();
 				if (this.SaveLoadListHolder.numSaves == 0)
 				{
-					gfx.io.GameDelegate.call("DoDeleteSaveUISanityCheck", []);
+					GameDelegate.call("DoDeleteSaveUISanityCheck", []);
 					this.StartState(StartMenu.MAIN_STATE);
 				}
 				else
@@ -624,8 +630,8 @@ class StartMenu extends MovieClip
 				}
 				break;
 			case StartMenu.MARKETPLACE_CONFIRM_STATE:
-				gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
-				gfx.io.GameDelegate.call("OpenMarketplace", []);
+				GameDelegate.call("PlaySound", ["UIMenuOK"]);
+				GameDelegate.call("OpenMarketplace", []);
 				this.StartState(StartMenu.MAIN_STATE);
 			default:
 				return;
@@ -647,7 +653,7 @@ class StartMenu extends MovieClip
 
 	function OnMousePressCharacterChange(evt)
 	{
-		gfx.io.GameDelegate.call("PlaySound", ["UIMenuCancel"]);
+		GameDelegate.call("PlaySound", ["UIMenuCancel"]);
 		this.EndState();
 	}
 
@@ -675,7 +681,7 @@ class StartMenu extends MovieClip
 			case StartMenu.DELETE_SAVE_CONFIRM_STATE:
 			case StartMenu.DLC_STATE:
 			case StartMenu.MARKETPLACE_CONFIRM_STATE:
-				gfx.io.GameDelegate.call("PlaySound", ["UIMenuCancel"]);
+				GameDelegate.call("PlaySound", ["UIMenuCancel"]);
 				this.EndState();
 			default:
 				return;
@@ -689,16 +695,16 @@ class StartMenu extends MovieClip
 			switch (event.entry.index)
 			{
 				case StartMenu.CONTINUE_INDEX:
-					gfx.io.GameDelegate.call("CONTINUE", []);
-					gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+					GameDelegate.call("CONTINUE", []);
+					GameDelegate.call("PlaySound", ["UIMenuOK"]);
 					return;
 				case StartMenu.NEW_INDEX:
-					gfx.io.GameDelegate.call("NEW", []);
-					gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+					GameDelegate.call("NEW", []);
+					GameDelegate.call("PlaySound", ["UIMenuOK"]);
 					return;
 				case StartMenu.QUIT_INDEX:
 					this.ShowConfirmScreen("$Quit to desktop?  Any unsaved progress will be lost.");
-					gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+					GameDelegate.call("PlaySound", ["UIMenuOK"]);
 					return;
 				case StartMenu.LOAD_INDEX:
 					if (!event.entry.disabled)
@@ -708,12 +714,12 @@ class StartMenu extends MovieClip
 					}
 					else
 					{
-						gfx.io.GameDelegate.call("OnDisabledLoadPress", []);
+						GameDelegate.call("OnDisabledLoadPress", []);
 					}
 					return;
 				case StartMenu.PS5_DATA_TRANSFER_INDEX:
-					gfx.io.GameDelegate.call("OnPS5DataTransfer", []);
-					gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+					GameDelegate.call("OnPS5DataTransfer", []);
+					GameDelegate.call("PlaySound", ["UIMenuOK"]);
 					return;
 				case StartMenu.DLC_INDEX:
 					this.StartState(StartMenu.DLC_STATE);
@@ -723,24 +729,24 @@ class StartMenu extends MovieClip
 					this.FadeOutAndCall("OpenCreditsMenu");
 					return;
 				case StartMenu.HELP_INDEX:
-					gfx.io.GameDelegate.call("HELP", []);
-					gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+					GameDelegate.call("HELP", []);
+					GameDelegate.call("PlaySound", ["UIMenuOK"]);
 					return;
 				case StartMenu.MOD_INDEX:
 					if (this._ModsAllowedByBnet)
 					{
 						this._MessageOfTheDay_mc.visible = false;
-						gfx.io.GameDelegate.call("MOD", []);
-						gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+						GameDelegate.call("MOD", []);
+						GameDelegate.call("PlaySound", ["UIMenuOK"]);
 					}
 					else
 					{
 						this.codeObj.ModsBlockedByBnet();
-						gfx.io.GameDelegate.call("PlaySound", ["UIMenuCancel"]);
+						GameDelegate.call("PlaySound", ["UIMenuCancel"]);
 					}
 					return;
 				case StartMenu.SKY10_UPSELL_INDEX:
-					gfx.io.GameDelegate.call("Sky10DLCPressed", []);
+					GameDelegate.call("Sky10DLCPressed", []);
 					return;
 				case StartMenu.CREATION_CLUB_INDEX:
 					if (this._CClubAllowedByBnet)
@@ -748,30 +754,30 @@ class StartMenu extends MovieClip
 						if (this._UserCanAccessCreationClub)
 						{
 							this._MessageOfTheDay_mc.visible = false;
-							gfx.io.GameDelegate.call("CreationClub", []);
-							gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+							GameDelegate.call("CreationClub", []);
+							GameDelegate.call("PlaySound", ["UIMenuOK"]);
 						}
 						else
 						{
 							this.codeObj.CClubBlockedByPermissions();
-							gfx.io.GameDelegate.call("PlaySound", ["UIMenuCancel"]);
+							GameDelegate.call("PlaySound", ["UIMenuCancel"]);
 						}
 					}
 					else
 					{
 						this.codeObj.CClubBlockedByBnet();
-						gfx.io.GameDelegate.call("PlaySound", ["UIMenuCancel"]);
+						GameDelegate.call("PlaySound", ["UIMenuCancel"]);
 					}
 					return;
 				case StartMenu.DOWNLOAD_ALL_INDEX:
 					if (!event.entry.disabled)
 					{
-						gfx.io.GameDelegate.call("DownloadAll", []);
+						GameDelegate.call("DownloadAll", []);
 					}
-					gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+					GameDelegate.call("PlaySound", ["UIMenuOK"]);
 					return;
 				default:
-					gfx.io.GameDelegate.call("PlaySound", ["UIMenuCancel"]);
+					GameDelegate.call("PlaySound", ["UIMenuCancel"]);
 					return;
 			}
 		}
@@ -779,7 +785,7 @@ class StartMenu extends MovieClip
 
 	function RequestCharacterListLoad()
 	{
-		gfx.io.GameDelegate.call("PopulateCharacterList", [this.SaveLoadListHolder.List_mc.entryList, this.SaveLoadListHolder.batchSize]);
+		GameDelegate.call("PopulateCharacterList", [this.SaveLoadListHolder.List_mc.entryList, this.SaveLoadListHolder.batchSize]);
 		this.StartState(StartMenu.CHARACTER_LOAD_STATE);
 	}
 
@@ -792,11 +798,11 @@ class StartMenu extends MovieClip
 	{
 		if (event.index == 0)
 		{
-			gfx.io.GameDelegate.call("QuitToMainMenu", []);
+			GameDelegate.call("QuitToMainMenu", []);
 		}
 		else if (event.index == 1)
 		{
-			gfx.io.GameDelegate.call("QuitToDesktop", []);
+			GameDelegate.call("QuitToDesktop", []);
 		}
 	}
 
@@ -807,7 +813,7 @@ class StartMenu extends MovieClip
 
 	function onMainListMoveUp(event)
 	{
-		gfx.io.GameDelegate.call("PlaySound", ["UIMenuFocus"]);
+		GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 		if (event.scrollChanged == true)
 		{
 			this.MainList._parent.gotoAndPlay("moveUp");
@@ -816,7 +822,7 @@ class StartMenu extends MovieClip
 
 	function onMainListMoveDown(event)
 	{
-		gfx.io.GameDelegate.call("PlaySound", ["UIMenuFocus"]);
+		GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 		if (event.scrollChanged == true)
 		{
 			this.MainList._parent.gotoAndPlay("moveDown");
@@ -827,7 +833,7 @@ class StartMenu extends MovieClip
 	{
 		if (event.keyboardOrMouse == 0 && event.index != -1)
 		{
-			gfx.io.GameDelegate.call("PlaySound", ["UIMenuFocus"]);
+			GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 		}
 	}
 
@@ -846,15 +852,15 @@ class StartMenu extends MovieClip
 			this.DeleteMouseButton._x = this.DeleteButton._x;
 			this.DeleteMouseButton.trackAsMenu = true;
 			this.DeleteSaveButton = this.DeleteMouseButton;
-			this.DeleteSaveButton.onPress = Shared.Proxy.create(this, this.onMouseButtonDeleteSaveClick);
-			this.DeleteSaveButton.addEventListener("rollOver", Shared.Proxy.create(this, this.onMouseButtonDeleteRollOver));
+			this.DeleteSaveButton.onPress = Proxy.create(this, this.onMouseButtonDeleteSaveClick);
+			this.DeleteSaveButton.addEventListener("rollOver", Proxy.create(this, this.onMouseButtonDeleteRollOver));
 		}
 		else if (aiPlatform == StartMenu.PLATFORM_PC_GAMEPAD && this.DeleteSaveButton == this.DeleteMouseButton)
 		{
 			this.DeleteSaveButton._visible = false;
 			this.DeleteSaveButton = this.DeleteButton;
 			this.DeleteSaveButton.onPress = undefined;
-			this.DeleteMouseButton.removeEventListeners("rollOver", Shared.Proxy.create(this, this.onMouseButtonDeleteRollOver));
+			this.DeleteMouseButton.removeEventListeners("rollOver", Proxy.create(this, this.onMouseButtonDeleteRollOver));
 		}
 		else
 		{
@@ -899,7 +905,7 @@ class StartMenu extends MovieClip
 		this.strFadeOutCallback = strCallback;
 		this.fadeOutParams = paramList;
 		this._parent.gotoAndPlay("fadeOut");
-		gfx.io.GameDelegate.call("fadeOutStarted", []);
+		GameDelegate.call("fadeOutStarted", []);
 	}
 
 	function onFadeOutCompletion()
@@ -908,18 +914,18 @@ class StartMenu extends MovieClip
 		{
 			if (this.fadeOutParams != undefined)
 			{
-				gfx.io.GameDelegate.call(this.strFadeOutCallback, this.fadeOutParams);
+				GameDelegate.call(this.strFadeOutCallback, this.fadeOutParams);
 			}
 			else
 			{
-				gfx.io.GameDelegate.call(this.strFadeOutCallback, []);
+				GameDelegate.call(this.strFadeOutCallback, []);
 			}
 		}
 	}
 
 	function StartState(strStateName)
 	{
-		gfx.io.GameDelegate.call("StartState", [strStateName]);
+		GameDelegate.call("StartState", [strStateName]);
 		this.ShouldProcessInputs = false;
 		if (strStateName == StartMenu.LOGIN_STATE)
 		{
@@ -953,7 +959,7 @@ class StartMenu extends MovieClip
 		this.SaveLoadListHolder.ShowSelectionButtons(false);
 		this.strCurrentState = strStateName + StartMenu.START_ANIM_STR;
 		this.gotoAndPlay(this.strCurrentState);
-		gfx.managers.FocusHandler.instance.setFocus(this, 0);
+		FocusHandler.instance.setFocus(this, 0);
 	}
 
 	function EndState()
@@ -988,23 +994,23 @@ class StartMenu extends MovieClip
 		switch (strNewState)
 		{
 			case StartMenu.MAIN_STATE:
-				gfx.managers.FocusHandler.instance.setFocus(this.MainList, 0);
+				FocusHandler.instance.setFocus(this.MainList, 0);
 				break;
 			case StartMenu.CHARACTER_SELECTION_STATE:
 			case StartMenu.SAVE_LOAD_STATE:
-				gfx.managers.FocusHandler.instance.setFocus(this.SaveLoadListHolder.List_mc, 0);
+				FocusHandler.instance.setFocus(this.SaveLoadListHolder.List_mc, 0);
 				this.SaveLoadListHolder.List_mc.disableSelection = false;
 				break;
 			case StartMenu.DLC_STATE:
 				this.iLoadDLCListTimerID = setInterval(this, "DoLoadDLCList", 500);
-				gfx.managers.FocusHandler.instance.setFocus(this.DLCList_mc, 0);
+				FocusHandler.instance.setFocus(this.DLCList_mc, 0);
 				break;
 			case StartMenu.MAIN_CONFIRM_STATE:
 			case StartMenu.SAVE_LOAD_CONFIRM_STATE:
 			case StartMenu.DELETE_SAVE_CONFIRM_STATE:
 			case StartMenu.PRESS_START_STATE:
 			case StartMenu.MARKETPLACE_CONFIRM_STATE:
-				gfx.managers.FocusHandler.instance.setFocus(this.ButtonRect, 0);
+				FocusHandler.instance.setFocus(this.ButtonRect, 0);
 			default:
 				return;
 		}
@@ -1021,12 +1027,12 @@ class StartMenu extends MovieClip
 	{
 		if (this.SaveLoadListHolder.numSaves > 0 && this.strCurrentState.indexOf(StartMenu.SAVE_LOAD_STATE) == -1)
 		{
-			gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+			GameDelegate.call("PlaySound", ["UIMenuOK"]);
 			this.StartState(StartMenu.SAVE_LOAD_STATE);
 		}
 		else
 		{
-			gfx.io.GameDelegate.call("PlaySound", ["UIMenuCancel"]);
+			GameDelegate.call("PlaySound", ["UIMenuCancel"]);
 		}
 	}
 
@@ -1036,12 +1042,12 @@ class StartMenu extends MovieClip
 		{
 			this.SaveLoadListHolder.isShowingCharacterList = true;
 			this.ShowCharacterSelectionHint(false);
-			gfx.io.GameDelegate.call("PlaySound", ["UIMenuOK"]);
+			GameDelegate.call("PlaySound", ["UIMenuOK"]);
 			this.StartState(StartMenu.CHARACTER_SELECTION_STATE);
 		}
 		else
 		{
-			gfx.io.GameDelegate.call("PlaySound", ["UIMenuCancel"]);
+			GameDelegate.call("PlaySound", ["UIMenuCancel"]);
 		}
 	}
 
@@ -1066,7 +1072,7 @@ class StartMenu extends MovieClip
 		this.DeleteSaveButton._alpha = event.index != -1 ? StartMenu.ALPHA_AVAILABLE : StartMenu.ALPHA_DISABLED;
 		if (this.iPlatform == 0)
 		{
-			gfx.io.GameDelegate.call("PlaySound", ["UIMenuFocus"]);
+			GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 		}
 	}
 
@@ -1139,7 +1145,7 @@ class StartMenu extends MovieClip
 	function onLoadingDLCMessageFadeCompletion()
 	{
 		clearInterval(this.iLoadDLCContentMessageTimerID);
-		gfx.io.GameDelegate.call("DoLoadDLCPlugins", []);
+		GameDelegate.call("DoLoadDLCPlugins", []);
 	}
 
 	function DoneLoadingDLC()
@@ -1151,7 +1157,7 @@ class StartMenu extends MovieClip
 	{
 		clearInterval(this.iLoadDLCListTimerID);
 		this.DLCList_mc.entryList.splice(0, this.DLCList_mc.entryList.length);
-		gfx.io.GameDelegate.call("LoadDLC", [this.DLCList_mc.entryList], this, "UpdateDLCPanel");
+		GameDelegate.call("LoadDLC", [this.DLCList_mc.entryList], this, "UpdateDLCPanel");
 	}
 
 	function UpdateDLCPanel(abMarketplaceAvail, abNewDLCAvail)

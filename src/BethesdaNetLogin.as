@@ -1,3 +1,8 @@
+import Shared.GlobalFunc;
+import Shared.Proxy;
+import gfx.events.EventDispatcher;
+import gfx.ui.NavigationCode;
+
 class BethesdaNetLogin extends MovieClip
 {
 	var AcceptButton;
@@ -57,19 +62,19 @@ class BethesdaNetLogin extends MovieClip
 	function BethesdaNetLogin()
 	{
 		super();
-		gfx.events.EventDispatcher.initialize(this);
+		EventDispatcher.initialize(this);
 		_global.gfxExtensions = true;
-		Shared.GlobalFunc.MaintainTextFormat();
+		GlobalFunc.MaintainTextFormat();
 		this.constructed = true;
 		this._QuickAcctAcceptedEULAIDs = new Array();
 		this.EULAPagesA = new Array();
 		this.Error_NotSignedInOrbis._visible = false;
 		this.EULAPage_mc.focusEnabled = true;
 		var _loc4_ = new Object();
-		_loc4_.onMouseWheel = Shared.Proxy.create(this, this.onMouseWheel);
+		_loc4_.onMouseWheel = Proxy.create(this, this.onMouseWheel);
 		Mouse.addListener(_loc4_);
-		this.EULAPage_mc.ScrollUp.onRelease = Shared.Proxy.create(this, this.onEULAScrollUpClicked);
-		this.EULAPage_mc.ScrollDown.onRelease = Shared.Proxy.create(this, this.onEULAScrollDownClicked);
+		this.EULAPage_mc.ScrollUp.onRelease = Proxy.create(this, this.onEULAScrollUpClicked);
+		this.EULAPage_mc.ScrollDown.onRelease = Proxy.create(this, this.onEULAScrollDownClicked);
 		this.UpdateEULAScrollIndicators();
 		this.NewAccountPage_mc.Error_tf.textAutoSize = "shrink";
 		this.NewAccountPage_mc.LoginHeader_tf.textAutoSize = "shrink";
@@ -108,9 +113,9 @@ class BethesdaNetLogin extends MovieClip
 		{
 			this.LoginPage_mc.UsernameInput_tf.text = "";
 		}
-		this.LoginPage_mc.UsernameInput_tf.onChanged = Shared.Proxy.create(this, this.OnUsernameFieldUpdate);
+		this.LoginPage_mc.UsernameInput_tf.onChanged = Proxy.create(this, this.OnUsernameFieldUpdate);
 		this.LoginPage_mc.PasswordInput_tf.text = "";
-		this.LoginPage_mc.PasswordInput_tf.onChanged = Shared.Proxy.create(this, this.OnPasswordFieldUpdate);
+		this.LoginPage_mc.PasswordInput_tf.onChanged = Proxy.create(this, this.OnPasswordFieldUpdate);
 		this.LoginPage_mc.UsernameGrayText_tf._visible = this.LoginPage_mc.UsernameInput_tf.text.length <= 0;
 		this.LoginPage_mc.PasswordGrayText_tf._visible = this.LoginPage_mc.PasswordInput_tf.text.length <= 0;
 		Selection.setFocus(this.LoginPage_mc.UsernameInput_tf);
@@ -192,7 +197,7 @@ class BethesdaNetLogin extends MovieClip
 				this.LoginPage_mc.UsernameInput_tf.SetText(astrEnteredText, false);
 				Selection.setFocus(this.LoginPage_mc.PasswordInput_tf);
 				this.LoginPage_mc.PasswordGrayText_tf._visible = false;
-				setTimeout(Shared.Proxy.create(this, this.onNextEditTimerDone), 1000);
+				setTimeout(Proxy.create(this, this.onNextEditTimerDone), 1000);
 			}
 			else if (Selection.getFocus() == targetPath(this.LoginPage_mc.PasswordInput_tf))
 			{
@@ -265,7 +270,7 @@ class BethesdaNetLogin extends MovieClip
 	function SetBottomButtons(buttons)
 	{
 		this.bottomButtons = buttons;
-		this.bottomButtons.addEventListener(BottomButtons.BUTTON_CLICKED, Shared.Proxy.create(this, this.OnBottomButtonClicked));
+		this.bottomButtons.addEventListener(BottomButtons.BUTTON_CLICKED, Proxy.create(this, this.OnBottomButtonClicked));
 		this.bottomButtons.SetButtons([BethesdaNetLogin.NEXT, BottomButtons.ACCEPT, BethesdaNetLogin.CONSOLE_EMAIL, BethesdaNetLogin.CREATE_ACCOUNT, BethesdaNetLogin.ENTER_TEXT, BottomButtons.CANCEL, BethesdaNetLogin.SKIP, BottomButtons.LIBRARY_LOGIN, BethesdaNetLogin.VIEW_EULA]);
 		var _loc2_ = 0;
 		this.NextButton = this.bottomButtons.GetButtonByIndex(_loc2_++);
@@ -278,7 +283,7 @@ class BethesdaNetLogin extends MovieClip
 		this.LibraryButton = this.bottomButtons.GetButtonByIndex(_loc2_++);
 		this.EulaButton = this.bottomButtons.GetButtonByIndex(_loc2_++);
 		this._QueuedButtonUpdate = true;
-		this.onEnterFrame = Shared.Proxy.create(this, this.DoUpdateButtons);
+		this.onEnterFrame = Proxy.create(this, this.DoUpdateButtons);
 	}
 
 	function DoUpdateButtons()
@@ -383,7 +388,7 @@ class BethesdaNetLogin extends MovieClip
 		{
 			_loc2_ = pathToFocus[0].handleInput(details, pathToFocus.slice(1));
 		}
-		if (!_loc2_ && Shared.GlobalFunc.IsKeyPressed(details) && !this.SpinnerVisible())
+		if (!_loc2_ && GlobalFunc.IsKeyPressed(details) && !this.SpinnerVisible())
 		{
 			_loc2_ = this.DoHandleInput(details.navEquivalent, details.code, false);
 		}
@@ -394,32 +399,32 @@ class BethesdaNetLogin extends MovieClip
 	{
 		trace("BethesdaNetLogin::DoHandleInput " + nav);
 		var _loc2_ = false;
-		if (nav == gfx.ui.NavigationCode.UP || keyCode == 38)
+		if (nav == NavigationCode.UP || keyCode == 38)
 		{
 			this.handleUpInput();
 			_loc2_ = true;
 		}
-		else if (nav == gfx.ui.NavigationCode.DOWN || keyCode == 40)
+		else if (nav == NavigationCode.DOWN || keyCode == 40)
 		{
 			this.handleDownInput();
 			_loc2_ = true;
 		}
-		else if (nav == gfx.ui.NavigationCode.TAB || keyCode == 9)
+		else if (nav == NavigationCode.TAB || keyCode == 9)
 		{
 			this.handleTabInput();
 			_loc2_ = true;
 		}
-		else if (nav == gfx.ui.NavigationCode.ENTER || keyCode == 13)
+		else if (nav == NavigationCode.ENTER || keyCode == 13)
 		{
 			this.onLoginAccept();
 			_loc2_ = true;
 		}
-		else if (nav == gfx.ui.NavigationCode.ESCAPE || keyCode == 27)
+		else if (nav == NavigationCode.ESCAPE || keyCode == 27)
 		{
 			this.OnEscape();
 			_loc2_ = true;
 		}
-		else if (nav == gfx.ui.NavigationCode.END || nav == gfx.ui.NavigationCode.GAMEPAD_X || keyCode == 35)
+		else if (nav == NavigationCode.END || nav == NavigationCode.GAMEPAD_X || keyCode == 35)
 		{
 			if (this.EulaButton._visible && !this.EulaButton.disabled)
 			{
@@ -427,7 +432,7 @@ class BethesdaNetLogin extends MovieClip
 			}
 			_loc2_ = true;
 		}
-		else if (nav == gfx.ui.NavigationCode.GAMEPAD_R1)
+		else if (nav == NavigationCode.GAMEPAD_R1)
 		{
 			if (this.EnterTextButton._visible)
 			{
@@ -562,7 +567,7 @@ class BethesdaNetLogin extends MovieClip
 		}
 		this.NewAccountPage_mc.NewEmailInput_tf.text = strUsername == undefined ? "" : strUsername;
 		this.NewAccountPage_mc.EmailGrayText_tf._visible = this.NewAccountPage_mc.NewEmailInput_tf.text.length <= 0;
-		this.NewAccountPage_mc.NewEmailInput_tf.onChanged = Shared.Proxy.create(this, this.OnEmailTextChange);
+		this.NewAccountPage_mc.NewEmailInput_tf.onChanged = Proxy.create(this, this.OnEmailTextChange);
 		Selection.setFocus(this.NewAccountPage_mc.NewEmailInput_tf);
 		if (this.NewAccountPage_mc.NewEmailInput_tf.text.length > 0)
 		{

@@ -1,3 +1,7 @@
+import Shared.GlobalFunc;
+import gfx.events.EventDispatcher;
+import gfx.ui.NavigationCode;
+
 class Shared.BSScrollingList extends MovieClip
 {
 	var EntriesA;
@@ -34,7 +38,7 @@ class Shared.BSScrollingList extends MovieClip
 		this.bDisableSelection = false;
 		this.bDisableInput = false;
 		this.bMouseDrivenNav = false;
-		gfx.events.EventDispatcher.initialize(this);
+		EventDispatcher.initialize(this);
 		Mouse.addListener(this);
 		this.iSelectedIndex = -1;
 		this.iScrollPosition = 0;
@@ -105,19 +109,19 @@ class Shared.BSScrollingList extends MovieClip
 		{
 			_loc4_ = this.GetClipByIndex(this.selectedIndex - this.scrollPosition);
 			_loc2_ = _loc4_ != undefined && _loc4_.handleInput != undefined && _loc4_.handleInput(details, pathToFocus.slice(1));
-			if (!_loc2_ && Shared.GlobalFunc.IsKeyPressed(details))
+			if (!_loc2_ && GlobalFunc.IsKeyPressed(details))
 			{
-				if (details.navEquivalent == gfx.ui.NavigationCode.UP)
+				if (details.navEquivalent == NavigationCode.UP)
 				{
 					this.moveSelectionUp();
 					_loc2_ = true;
 				}
-				else if (details.navEquivalent == gfx.ui.NavigationCode.DOWN)
+				else if (details.navEquivalent == NavigationCode.DOWN)
 				{
 					this.moveSelectionDown();
 					_loc2_ = true;
 				}
-				else if (!this.bDisableSelection && details.navEquivalent == gfx.ui.NavigationCode.ENTER)
+				else if (!this.bDisableSelection && details.navEquivalent == NavigationCode.ENTER)
 				{
 					this.onItemPress();
 					_loc2_ = true;
@@ -294,15 +298,15 @@ class Shared.BSScrollingList extends MovieClip
 	{
 		if (strNewOption == "None")
 		{
-			this.iTextOption = Shared.BSScrollingList.TEXT_OPTION_NONE;
+			this.iTextOption = TEXT_OPTION_NONE;
 		}
 		else if (strNewOption == "Shrink To Fit")
 		{
-			this.iTextOption = Shared.BSScrollingList.TEXT_OPTION_SHRINK_TO_FIT;
+			this.iTextOption = TEXT_OPTION_SHRINK_TO_FIT;
 		}
 		else if (strNewOption == "Multi-Line")
 		{
-			this.iTextOption = Shared.BSScrollingList.TEXT_OPTION_MULTILINE;
+			this.iTextOption = TEXT_OPTION_MULTILINE;
 		}
 	}
 
@@ -488,11 +492,11 @@ class Shared.BSScrollingList extends MovieClip
 	{
 		if (aEntryClip.textField != undefined)
 		{
-			if (this.textOption == Shared.BSScrollingList.TEXT_OPTION_SHRINK_TO_FIT)
+			if (this.textOption == TEXT_OPTION_SHRINK_TO_FIT)
 			{
 				aEntryClip.textField.textAutoSize = "shrink";
 			}
-			else if (this.textOption == Shared.BSScrollingList.TEXT_OPTION_MULTILINE)
+			else if (this.textOption == TEXT_OPTION_MULTILINE)
 			{
 				aEntryClip.textField.verticalAutoSize = "top";
 			}

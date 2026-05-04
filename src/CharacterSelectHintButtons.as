@@ -1,3 +1,6 @@
+import gfx.events.EventDispatcher;
+import gfx.io.GameDelegate;
+
 class CharacterSelectHintButtons extends MovieClip
 {
 	var DURANGO_Y;
@@ -23,7 +26,7 @@ class CharacterSelectHintButtons extends MovieClip
 	function CharacterSelectHintButtons()
 	{
 		super();
-		gfx.events.EventDispatcher.initialize(this);
+		EventDispatcher.initialize(this);
 	}
 
 	function SetPlatform(aiPlatform)
@@ -72,7 +75,7 @@ class CharacterSelectHintButtons extends MovieClip
 
 	function RollOver(event)
 	{
-		gfx.io.GameDelegate.call("PlaySound", ["UIMenuFocus"]);
+		GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 		this.gotoAndStop(2);
 	}
 

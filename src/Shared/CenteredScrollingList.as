@@ -1,4 +1,7 @@
-class Shared.CenteredScrollingList extends Shared.BSScrollingList
+import Shared.BSScrollingList;
+import Shared.ListFilterer;
+
+class Shared.CenteredScrollingList extends BSScrollingList
 {
 	var EntriesA;
 	var GetClipByIndex;
@@ -27,7 +30,7 @@ class Shared.CenteredScrollingList extends Shared.BSScrollingList
 	function CenteredScrollingList()
 	{
 		super();
-		this._filterer = new Shared.ListFilterer();
+		this._filterer = new ListFilterer();
 		this._filterer.addEventListener("filterChange", this, "onFilterChange");
 		this.bRecenterSelection = false;
 		this.iMaxTextLength = 256;

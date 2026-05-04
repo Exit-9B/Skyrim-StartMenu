@@ -1,4 +1,9 @@
-class Components.CrossPlatformButtons extends gfx.controls.Button
+import Shared.ButtonChange;
+import Shared.Proxy;
+import gfx.controls.Button;
+import gfx.io.GameDelegate;
+
+class Components.CrossPlatformButtons extends Button
 {
 	var ButtonArt;
 	var ButtonArtSecondary;
@@ -23,8 +28,8 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 	function CrossPlatformButtons()
 	{
 		super();
-		this.textField.onChanged = Shared.Proxy.create(this, this.Reposition);
-		gfx.io.GameDelegate.call("myLog", ["CrossPlatformButtons::CrossPlatformButtons"]);
+		this.textField.onChanged = Proxy.create(this, this.Reposition);
+		GameDelegate.call("myLog", ["CrossPlatformButtons::CrossPlatformButtons"]);
 	}
 
 	function onLoad()
@@ -34,12 +39,12 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 		{
 			this._parent.onButtonLoad(this);
 		}
-		gfx.io.GameDelegate.call("myLog", ["CrossPlatformButtons::onLoad"]);
+		GameDelegate.call("myLog", ["CrossPlatformButtons::onLoad"]);
 	}
 
 	function SetPlatform(aiPlatform, aSwapPS3)
 	{
-		gfx.io.GameDelegate.call("myLog", ["CrossPlatformButtons::SetPlatform"]);
+		GameDelegate.call("myLog", ["CrossPlatformButtons::SetPlatform"]);
 		if (aiPlatform != undefined)
 		{
 			this.CurrentPlatform = aiPlatform;
@@ -67,7 +72,7 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 		var _loc4_;
 		switch (this.CurrentPlatform)
 		{
-			case Shared.ButtonChange.PLATFORM_PC:
+			case ButtonChange.PLATFORM_PC:
 				if (this.PCButton != "None")
 				{
 					this.ButtonArt_mc = this.attachMovie(this.PCButton, "ButtonArt", this.getNextHighestDepth());
@@ -77,21 +82,21 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 					this.ButtonArtSecondary_mc = this.attachMovie(this.PCButtonSecondary, "ButtonArtSecondary", this.getNextHighestDepth());
 				}
 				break;
-			case Shared.ButtonChange.PLATFORM_PC_GAMEPAD:
-			case Shared.ButtonChange.PLATFORM_360:
-			case Shared.ButtonChange.PLATFORM_SCARLETT:
+			case ButtonChange.PLATFORM_PC_GAMEPAD:
+			case ButtonChange.PLATFORM_360:
+			case ButtonChange.PLATFORM_SCARLETT:
 				this.ButtonArt_mc = this.attachMovie(this.XBoxButton, "ButtonArt", this.getNextHighestDepth());
 				if (this.XBoxButtonSecondary != null)
 				{
 					this.ButtonArtSecondary_mc = this.attachMovie(this.XBoxButtonSecondary, "ButtonArtSecondary", this.getNextHighestDepth());
 				}
 				break;
-			case Shared.ButtonChange.PLATFORM_PS3:
-			case Shared.ButtonChange.PLATFORM_PROSPERO:
+			case ButtonChange.PLATFORM_PS3:
+			case ButtonChange.PLATFORM_PROSPERO:
 			default:
 				_loc2_ = this.PS3Button;
 				_loc3_ = this.PS3ButtonSecondary;
-				gfx.io.GameDelegate.call("myLog", [String(_loc2_)]);
+				GameDelegate.call("myLog", [String(_loc2_)]);
 				if (this.PS3Swapped)
 				{
 					if (_loc2_ == "PS3_A")
@@ -113,7 +118,7 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 				}
 				_loc5_ = _loc2_;
 				_loc4_ = _loc3_;
-				if (this.CurrentPlatform == Shared.ButtonChange.PLATFORM_PROSPERO)
+				if (this.CurrentPlatform == ButtonChange.PLATFORM_PROSPERO)
 				{
 					if (_loc2_ == "PS3_A")
 					{
@@ -236,7 +241,7 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 						_loc3_ = "PS5_Start";
 					}
 				}
-				gfx.io.GameDelegate.call("myLog", [String(_loc2_)]);
+				GameDelegate.call("myLog", [String(_loc2_)]);
 				this.ButtonArt_mc = this.attachMovie(_loc2_, "ButtonArt", this.getNextHighestDepth());
 				if (this.ButtonArt_mc == undefined)
 				{

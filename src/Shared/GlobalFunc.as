@@ -168,18 +168,18 @@ class Shared.GlobalFunc
 
 	static function GetTextField(aParentClip, aName)
 	{
-		if (Shared.GlobalFunc.RegisteredTextFields[aName + aParentClip._name] != undefined)
+		if (RegisteredTextFields[aName + aParentClip._name] != undefined)
 		{
-			return Shared.GlobalFunc.RegisteredTextFields[aName + aParentClip._name];
+			return RegisteredTextFields[aName + aParentClip._name];
 		}
 		trace(aName + " is not registered a TextField name.");
 	}
 
 	static function GetMovieClip(aParentClip, aName)
 	{
-		if (Shared.GlobalFunc.RegisteredMovieClips[aName + aParentClip._name] != undefined)
+		if (RegisteredMovieClips[aName + aParentClip._name] != undefined)
 		{
-			return Shared.GlobalFunc.RegisteredMovieClips[aName + aParentClip._name];
+			return RegisteredMovieClips[aName + aParentClip._name];
 		}
 		trace(aName + " is not registered a MovieClip name.");
 	}
@@ -188,9 +188,9 @@ class Shared.GlobalFunc
 	{
 		TextField.prototype.RegisterTextField = function(aStartingClip)
 		{
-			if (Shared.GlobalFunc.RegisteredTextFields[this._name + aStartingClip._name] == undefined)
+			if (RegisteredTextFields[this._name + aStartingClip._name] == undefined)
 			{
-				Shared.GlobalFunc.RegisteredTextFields[this._name + aStartingClip._name] = this;
+				RegisteredTextFields[this._name + aStartingClip._name] = this;
 			}
 		};
 	}
@@ -212,7 +212,7 @@ class Shared.GlobalFunc
 		while (aStartingClip._totalFrames && _loc2_ <= aStartingClip._totalFrames)
 		{
 			aStartingClip.gotoAndStop(_loc2_);
-			Shared.GlobalFunc.RegisterTextFields(aStartingClip);
+			RegisterTextFields(aStartingClip);
 			_loc2_++;
 		}
 	}
@@ -221,9 +221,9 @@ class Shared.GlobalFunc
 	{
 		MovieClip.prototype.RegisterMovieClip = function(aStartingClip)
 		{
-			if (Shared.GlobalFunc.RegisteredMovieClips[this._name + aStartingClip._name] == undefined)
+			if (RegisteredMovieClips[this._name + aStartingClip._name] == undefined)
 			{
-				Shared.GlobalFunc.RegisteredMovieClips[this._name + aStartingClip._name] = this;
+				RegisteredMovieClips[this._name + aStartingClip._name] = this;
 			}
 		};
 	}
@@ -247,7 +247,7 @@ class Shared.GlobalFunc
 			{
 				if (aStartingClip[_loc3_] != aStartingClip)
 				{
-					Shared.GlobalFunc.RecursiveRegisterMovieClips(aStartingClip[_loc3_], aRootClip);
+					RecursiveRegisterMovieClips(aStartingClip[_loc3_], aRootClip);
 				}
 				aStartingClip[_loc3_].RegisterMovieClip(aRootClip);
 			}
@@ -260,7 +260,7 @@ class Shared.GlobalFunc
 		while (aStartingClip._totalFrames && _loc2_ <= aStartingClip._totalFrames)
 		{
 			aStartingClip.gotoAndStop(_loc2_);
-			Shared.GlobalFunc.RegisterMovieClips(aStartingClip);
+			RegisterMovieClips(aStartingClip);
 			_loc2_++;
 		}
 	}

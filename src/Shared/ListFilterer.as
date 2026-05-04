@@ -1,3 +1,5 @@
+import gfx.events.EventDispatcher;
+
 class Shared.ListFilterer
 {
 	var EntryMatchesFunc;
@@ -9,7 +11,7 @@ class Shared.ListFilterer
 	{
 		this.iItemFilter = 4294967295;
 		this.EntryMatchesFunc = this.EntryMatchesFilter;
-		gfx.events.EventDispatcher.initialize(this);
+		EventDispatcher.initialize(this);
 	}
 
 	function get itemFilter()

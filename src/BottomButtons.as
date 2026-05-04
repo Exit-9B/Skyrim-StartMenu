@@ -1,3 +1,6 @@
+import Shared.Proxy;
+import gfx.events.EventDispatcher;
+
 class BottomButtons extends MovieClip
 {
 	var _buttonBgSide;
@@ -48,14 +51,14 @@ class BottomButtons extends MovieClip
 	function BottomButtons()
 	{
 		super();
-		gfx.events.EventDispatcher.initialize(this);
+		EventDispatcher.initialize(this);
 		this._visible = false;
 		this._hide = false;
 		this._buttonBgSide = this.bg_mc._width / 2;
 		this._buttons = new Array();
 		this._buttonMap = {};
 		this._lastSetButtons = new Array();
-		this.onEnterFrame = Shared.Proxy.create(this, this.Init);
+		this.onEnterFrame = Proxy.create(this, this.Init);
 	}
 
 	function Init()
@@ -79,7 +82,7 @@ class BottomButtons extends MovieClip
 		}
 		else
 		{
-			this._Timeout = setTimeout(Shared.Proxy.create(this, this.DelayedHide), BottomButtons.BUTTON_UPDATE_TIMER);
+			this._Timeout = setTimeout(Proxy.create(this, this.DelayedHide), BottomButtons.BUTTON_UPDATE_TIMER);
 		}
 	}
 
@@ -128,10 +131,10 @@ class BottomButtons extends MovieClip
 			while (_loc3_ < buttons.length)
 			{
 				_loc2_ = Components.CrossPlatformButtons(this.attachMovie(this.GetButtonID(this._platform), this.GetButtonID(this._platform) + "_" + _loc3_, this.getNextHighestDepth()));
-				_loc2_.addEventListener("stateChange", Shared.Proxy.create(this, this.ButtonStateChange));
-				_loc2_.addEventListener("click", Shared.Proxy.create(this, this.ButtonClick));
-				_loc2_.addEventListener("releaseOutside", Shared.Proxy.create(this, this.ButtonClick));
-				_loc2_.OnTextFieldChanged = Shared.Proxy.create(this, this.Reposition);
+				_loc2_.addEventListener("stateChange", Proxy.create(this, this.ButtonStateChange));
+				_loc2_.addEventListener("click", Proxy.create(this, this.ButtonClick));
+				_loc2_.addEventListener("releaseOutside", Proxy.create(this, this.ButtonClick));
+				_loc2_.OnTextFieldChanged = Proxy.create(this, this.Reposition);
 				_loc2_.textField.autoSize = true;
 				_loc2_.SetArt(buttons[_loc3_]);
 				_loc2_.label = buttons[_loc3_].Label;

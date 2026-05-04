@@ -1,4 +1,7 @@
-class MainSaveLoadList extends Shared.BSScrollingList
+import Shared.BSScrollingList;
+import gfx.io.GameDelegate;
+
+class MainSaveLoadList extends BSScrollingList
 {
 	function MainSaveLoadList()
 	{
@@ -32,12 +35,12 @@ class MainSaveLoadList extends Shared.BSScrollingList
 	function moveSelectionUp()
 	{
 		super.moveSelectionUp();
-		gfx.io.GameDelegate.call("PlaySound", ["UIMenuFocus"]);
+		GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 	}
 
 	function moveSelectionDown()
 	{
 		super.moveSelectionDown();
-		gfx.io.GameDelegate.call("PlaySound", ["UIMenuFocus"]);
+		GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 	}
 }

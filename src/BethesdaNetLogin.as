@@ -40,12 +40,12 @@ class BethesdaNetLogin extends MovieClip
 	static var LOGIN_ERROR = "BethesdaNetLogin.LoginError";
 	static var EULA_CANCELED = "BethesdaNetLogin.EulaCanceled";
 
-	static var VIEW_EULA = {PCArt:"End",XBoxArt:"360_X",PS3Art:"PS3_X",Label:"$View Eula",KeyCode:35};
-	static var ENTER_TEXT = {PCArt:"End",XBoxArt:"360_RB",PS3Art:"PS3_RB",Label:"$Enter Text",KeyCode:0};
-	static var NEXT = {PCArt:"Enter",XBoxArt:"360_A",PS3Art:"PS3_A",Label:"$Next",KeyCode:13};
-	static var CONSOLE_EMAIL = {PCArt:"Enter",XBoxArt:"360_A",PS3Art:"PS3_A",Label:"$USE CONSOLE EMAIL",KeyCode:13};
-	static var CREATE_ACCOUNT = {PCArt:"Enter",XBoxArt:"360_A",PS3Art:"PS3_A",Label:"$CREATE ACCOUNT",KeyCode:13};
-	static var SKIP = {PCArt:"Esc",XBoxArt:"360_B",PS3Art:"PS3_B",Label:"$Skip",KeyCode:9};
+	static var VIEW_EULA = {PCArt:"End", XBoxArt:"360_X", PS3Art:"PS3_X", Label:"$View Eula", KeyCode:35};
+	static var ENTER_TEXT = {PCArt:"End", XBoxArt:"360_RB", PS3Art:"PS3_RB", Label:"$Enter Text", KeyCode:0};
+	static var NEXT = {PCArt:"Enter", XBoxArt:"360_A", PS3Art:"PS3_A", Label:"$Next", KeyCode:13};
+	static var CONSOLE_EMAIL = {PCArt:"Enter", XBoxArt:"360_A", PS3Art:"PS3_A", Label:"$USE CONSOLE EMAIL", KeyCode:13};
+	static var CREATE_ACCOUNT = {PCArt:"Enter", XBoxArt:"360_A", PS3Art:"PS3_A", Label:"$CREATE ACCOUNT", KeyCode:13};
+	static var SKIP = {PCArt:"Esc", XBoxArt:"360_B", PS3Art:"PS3_B", Label:"$Skip", KeyCode:9};
 
 	var DefaultEmail = "";
 	var constructed = false;
@@ -66,10 +66,10 @@ class BethesdaNetLogin extends MovieClip
 		this.Error_NotSignedInOrbis._visible = false;
 		this.EULAPage_mc.focusEnabled = true;
 		var _loc4_ = new Object();
-		_loc4_.onMouseWheel = Shared.Proxy.create(this,this.onMouseWheel);
+		_loc4_.onMouseWheel = Shared.Proxy.create(this, this.onMouseWheel);
 		Mouse.addListener(_loc4_);
-		this.EULAPage_mc.ScrollUp.onRelease = Shared.Proxy.create(this,this.onEULAScrollUpClicked);
-		this.EULAPage_mc.ScrollDown.onRelease = Shared.Proxy.create(this,this.onEULAScrollDownClicked);
+		this.EULAPage_mc.ScrollUp.onRelease = Shared.Proxy.create(this, this.onEULAScrollUpClicked);
+		this.EULAPage_mc.ScrollDown.onRelease = Shared.Proxy.create(this, this.onEULAScrollDownClicked);
 		this.UpdateEULAScrollIndicators();
 		this.NewAccountPage_mc.Error_tf.textAutoSize = "shrink";
 		this.NewAccountPage_mc.LoginHeader_tf.textAutoSize = "shrink";
@@ -99,7 +99,7 @@ class BethesdaNetLogin extends MovieClip
 		{
 			this.codeObj.startEditText();
 		}
-		this.dispatchEvent({type:BethesdaNetLogin.LOGIN_ACTIVATED,target:this});
+		this.dispatchEvent({type:BethesdaNetLogin.LOGIN_ACTIVATED, target:this});
 		if (aUserName != undefined)
 		{
 			this.LoginPage_mc.UsernameInput_tf.text = aUserName;
@@ -108,9 +108,9 @@ class BethesdaNetLogin extends MovieClip
 		{
 			this.LoginPage_mc.UsernameInput_tf.text = "";
 		}
-		this.LoginPage_mc.UsernameInput_tf.onChanged = Shared.Proxy.create(this,this.OnUsernameFieldUpdate);
+		this.LoginPage_mc.UsernameInput_tf.onChanged = Shared.Proxy.create(this, this.OnUsernameFieldUpdate);
 		this.LoginPage_mc.PasswordInput_tf.text = "";
-		this.LoginPage_mc.PasswordInput_tf.onChanged = Shared.Proxy.create(this,this.OnPasswordFieldUpdate);
+		this.LoginPage_mc.PasswordInput_tf.onChanged = Shared.Proxy.create(this, this.OnPasswordFieldUpdate);
 		this.LoginPage_mc.UsernameGrayText_tf._visible = this.LoginPage_mc.UsernameInput_tf.text.length <= 0;
 		this.LoginPage_mc.PasswordGrayText_tf._visible = this.LoginPage_mc.PasswordInput_tf.text.length <= 0;
 		Selection.setFocus(this.LoginPage_mc.UsernameInput_tf);
@@ -152,15 +152,15 @@ class BethesdaNetLogin extends MovieClip
 	function ShowLoginScreen_AfterFailure(strErrorString)
 	{
 		trace("BethesdaNetLogin::ShowLoginScreen_AfterFailure " + strErrorString);
-		this.dispatchEvent({type:BethesdaNetLogin.LOGIN_ERROR,target:this});
-		this.dispatchEvent({type:BethesdaNetLogin.LOGIN_ACTIVATED,target:this});
+		this.dispatchEvent({type:BethesdaNetLogin.LOGIN_ERROR, target:this});
+		this.dispatchEvent({type:BethesdaNetLogin.LOGIN_ACTIVATED, target:this});
 		if (this.LoginPage_mc == this._LastLoginScreen)
 		{
-			this.ShowLoginScreen(this.LoginPage_mc.UsernameInput_tf.text,strErrorString);
+			this.ShowLoginScreen(this.LoginPage_mc.UsernameInput_tf.text, strErrorString);
 		}
 		else if (this.NewAccountPage_mc == this._LastLoginScreen)
 		{
-			this.ShowNewAccountPage(this.NewAccountPage_mc.NewEmailInput_tf.text,strErrorString);
+			this.ShowNewAccountPage(this.NewAccountPage_mc.NewEmailInput_tf.text, strErrorString);
 		}
 	}
 
@@ -168,8 +168,8 @@ class BethesdaNetLogin extends MovieClip
 	{
 		trace("BethesdaNetLogin::ShowSpinner " + aMessageText);
 		this.ShowCurrentScreen(this.Spinner_mc);
-		this.dispatchEvent({type:BethesdaNetLogin.LOGIN_ACTIVATED,target:this});
-		this.Spinner_mc.textField.SetText(aMessageText,false);
+		this.dispatchEvent({type:BethesdaNetLogin.LOGIN_ACTIVATED, target:this});
+		this.Spinner_mc.textField.SetText(aMessageText, false);
 		Selection.setFocus(undefined);
 	}
 
@@ -189,18 +189,18 @@ class BethesdaNetLogin extends MovieClip
 		{
 			if (Selection.getFocus() == targetPath(this.LoginPage_mc.UsernameInput_tf))
 			{
-				this.LoginPage_mc.UsernameInput_tf.SetText(astrEnteredText,false);
+				this.LoginPage_mc.UsernameInput_tf.SetText(astrEnteredText, false);
 				Selection.setFocus(this.LoginPage_mc.PasswordInput_tf);
 				this.LoginPage_mc.PasswordGrayText_tf._visible = false;
-				setTimeout(Shared.Proxy.create(this,this.onNextEditTimerDone),1000);
+				setTimeout(Shared.Proxy.create(this, this.onNextEditTimerDone), 1000);
 			}
 			else if (Selection.getFocus() == targetPath(this.LoginPage_mc.PasswordInput_tf))
 			{
-				this.LoginPage_mc.PasswordInput_tf.SetText(astrEnteredText,false);
+				this.LoginPage_mc.PasswordInput_tf.SetText(astrEnteredText, false);
 			}
 			else if (Selection.getFocus() == targetPath(this.NewAccountPage_mc.NewEmailInput_tf))
 			{
-				this.NewAccountPage_mc.NewEmailInput_tf.SetText(astrEnteredText,false);
+				this.NewAccountPage_mc.NewEmailInput_tf.SetText(astrEnteredText, false);
 			}
 		}
 		if (this.LoginPage_mc.UsernameInput_tf.text.length > 0)
@@ -265,8 +265,8 @@ class BethesdaNetLogin extends MovieClip
 	function SetBottomButtons(buttons)
 	{
 		this.bottomButtons = buttons;
-		this.bottomButtons.addEventListener(BottomButtons.BUTTON_CLICKED,Shared.Proxy.create(this,this.OnBottomButtonClicked));
-		this.bottomButtons.SetButtons([BethesdaNetLogin.NEXT,BottomButtons.ACCEPT,BethesdaNetLogin.CONSOLE_EMAIL,BethesdaNetLogin.CREATE_ACCOUNT,BethesdaNetLogin.ENTER_TEXT,BottomButtons.CANCEL,BethesdaNetLogin.SKIP,BottomButtons.LIBRARY_LOGIN,BethesdaNetLogin.VIEW_EULA]);
+		this.bottomButtons.addEventListener(BottomButtons.BUTTON_CLICKED, Shared.Proxy.create(this, this.OnBottomButtonClicked));
+		this.bottomButtons.SetButtons([BethesdaNetLogin.NEXT, BottomButtons.ACCEPT, BethesdaNetLogin.CONSOLE_EMAIL, BethesdaNetLogin.CREATE_ACCOUNT, BethesdaNetLogin.ENTER_TEXT, BottomButtons.CANCEL, BethesdaNetLogin.SKIP, BottomButtons.LIBRARY_LOGIN, BethesdaNetLogin.VIEW_EULA]);
 		var _loc2_ = 0;
 		this.NextButton = this.bottomButtons.GetButtonByIndex(_loc2_++);
 		this.AcceptButton = this.bottomButtons.GetButtonByIndex(_loc2_++);
@@ -278,7 +278,7 @@ class BethesdaNetLogin extends MovieClip
 		this.LibraryButton = this.bottomButtons.GetButtonByIndex(_loc2_++);
 		this.EulaButton = this.bottomButtons.GetButtonByIndex(_loc2_++);
 		this._QueuedButtonUpdate = true;
-		this.onEnterFrame = Shared.Proxy.create(this,this.DoUpdateButtons);
+		this.onEnterFrame = Shared.Proxy.create(this, this.DoUpdateButtons);
 	}
 
 	function DoUpdateButtons()
@@ -365,7 +365,7 @@ class BethesdaNetLogin extends MovieClip
 		this.LoginPage_mc.LoginPSAutoFillMessage._visible = false;
 		if (this.IsPlatformSony())
 		{
-			this.LoginPage_mc.LoginFooter_tf.SetText("$LoginPage_Footer_PS4",false);
+			this.LoginPage_mc.LoginFooter_tf.SetText("$LoginPage_Footer_PS4", false);
 			this.NewAccountPage_mc.PSAutoFillMessage._visible = true;
 			this.LoginPage_mc.LoginPSAutoFillMessage._visible = true;
 		}
@@ -381,11 +381,11 @@ class BethesdaNetLogin extends MovieClip
 		var _loc2_ = false;
 		if (pathToFocus[0].handleInput != undefined)
 		{
-			_loc2_ = pathToFocus[0].handleInput(details,pathToFocus.slice(1));
+			_loc2_ = pathToFocus[0].handleInput(details, pathToFocus.slice(1));
 		}
 		if (!_loc2_ && Shared.GlobalFunc.IsKeyPressed(details) && !this.SpinnerVisible())
 		{
-			_loc2_ = this.DoHandleInput(details.navEquivalent,details.code,false);
+			_loc2_ = this.DoHandleInput(details.navEquivalent, details.code, false);
 		}
 		return _loc2_;
 	}
@@ -443,17 +443,17 @@ class BethesdaNetLogin extends MovieClip
 		if (Selection.getFocus() == targetPath(this.LoginPage_mc.UsernameInput_tf))
 		{
 			this.LoginPage_mc.UsernameGrayText_tf._visible = false;
-			this.codeObj.startEditText(this.LoginPage_mc.UsernameInput_tf.text.length <= 0 ? this.LoginPage_mc.UsernameGrayText_tf.text : this.LoginPage_mc.UsernameInput_tf.text,false);
+			this.codeObj.startEditText(this.LoginPage_mc.UsernameInput_tf.text.length <= 0 ? this.LoginPage_mc.UsernameGrayText_tf.text : this.LoginPage_mc.UsernameInput_tf.text, false);
 		}
 		else if (Selection.getFocus() == targetPath(this.LoginPage_mc.PasswordInput_tf))
 		{
 			this.LoginPage_mc.PasswordGrayText_tf._visible = false;
-			this.codeObj.startEditText(this.LoginPage_mc.PasswordInput_tf.text.length <= 0 ? this.LoginPage_mc.PasswordGrayText_tf.text : this.LoginPage_mc.PasswordInput_tf.text,true);
+			this.codeObj.startEditText(this.LoginPage_mc.PasswordInput_tf.text.length <= 0 ? this.LoginPage_mc.PasswordGrayText_tf.text : this.LoginPage_mc.PasswordInput_tf.text, true);
 		}
 		else if (Selection.getFocus() == targetPath(this.NewAccountPage_mc.NewEmailInput_tf))
 		{
 			this.NewAccountPage_mc.EmailGrayText_tf._visible = false;
-			this.codeObj.startEditText(this.NewAccountPage_mc.NewEmailInput_tf.text,false);
+			this.codeObj.startEditText(this.NewAccountPage_mc.NewEmailInput_tf.text, false);
 		}
 		return true;
 	}
@@ -466,8 +466,8 @@ class BethesdaNetLogin extends MovieClip
 	function LoadEULAPage()
 	{
 		trace("BethesdaNetLogin::LoadEULAPage");
-		this.EULAPage_mc.Title_tf.SetText(this.EULAPagesA[this._CurrEULAIndex].title,true);
-		this.EULAPage_mc.EULA_tf.SetText(this.EULAPagesA[this._CurrEULAIndex].text,true);
+		this.EULAPage_mc.Title_tf.SetText(this.EULAPagesA[this._CurrEULAIndex].title, true);
+		this.EULAPage_mc.EULA_tf.SetText(this.EULAPagesA[this._CurrEULAIndex].text, true);
 		this.EULAPage_mc.EULA_tf.scroll = 0;
 		this.UpdateEULAScrollIndicators();
 		Selection.setFocus(this.EULAPage_mc);
@@ -480,7 +480,7 @@ class BethesdaNetLogin extends MovieClip
 		{
 			if (this.LoginPage_mc.UsernameInput_tf.text.length > 0 && this.LoginPage_mc.PasswordInput_tf.text.length > 0)
 			{
-				this.codeObj.attemptLogin(this.LoginPage_mc.UsernameInput_tf.text,this.LoginPage_mc.PasswordInput_tf.text);
+				this.codeObj.attemptLogin(this.LoginPage_mc.UsernameInput_tf.text, this.LoginPage_mc.PasswordInput_tf.text);
 				this.codeObj.PlaySound("UIMenuOK");
 			}
 			else if (this.iPlatform != BethesdaNetLogin.CONTROLLER_PC && this.iPlatform != BethesdaNetLogin.CONTROLLER_PCGAMEPAD)
@@ -493,7 +493,7 @@ class BethesdaNetLogin extends MovieClip
 				else if (Selection.getFocus() == targetPath(this.LoginPage_mc.PasswordInput_tf))
 				{
 					this.LoginPage_mc.PasswordGrayText_tf._visible = false;
-					this.codeObj.startEditText(this.LoginPage_mc.PasswordInput_tf.text.length <= 0 ? this.LoginPage_mc.PasswordGrayText_tf.text : this.LoginPage_mc.PasswordInput_tf.text,true);
+					this.codeObj.startEditText(this.LoginPage_mc.PasswordInput_tf.text.length <= 0 ? this.LoginPage_mc.PasswordGrayText_tf.text : this.LoginPage_mc.PasswordInput_tf.text, true);
 				}
 			}
 		}
@@ -512,7 +512,7 @@ class BethesdaNetLogin extends MovieClip
 			else if (!this._ViewingEulaWithoutAcceptance)
 			{
 				this.HideEULAScreen();
-				this.codeObj.attemptLogin(this.LoginPage_mc.UsernameInput_tf.text,this.LoginPage_mc.PasswordInput_tf.text);
+				this.codeObj.attemptLogin(this.LoginPage_mc.UsernameInput_tf.text, this.LoginPage_mc.PasswordInput_tf.text);
 			}
 			else
 			{
@@ -532,7 +532,7 @@ class BethesdaNetLogin extends MovieClip
 			{
 				this.codeObj.PlayOKSound();
 				this.HideNewAccountPage();
-				this.codeObj.createQuickAccount(this.NewAccountPage_mc.NewEmailInput_tf.text,true,this.GetNewsByDefault);
+				this.codeObj.createQuickAccount(this.NewAccountPage_mc.NewEmailInput_tf.text, true, this.GetNewsByDefault);
 			}
 		}
 	}
@@ -562,11 +562,11 @@ class BethesdaNetLogin extends MovieClip
 		}
 		this.NewAccountPage_mc.NewEmailInput_tf.text = strUsername == undefined ? "" : strUsername;
 		this.NewAccountPage_mc.EmailGrayText_tf._visible = this.NewAccountPage_mc.NewEmailInput_tf.text.length <= 0;
-		this.NewAccountPage_mc.NewEmailInput_tf.onChanged = Shared.Proxy.create(this,this.OnEmailTextChange);
+		this.NewAccountPage_mc.NewEmailInput_tf.onChanged = Shared.Proxy.create(this, this.OnEmailTextChange);
 		Selection.setFocus(this.NewAccountPage_mc.NewEmailInput_tf);
 		if (this.NewAccountPage_mc.NewEmailInput_tf.text.length > 0)
 		{
-			this.NewAccountPage_mc.NewEmailInput_tf.setSelection(0,this.NewAccountPage_mc.NewEmailInput_tf.text.length);
+			this.NewAccountPage_mc.NewEmailInput_tf.setSelection(0, this.NewAccountPage_mc.NewEmailInput_tf.text.length);
 		}
 		if (strErrorText != undefined)
 		{
@@ -651,7 +651,7 @@ class BethesdaNetLogin extends MovieClip
 			if (!this._ViewingEulaWithoutAcceptance)
 			{
 				this.HideEULAScreen();
-				this.dispatchEvent({type:BethesdaNetLogin.EULA_CANCELED,target:this});
+				this.dispatchEvent({type:BethesdaNetLogin.EULA_CANCELED, target:this});
 			}
 			else
 			{
@@ -661,7 +661,7 @@ class BethesdaNetLogin extends MovieClip
 		}
 		else if (this.NewAccountPage_mc._visible)
 		{
-			this.dispatchEvent({type:BethesdaNetLogin.LOGIN_CANCELED,target:this});
+			this.dispatchEvent({type:BethesdaNetLogin.LOGIN_CANCELED, target:this});
 		}
 		else if (this.LoginPage_mc._visible)
 		{
@@ -719,18 +719,18 @@ class BethesdaNetLogin extends MovieClip
 		{
 			_loc2_ = 27;
 		}
-		this.DoHandleInput("",_loc2_,true);
+		this.DoHandleInput("", _loc2_, true);
 	}
 
 	function onNextEditTimerDone()
 	{
 		if (this.IsPlatformSony())
 		{
-			this.codeObj.startEditText(this.LoginPage_mc.PasswordInput_tf.text.length <= 0 ? "" : this.LoginPage_mc.PasswordInput_tf.text,true);
+			this.codeObj.startEditText(this.LoginPage_mc.PasswordInput_tf.text.length <= 0 ? "" : this.LoginPage_mc.PasswordInput_tf.text, true);
 		}
 		else
 		{
-			this.codeObj.startEditText(this.LoginPage_mc.PasswordInput_tf.text.length <= 0 ? this.LoginPage_mc.PasswordGrayText_tf.text : this.LoginPage_mc.PasswordInput_tf.text,true);
+			this.codeObj.startEditText(this.LoginPage_mc.PasswordInput_tf.text.length <= 0 ? this.LoginPage_mc.PasswordGrayText_tf.text : this.LoginPage_mc.PasswordInput_tf.text, true);
 		}
 	}
 

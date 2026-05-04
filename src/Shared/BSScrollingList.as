@@ -52,7 +52,7 @@ class Shared.BSScrollingList extends MovieClip
 			{
 				if (!this._parent.listAnimating && !this._parent.bDisableInput && this.itemIndex != undefined)
 				{
-					this._parent.doSetSelectedIndex(this.itemIndex,0);
+					this._parent.doSetSelectedIndex(this.itemIndex, 0);
 					this._parent.bMouseDrivenNav = true;
 				}
 			};
@@ -71,7 +71,7 @@ class Shared.BSScrollingList extends MovieClip
 			{
 				if (this.itemIndex != undefined)
 				{
-					this._parent.onItemPressAux(aiKeyboardOrMouse,aiButtonIndex);
+					this._parent.onItemPressAux(aiKeyboardOrMouse, aiButtonIndex);
 				}
 			};
 			_loc3_ = this.GetClipByIndex(++this.iMaxItemsShown);
@@ -83,13 +83,13 @@ class Shared.BSScrollingList extends MovieClip
 		if (this.ListScrollbar != undefined)
 		{
 			this.ListScrollbar.position = 0;
-			this.ListScrollbar.addEventListener("scroll",this,"onScroll");
+			this.ListScrollbar.addEventListener("scroll", this, "onScroll");
 		}
 	}
 
 	function ClearList()
 	{
-		this.EntriesA.splice(0,this.EntriesA.length);
+		this.EntriesA.splice(0, this.EntriesA.length);
 	}
 
 	function GetClipByIndex(aiIndex)
@@ -104,7 +104,7 @@ class Shared.BSScrollingList extends MovieClip
 		if (!this.bDisableInput)
 		{
 			_loc4_ = this.GetClipByIndex(this.selectedIndex - this.scrollPosition);
-			_loc2_ = _loc4_ != undefined && _loc4_.handleInput != undefined && _loc4_.handleInput(details,pathToFocus.slice(1));
+			_loc2_ = _loc4_ != undefined && _loc4_.handleInput != undefined && _loc4_.handleInput(details, pathToFocus.slice(1));
 			if (!_loc2_ && Shared.GlobalFunc.IsKeyPressed(details))
 			{
 				if (details.navEquivalent == gfx.ui.NavigationCode.UP)
@@ -137,7 +137,7 @@ class Shared.BSScrollingList extends MovieClip
 			{
 				if (_loc2_ == this)
 				{
-					this.doSetSelectedIndex(-1,0);
+					this.doSetSelectedIndex(-1, 0);
 					if (delta < 0)
 					{
 						this.scrollPosition += 1;
@@ -186,7 +186,7 @@ class Shared.BSScrollingList extends MovieClip
 			this.iSelectedIndex = aiNewIndex;
 			if (_loc2_ != -1)
 			{
-				this.SetEntry(this.GetClipByIndex(this.EntriesA[_loc2_].clipIndex),this.EntriesA[_loc2_]);
+				this.SetEntry(this.GetClipByIndex(this.EntriesA[_loc2_].clipIndex), this.EntriesA[_loc2_]);
 			}
 			if (this.iSelectedIndex != -1)
 			{
@@ -198,19 +198,19 @@ class Shared.BSScrollingList extends MovieClip
 					}
 					else if (this.iSelectedIndex >= this.iScrollPosition + this.iListItemsShown)
 					{
-						this.scrollPosition = Math.min(this.iSelectedIndex - this.iListItemsShown + 1,this.iMaxScrollPosition);
+						this.scrollPosition = Math.min(this.iSelectedIndex - this.iListItemsShown + 1, this.iMaxScrollPosition);
 					}
 					else
 					{
-						this.SetEntry(this.GetClipByIndex(this.EntriesA[this.iSelectedIndex].clipIndex),this.EntriesA[this.iSelectedIndex]);
+						this.SetEntry(this.GetClipByIndex(this.EntriesA[this.iSelectedIndex].clipIndex), this.EntriesA[this.iSelectedIndex]);
 					}
 				}
 				else
 				{
-					this.SetEntry(this.GetClipByIndex(this.EntriesA[this.iSelectedIndex].clipIndex),this.EntriesA[this.iSelectedIndex]);
+					this.SetEntry(this.GetClipByIndex(this.EntriesA[this.iSelectedIndex].clipIndex), this.EntriesA[this.iSelectedIndex]);
 				}
 			}
-			this.dispatchEvent({type:"selectionChange",index:this.iSelectedIndex,keyboardOrMouse:aiKeyboardOrMouse});
+			this.dispatchEvent({type:"selectionChange", index:this.iSelectedIndex, keyboardOrMouse:aiKeyboardOrMouse});
 		}
 	}
 
@@ -322,7 +322,7 @@ class Shared.BSScrollingList extends MovieClip
 		while (_loc2_ < this.EntriesA.length && this.iListItemsShown < this.iMaxItemsShown && _loc5_ <= this.fListHeight)
 		{
 			_loc3_ = this.GetClipByIndex(this.iListItemsShown);
-			this.SetEntry(_loc3_,this.EntriesA[_loc2_]);
+			this.SetEntry(_loc3_, this.EntriesA[_loc2_]);
 			this.EntriesA[_loc2_].clipIndex = this.iListItemsShown;
 			_loc3_.itemIndex = _loc2_;
 			_loc3_._y = _loc6_ + _loc5_;
@@ -360,12 +360,12 @@ class Shared.BSScrollingList extends MovieClip
 			if (_loc2_ != this.iMaxScrollPosition)
 			{
 				this.ListScrollbar._visible = false;
-				this.ListScrollbar.setScrollProperties(this.iMaxItemsShown,0,this.iMaxScrollPosition);
+				this.ListScrollbar.setScrollProperties(this.iMaxItemsShown, 0, this.iMaxScrollPosition);
 				if (this.iScrollbarDrawTimerID != undefined)
 				{
 					clearInterval(this.iScrollbarDrawTimerID);
 				}
-				this.iScrollbarDrawTimerID = setInterval(this,"SetScrollbarVisibility",50);
+				this.iScrollbarDrawTimerID = setInterval(this, "SetScrollbarVisibility", 50);
 			}
 			else
 			{
@@ -408,7 +408,7 @@ class Shared.BSScrollingList extends MovieClip
 	function GetEntryHeight(aiEntryIndex)
 	{
 		var _loc2_ = this.GetClipByIndex(0);
-		this.SetEntry(_loc2_,this.EntriesA[aiEntryIndex]);
+		this.SetEntry(_loc2_, this.EntriesA[aiEntryIndex]);
 		return _loc2_._height;
 	}
 
@@ -452,7 +452,7 @@ class Shared.BSScrollingList extends MovieClip
 	{
 		if (!this.bDisableInput && !this.bDisableSelection && this.iSelectedIndex != -1)
 		{
-			this.dispatchEvent({type:"itemPress",index:this.iSelectedIndex,entry:this.EntriesA[this.iSelectedIndex],keyboardOrMouse:aiKeyboardOrMouse});
+			this.dispatchEvent({type:"itemPress", index:this.iSelectedIndex, entry:this.EntriesA[this.iSelectedIndex], keyboardOrMouse:aiKeyboardOrMouse});
 		}
 		else
 		{
@@ -464,7 +464,7 @@ class Shared.BSScrollingList extends MovieClip
 	{
 		if (!this.bDisableInput && !this.bDisableSelection && this.iSelectedIndex != -1 && aiButtonIndex == 1)
 		{
-			this.dispatchEvent({type:"itemPressAux",index:this.iSelectedIndex,entry:this.EntriesA[this.iSelectedIndex],keyboardOrMouse:aiKeyboardOrMouse});
+			this.dispatchEvent({type:"itemPressAux", index:this.iSelectedIndex, entry:this.EntriesA[this.iSelectedIndex], keyboardOrMouse:aiKeyboardOrMouse});
 		}
 	}
 
@@ -480,7 +480,7 @@ class Shared.BSScrollingList extends MovieClip
 			{
 				aEntryClip.gotoAndStop("Normal");
 			}
-			this.SetEntryText(aEntryClip,aEntryObject);
+			this.SetEntryText(aEntryClip, aEntryObject);
 		}
 	}
 

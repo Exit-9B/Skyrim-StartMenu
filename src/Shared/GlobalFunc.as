@@ -25,7 +25,7 @@ class Shared.GlobalFunc
 		var _loc1_ = aTargetMin + (aSource - aSourceMin) / (aSourceMax - aSourceMin) * (aTargetMax - aTargetMin);
 		if (abClamp)
 		{
-			_loc1_ = Math.min(Math.max(_loc1_,aTargetMin),aTargetMax);
+			_loc1_ = Math.min(Math.max(_loc1_, aTargetMin), aTargetMax);
 		}
 		return _loc1_;
 	}
@@ -41,7 +41,7 @@ class Shared.GlobalFunc
 
 	static function RoundDecimal(aNumber, aPrecision)
 	{
-		var _loc1_ = Math.pow(10,aPrecision);
+		var _loc1_ = Math.pow(10, aPrecision);
 		return Math.round(_loc1_ * aNumber) / _loc1_;
 	}
 
@@ -80,8 +80,8 @@ class Shared.GlobalFunc
 	{
 		MovieClip.prototype.Lock = function(aPosition)
 		{
-			var _loc4_ = {x:Stage.visibleRect.x + Stage.safeRect.x,y:Stage.visibleRect.y + Stage.safeRect.y};
-			var _loc3_ = {x:Stage.visibleRect.x + Stage.visibleRect.width - Stage.safeRect.x,y:Stage.visibleRect.y + Stage.visibleRect.height - Stage.safeRect.y};
+			var _loc4_ = {x:Stage.visibleRect.x + Stage.safeRect.x, y:Stage.visibleRect.y + Stage.safeRect.y};
+			var _loc3_ = {x:Stage.visibleRect.x + Stage.visibleRect.width - Stage.safeRect.x, y:Stage.visibleRect.y + Stage.visibleRect.height - Stage.safeRect.y};
 			this._parent.globalToLocal(_loc4_);
 			this._parent.globalToLocal(_loc3_);
 			if (aPosition == "T" || aPosition == "TL" || aPosition == "TR")
@@ -247,7 +247,7 @@ class Shared.GlobalFunc
 			{
 				if (aStartingClip[_loc3_] != aStartingClip)
 				{
-					Shared.GlobalFunc.RecursiveRegisterMovieClips(aStartingClip[_loc3_],aRootClip);
+					Shared.GlobalFunc.RecursiveRegisterMovieClips(aStartingClip[_loc3_], aRootClip);
 				}
 				aStartingClip[_loc3_].RegisterMovieClip(aRootClip);
 			}
@@ -281,7 +281,7 @@ class Shared.GlobalFunc
 		{
 			_loc1_--;
 		}
-		_loc3_ = _loc3_.substring(0,_loc1_ + 1);
+		_loc3_ = _loc3_.substring(0, _loc1_ + 1);
 		return _loc3_;
 	}
 }

@@ -51,14 +51,14 @@ class SaveLoadPanel extends MovieClip
 	{
 		this.ScreenshotLoader = new MovieClipLoader();
 		this.ScreenshotLoader.addListener(this);
-		gfx.io.GameDelegate.addCallBack("ConfirmOKToLoad",this,"onOKToLoadConfirm");
-		gfx.io.GameDelegate.addCallBack("onSaveLoadBatchComplete",this,"onSaveLoadBatchComplete");
-		gfx.io.GameDelegate.addCallBack("onFillCharacterListComplete",this,"onFillCharacterListComplete");
-		gfx.io.GameDelegate.addCallBack("ScreenshotReady",this,"ShowScreenshot");
-		this.SaveLoadList_mc.addEventListener("itemPress",this,"onSaveLoadItemPress");
-		this.SaveLoadList_mc.addEventListener("selectionChange",this,"onSaveLoadItemHighlight");
+		gfx.io.GameDelegate.addCallBack("ConfirmOKToLoad", this, "onOKToLoadConfirm");
+		gfx.io.GameDelegate.addCallBack("onSaveLoadBatchComplete", this, "onSaveLoadBatchComplete");
+		gfx.io.GameDelegate.addCallBack("onFillCharacterListComplete", this, "onFillCharacterListComplete");
+		gfx.io.GameDelegate.addCallBack("ScreenshotReady", this, "ShowScreenshot");
+		this.SaveLoadList_mc.addEventListener("itemPress", this, "onSaveLoadItemPress");
+		this.SaveLoadList_mc.addEventListener("selectionChange", this, "onSaveLoadItemHighlight");
 		this.iBatchSize = this.SaveLoadList_mc.maxEntries;
-		this.PlayerInfoText.createTextField("LevelText",this.PlayerInfoText.getNextHighestDepth(),0,0,200,30);
+		this.PlayerInfoText.createTextField("LevelText", this.PlayerInfoText.getNextHighestDepth(), 0, 0, 200, 30);
 		this.PlayerInfoText.LevelText.text = "$Level";
 		this.PlayerInfoText.LevelText._visible = false;
 	}
@@ -109,15 +109,15 @@ class SaveLoadPanel extends MovieClip
 		{
 			this.BackMouseButton.SetPlatform(this.iPlatform);
 			this.SelectMouseButton.SetPlatform(this.iPlatform);
-			this.BackMouseButton.addEventListener("click",Shared.Proxy.create(this,this.OnBackClicked));
-			this.SelectMouseButton.addEventListener("click",Shared.Proxy.create(this,this.OnSelectClicked));
+			this.BackMouseButton.addEventListener("click", Shared.Proxy.create(this, this.OnBackClicked));
+			this.SelectMouseButton.addEventListener("click", Shared.Proxy.create(this, this.OnSelectClicked));
 			_loc2_ = this.SelectMouseButton.getBounds(this);
 			this.SelectMouseButton._x += this.CharacterSelectionHint_mc._x - _loc2_.xMin;
 		}
 		else
 		{
-			this.BackGamepadButton.SetPlatform(this.iPlatform,this.PS3Switch);
-			this.SelectGamepadButton.SetPlatform(this.iPlatform,this.PS3Switch);
+			this.BackGamepadButton.SetPlatform(this.iPlatform, this.PS3Switch);
+			this.SelectGamepadButton.SetPlatform(this.iPlatform, this.PS3Switch);
 		}
 		this.BackMouseButton._visible = this.SelectMouseButton._visible = this.iPlatform == SaveLoadPanel.CONTROLLER_PC;
 		this.BackGamepadButton._visible = this.SelectGamepadButton._visible = this.iPlatform != SaveLoadPanel.CONTROLLER_PC;
@@ -147,7 +147,7 @@ class SaveLoadPanel extends MovieClip
 	{
 		if (this.lastSelectedIndexMemory > this.SaveLoadList_mc.entryList.length - 1)
 		{
-			this.lastSelectedIndexMemory = Math.max(0,this.SaveLoadList_mc.entryList.length - 1);
+			this.lastSelectedIndexMemory = Math.max(0, this.SaveLoadList_mc.entryList.length - 1);
 		}
 		return this.lastSelectedIndexMemory;
 	}
@@ -177,17 +177,17 @@ class SaveLoadPanel extends MovieClip
 				{
 					_loc2_ = 4294967295;
 				}
-				gfx.io.GameDelegate.call("CharacterSelected",[_loc2_,_loc3_,this.bSaving,this.SaveLoadList_mc.entryList,this.iBatchSize]);
+				gfx.io.GameDelegate.call("CharacterSelected", [_loc2_, _loc3_, this.bSaving, this.SaveLoadList_mc.entryList, this.iBatchSize]);
 				this.dispatchEvent({type:"OnCharacterSelected"});
 			}
 		}
 		else if (!this.bSaving)
 		{
-			gfx.io.GameDelegate.call("IsOKtoLoad",[this.SaveLoadList_mc.selectedIndex]);
+			gfx.io.GameDelegate.call("IsOKtoLoad", [this.SaveLoadList_mc.selectedIndex]);
 		}
 		else
 		{
-			this.dispatchEvent({type:"saveGameSelected",index:this.SaveLoadList_mc.selectedIndex});
+			this.dispatchEvent({type:"saveGameSelected", index:this.SaveLoadList_mc.selectedIndex});
 		}
 	}
 
@@ -205,7 +205,7 @@ class SaveLoadPanel extends MovieClip
 
 	function onOKToLoadConfirm()
 	{
-		this.dispatchEvent({type:"loadGameSelected",index:this.SaveLoadList_mc.selectedIndex});
+		this.dispatchEvent({type:"loadGameSelected", index:this.SaveLoadList_mc.selectedIndex});
 	}
 
 	function ForceStopLoading()
@@ -213,7 +213,7 @@ class SaveLoadPanel extends MovieClip
 		this.isForceStopping = true;
 		if (this.uiSaveLoadManagerProcessedElements < this.uiSaveLoadManagerNumElementsToLoad)
 		{
-			gfx.io.GameDelegate.call("ForceStopSaveListLoading",[]);
+			gfx.io.GameDelegate.call("ForceStopSaveListLoading", []);
 		}
 	}
 
@@ -245,9 +245,9 @@ class SaveLoadPanel extends MovieClip
 		{
 			if (event.index != -1)
 			{
-				this.iScreenshotTimerID = setInterval(this,"PrepScreenshot",SaveLoadPanel.SCREENSHOT_DELAY);
+				this.iScreenshotTimerID = setInterval(this, "PrepScreenshot", SaveLoadPanel.SCREENSHOT_DELAY);
 			}
-			this.dispatchEvent({type:"saveHighlighted",index:this.SaveLoadList_mc.selectedIndex});
+			this.dispatchEvent({type:"saveHighlighted", index:this.SaveLoadList_mc.selectedIndex});
 		}
 	}
 
@@ -257,18 +257,18 @@ class SaveLoadPanel extends MovieClip
 		this.iScreenshotTimerID = undefined;
 		if (this.bSaving)
 		{
-			gfx.io.GameDelegate.call("PrepSaveGameScreenshot",[this.SaveLoadList_mc.selectedIndex - 1,this.SaveLoadList_mc.selectedEntry]);
+			gfx.io.GameDelegate.call("PrepSaveGameScreenshot", [this.SaveLoadList_mc.selectedIndex - 1, this.SaveLoadList_mc.selectedEntry]);
 		}
 		else
 		{
-			gfx.io.GameDelegate.call("PrepSaveGameScreenshot",[this.SaveLoadList_mc.selectedIndex,this.SaveLoadList_mc.selectedEntry]);
+			gfx.io.GameDelegate.call("PrepSaveGameScreenshot", [this.SaveLoadList_mc.selectedIndex, this.SaveLoadList_mc.selectedEntry]);
 		}
 	}
 
 	function ShowScreenshot()
 	{
-		this.ScreenshotRect = this.ScreenshotHolder.createEmptyMovieClip("ScreenshotRect",0);
-		this.ScreenshotLoader.loadClip("img://BGSSaveLoadHeader_Screenshot",this.ScreenshotRect);
+		this.ScreenshotRect = this.ScreenshotHolder.createEmptyMovieClip("ScreenshotRect", 0);
+		this.ScreenshotLoader.loadClip("img://BGSSaveLoadHeader_Screenshot", this.ScreenshotRect);
 		var _loc2_;
 		var _loc3_;
 		if (this.SaveLoadList_mc.selectedEntry.corrupt == true)
@@ -285,7 +285,7 @@ class SaveLoadPanel extends MovieClip
 			_loc3_ = 20;
 			if (_loc2_.length > _loc3_)
 			{
-				_loc2_ = _loc2_.substr(0,_loc3_ - 3) + "...";
+				_loc2_ = _loc2_.substr(0, _loc3_ - 3) + "...";
 			}
 			if (this.SaveLoadList_mc.selectedEntry.raceName != undefined && this.SaveLoadList_mc.selectedEntry.raceName.length > 0)
 			{
@@ -334,7 +334,7 @@ class SaveLoadPanel extends MovieClip
 		{
 			if (this.SaveLoadList_mc.entryList[_loc3_].text.length > _loc2_)
 			{
-				this.SaveLoadList_mc.entryList[_loc3_].text = this.SaveLoadList_mc.entryList[_loc3_].text.substr(0,_loc2_ - 3) + "...";
+				this.SaveLoadList_mc.entryList[_loc3_].text = this.SaveLoadList_mc.entryList[_loc3_].text.substr(0, _loc2_ - 3) + "...";
 			}
 		}
 		this.SaveLoadList_mc.InvalidateData();
@@ -358,19 +358,19 @@ class SaveLoadPanel extends MovieClip
 			{
 				if (this.SaveLoadList_mc.entryList[_loc3_].text == undefined)
 				{
-					this.SaveLoadList_mc.entryList.splice(_loc3_,1);
+					this.SaveLoadList_mc.entryList.splice(_loc3_, 1);
 				}
 			}
 			if (this.SaveLoadList_mc.entryList[_loc3_].text.length > _loc2_)
 			{
-				this.SaveLoadList_mc.entryList[_loc3_].text = this.SaveLoadList_mc.entryList[_loc3_].text.substr(0,_loc2_ - 3) + "...";
+				this.SaveLoadList_mc.entryList[_loc3_].text = this.SaveLoadList_mc.entryList[_loc3_].text.substr(0, _loc2_ - 3) + "...";
 			}
 		}
 		var _loc4_ = "$[NEW SAVE]";
 		var _loc5_;
 		if (this.bSaving && this.SaveLoadList_mc.entryList[0].text != _loc4_)
 		{
-			_loc5_ = {name:" ",playTime:" ",text:_loc4_};
+			_loc5_ = {name:" ", playTime:" ", text:_loc4_};
 			this.SaveLoadList_mc.entryList.unshift(_loc5_);
 		}
 		else if (!this.bSaving && this.SaveLoadList_mc.entryList[0].text == _loc4_)
@@ -403,13 +403,13 @@ class SaveLoadPanel extends MovieClip
 		{
 			if (this.bSaving)
 			{
-				gfx.io.GameDelegate.call("DeleteSave",[this.SaveLoadList_mc.selectedIndex - 1]);
+				gfx.io.GameDelegate.call("DeleteSave", [this.SaveLoadList_mc.selectedIndex - 1]);
 			}
 			else
 			{
-				gfx.io.GameDelegate.call("DeleteSave",[this.SaveLoadList_mc.selectedIndex]);
+				gfx.io.GameDelegate.call("DeleteSave", [this.SaveLoadList_mc.selectedIndex]);
 			}
-			this.SaveLoadList_mc.entryList.splice(this.SaveLoadList_mc.selectedIndex,1);
+			this.SaveLoadList_mc.entryList.splice(this.SaveLoadList_mc.selectedIndex, 1);
 			this.SaveLoadList_mc.InvalidateData();
 			this.onSaveLoadItemHighlight({index:this.SaveLoadList_mc.selectedIndex});
 		}
@@ -419,7 +419,7 @@ class SaveLoadPanel extends MovieClip
 	{
 		this.SaveLoadList_mc.ClearList();
 		this.SaveLoadList_mc.entryList().push(new Object());
-		this.onSaveLoadBatchComplete(true,0,0);
+		this.onSaveLoadBatchComplete(true, 0, 0);
 	}
 
 	function OnSelectClicked()

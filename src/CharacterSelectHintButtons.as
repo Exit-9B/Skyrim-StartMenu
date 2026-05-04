@@ -67,12 +67,12 @@ class CharacterSelectHintButtons extends MovieClip
 
 	function ButtonClick(event)
 	{
-		this.dispatchEvent({type:"OnMousePressCharacterChange",target:this,data:[]});
+		this.dispatchEvent({type:"OnMousePressCharacterChange", target:this, data:[]});
 	}
 
 	function RollOver(event)
 	{
-		gfx.io.GameDelegate.call("PlaySound",["UIMenuFocus"]);
+		gfx.io.GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 		this.gotoAndStop(2);
 	}
 

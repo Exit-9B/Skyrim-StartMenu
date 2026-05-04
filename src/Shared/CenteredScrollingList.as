@@ -28,7 +28,7 @@ class Shared.CenteredScrollingList extends Shared.BSScrollingList
 	{
 		super();
 		this._filterer = new Shared.ListFilterer();
-		this._filterer.addEventListener("filterChange",this,"onFilterChange");
+		this._filterer.addEventListener("filterChange", this, "onFilterChange");
 		this.bRecenterSelection = false;
 		this.iMaxTextLength = 256;
 		this.iDividerIndex = -1;
@@ -136,7 +136,7 @@ class Shared.CenteredScrollingList extends Shared.BSScrollingList
 			_loc5_ = this.GetClipByIndex(_loc4_);
 			if (this.iScrollPosition - this.iNumTopHalfEntries + _loc4_ >= 0)
 			{
-				this.SetEntry(_loc5_,this.EntriesA[_loc2_]);
+				this.SetEntry(_loc5_, this.EntriesA[_loc2_]);
 				_loc5_._visible = true;
 				_loc5_.itemIndex = this.IsDivider(this.EntriesA[_loc2_]) == true ? undefined : _loc2_;
 				this.EntriesA[_loc2_].clipIndex = _loc4_;
@@ -160,7 +160,7 @@ class Shared.CenteredScrollingList extends Shared.BSScrollingList
 		while (_loc2_ != undefined && _loc2_ != -1 && _loc2_ < this.EntriesA.length && this.iListItemsShown < this.iMaxItemsShown && _loc6_ <= this.fListHeight)
 		{
 			_loc5_ = this.GetClipByIndex(this.iListItemsShown);
-			this.SetEntry(_loc5_,this.EntriesA[_loc2_]);
+			this.SetEntry(_loc5_, this.EntriesA[_loc2_]);
 			this.EntriesA[_loc2_].clipIndex = this.iListItemsShown;
 			_loc5_.itemIndex = this.IsDivider(this.EntriesA[_loc2_]) == true ? undefined : _loc2_;
 			_loc5_._y = _loc10_ + _loc6_;
@@ -188,7 +188,7 @@ class Shared.CenteredScrollingList extends Shared.BSScrollingList
 			{
 				if (_loc3_._parent == this && _loc3_._visible && _loc3_.itemIndex != undefined)
 				{
-					this.doSetSelectedIndex(_loc3_.itemIndex,0);
+					this.doSetSelectedIndex(_loc3_.itemIndex, 0);
 				}
 				_loc3_ = _loc3_._parent;
 			}
@@ -233,7 +233,7 @@ class Shared.CenteredScrollingList extends Shared.BSScrollingList
 			}
 			this.bMouseDrivenNav = false;
 			this.UpdateList();
-			this.dispatchEvent({type:"listMovedUp",index:this.iSelectedIndex,scrollChanged:_loc3_ != this.iScrollPosition});
+			this.dispatchEvent({type:"listMovedUp", index:this.iSelectedIndex, scrollChanged:_loc3_ != this.iScrollPosition});
 		}
 	}
 
@@ -256,7 +256,7 @@ class Shared.CenteredScrollingList extends Shared.BSScrollingList
 			}
 			this.bMouseDrivenNav = false;
 			this.UpdateList();
-			this.dispatchEvent({type:"listMovedDown",index:this.iSelectedIndex,scrollChanged:_loc3_ != this.iScrollPosition});
+			this.dispatchEvent({type:"listMovedDown", index:this.iSelectedIndex, scrollChanged:_loc3_ != this.iScrollPosition});
 		}
 	}
 
@@ -365,7 +365,7 @@ class Shared.CenteredScrollingList extends Shared.BSScrollingList
 			{
 				aEntryClip.statusIcon._visible = true;
 			}
-			this.SetEntryText(aEntryClip,aEntryObject);
+			this.SetEntryText(aEntryClip, aEntryObject);
 		}
 	}
 }

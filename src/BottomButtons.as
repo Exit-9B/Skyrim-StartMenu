@@ -6,23 +6,23 @@ class BottomButtons extends MovieClip
 	var dispatchEvent;
 	var onEnterFrame;
 
-	static var ACCEPT = {PCArt:"Enter",XBoxArt:"360_A",PS3Art:"PS3_A",Label:"$Accept",KeyCode:13};
-	static var ENTER_TEXT = {PCArt:"Enter",XBoxArt:"360_A",PS3Art:"PS3_A",Label:"$Enter Text",KeyCode:13};
-	static var CANCEL = {PCArt:"Esc",XBoxArt:"360_B",PS3Art:"PS3_B",Label:"$Back",KeyCode:9};
-	static var LIBRARY_LOGIN = {PCArt:"Home",XBoxArt:"360_Y",PS3Art:"PS3_Y",Label:"$Mod_MyLibrary",KeyCode:36};
-	static var LIBRARY = {PCArt:"T",XBoxArt:"360_Y",PS3Art:"PS3_Y",Label:"$Mod_MyLibrary",KeyCode:84};
-	static var DETAILS = {PCArt:"Enter",XBoxArt:"360_A",PS3Art:"PS3_A",Label:"$Mod_Details",KeyCode:13};
-	static var ENABLE_MOD = {PCArt:"Enter",XBoxArt:"360_A",PS3Art:"PS3_A",Label:"$Mod_LibraryEnable",KeyCode:13};
-	static var REORDER_MOD = {PCArt:"X",XBoxArt:"360_X",PS3Art:"PS3_X",Label:"$Mod_Reorder",KeyCode:88};
-	static var DONE_REORDER_MOD = {PCArt:"X",XBoxArt:"360_X",PS3Art:"PS3_X",Label:"$Done",KeyCode:88};
-	static var DELETE_MOD = {PCArt:"T",XBoxArt:"360_Y",PS3Art:"PS3_Y",Label:"$Mod_LibraryDelete",KeyCode:84};
-	static var SEARCH = {PCArt:"X",XBoxArt:"360_X",PS3Art:"PS3_X",Label:"$Mod_Search",KeyCode:88};
-	static var SEARCH_CONFIRM = {PCArt:"Enter",XBoxArt:"360_A",PS3Art:"PS3_A",Label:"$Mod_Search",KeyCode:13};
-	static var OPTIONS = {PCArt:"V",XBoxArt:"360_Back",PS3Art:"PS3_Back",Label:"$Mod_AccountSettings",KeyCode:86};
-	static var CONFIRM = {PCArt:"Enter",XBoxArt:"360_A",PS3Art:"PS3_A",Label:"$Select",KeyCode:13};
-	static var MOD_TIME_FILTER = {PCArt:"Home",PCArtSecondary:"End",XBoxArt:"360_LT",XBoxArtSecondary:"360_RT",PS3Art:"PS3_LT",PS3ArtSecondary:"PS3_RT",Label:"$TimeFilterToday",KeyCode:36,KeyCodeSecondary:35};
-	static var NEW_ACCOUNT = {PCArt:"End",XBoxArt:"360_X",PS3Art:"PS3_X",Label:"$Login_CreateNew",KeyCode:35};
-	static var TOGGLE = {PCArt:"T",XBoxArt:"360_Y",PS3Art:"PS3_Y",Label:"$Toggle",KeyCode:84};
+	static var ACCEPT = {PCArt:"Enter", XBoxArt:"360_A", PS3Art:"PS3_A", Label:"$Accept", KeyCode:13};
+	static var ENTER_TEXT = {PCArt:"Enter", XBoxArt:"360_A", PS3Art:"PS3_A", Label:"$Enter Text", KeyCode:13};
+	static var CANCEL = {PCArt:"Esc", XBoxArt:"360_B", PS3Art:"PS3_B", Label:"$Back", KeyCode:9};
+	static var LIBRARY_LOGIN = {PCArt:"Home", XBoxArt:"360_Y", PS3Art:"PS3_Y", Label:"$Mod_MyLibrary", KeyCode:36};
+	static var LIBRARY = {PCArt:"T", XBoxArt:"360_Y", PS3Art:"PS3_Y", Label:"$Mod_MyLibrary", KeyCode:84};
+	static var DETAILS = {PCArt:"Enter", XBoxArt:"360_A", PS3Art:"PS3_A", Label:"$Mod_Details", KeyCode:13};
+	static var ENABLE_MOD = {PCArt:"Enter", XBoxArt:"360_A", PS3Art:"PS3_A", Label:"$Mod_LibraryEnable", KeyCode:13};
+	static var REORDER_MOD = {PCArt:"X", XBoxArt:"360_X", PS3Art:"PS3_X", Label:"$Mod_Reorder", KeyCode:88};
+	static var DONE_REORDER_MOD = {PCArt:"X", XBoxArt:"360_X", PS3Art:"PS3_X", Label:"$Done", KeyCode:88};
+	static var DELETE_MOD = {PCArt:"T", XBoxArt:"360_Y", PS3Art:"PS3_Y", Label:"$Mod_LibraryDelete", KeyCode:84};
+	static var SEARCH = {PCArt:"X", XBoxArt:"360_X", PS3Art:"PS3_X", Label:"$Mod_Search", KeyCode:88};
+	static var SEARCH_CONFIRM = {PCArt:"Enter", XBoxArt:"360_A", PS3Art:"PS3_A", Label:"$Mod_Search", KeyCode:13};
+	static var OPTIONS = {PCArt:"V", XBoxArt:"360_Back", PS3Art:"PS3_Back", Label:"$Mod_AccountSettings", KeyCode:86};
+	static var CONFIRM = {PCArt:"Enter", XBoxArt:"360_A", PS3Art:"PS3_A", Label:"$Select", KeyCode:13};
+	static var MOD_TIME_FILTER = {PCArt:"Home", PCArtSecondary:"End", XBoxArt:"360_LT", XBoxArtSecondary:"360_RT", PS3Art:"PS3_LT", PS3ArtSecondary:"PS3_RT", Label:"$TimeFilterToday", KeyCode:36, KeyCodeSecondary:35};
+	static var NEW_ACCOUNT = {PCArt:"End", XBoxArt:"360_X", PS3Art:"PS3_X", Label:"$Login_CreateNew", KeyCode:35};
+	static var TOGGLE = {PCArt:"T", XBoxArt:"360_Y", PS3Art:"PS3_Y", Label:"$Toggle", KeyCode:84};
 
 	static var BUTTON_CLICKED = "BottomButtons_ButtonClicked";
 	static var BUTTON_HORIZONTAL_SPACING = 26;
@@ -55,14 +55,14 @@ class BottomButtons extends MovieClip
 		this._buttons = new Array();
 		this._buttonMap = {};
 		this._lastSetButtons = new Array();
-		this.onEnterFrame = Shared.Proxy.create(this,this.Init);
+		this.onEnterFrame = Shared.Proxy.create(this, this.Init);
 	}
 
 	function Init()
 	{
 		this.onEnterFrame = null;
 		this._initialized = true;
-		this.SetPlatform(this._platform,this._ps3Switch);
+		this.SetPlatform(this._platform, this._ps3Switch);
 	}
 
 	function Hide(hide)
@@ -79,7 +79,7 @@ class BottomButtons extends MovieClip
 		}
 		else
 		{
-			this._Timeout = setTimeout(Shared.Proxy.create(this,this.DelayedHide),BottomButtons.BUTTON_UPDATE_TIMER);
+			this._Timeout = setTimeout(Shared.Proxy.create(this, this.DelayedHide), BottomButtons.BUTTON_UPDATE_TIMER);
 		}
 	}
 
@@ -95,7 +95,7 @@ class BottomButtons extends MovieClip
 		var _loc2_ = 0;
 		while (_loc2_ < this._buttons.length)
 		{
-			this._buttons[_loc2_].SetPlatform(this._platform,this._ps3Switch);
+			this._buttons[_loc2_].SetPlatform(this._platform, this._ps3Switch);
 			_loc2_++;
 		}
 	}
@@ -127,17 +127,17 @@ class BottomButtons extends MovieClip
 			_loc3_ = 0;
 			while (_loc3_ < buttons.length)
 			{
-				_loc2_ = Components.CrossPlatformButtons(this.attachMovie(this.GetButtonID(this._platform),this.GetButtonID(this._platform) + "_" + _loc3_,this.getNextHighestDepth()));
-				_loc2_.addEventListener("stateChange",Shared.Proxy.create(this,this.ButtonStateChange));
-				_loc2_.addEventListener("click",Shared.Proxy.create(this,this.ButtonClick));
-				_loc2_.addEventListener("releaseOutside",Shared.Proxy.create(this,this.ButtonClick));
-				_loc2_.OnTextFieldChanged = Shared.Proxy.create(this,this.Reposition);
+				_loc2_ = Components.CrossPlatformButtons(this.attachMovie(this.GetButtonID(this._platform), this.GetButtonID(this._platform) + "_" + _loc3_, this.getNextHighestDepth()));
+				_loc2_.addEventListener("stateChange", Shared.Proxy.create(this, this.ButtonStateChange));
+				_loc2_.addEventListener("click", Shared.Proxy.create(this, this.ButtonClick));
+				_loc2_.addEventListener("releaseOutside", Shared.Proxy.create(this, this.ButtonClick));
+				_loc2_.OnTextFieldChanged = Shared.Proxy.create(this, this.Reposition);
 				_loc2_.textField.autoSize = true;
 				_loc2_.SetArt(buttons[_loc3_]);
 				_loc2_.label = buttons[_loc3_].Label;
 				_loc2_._visible = true;
 				_loc2_._x = this.OUT_OF_THE_STAGE;
-				_loc2_.SetPlatform(this._platform,this._ps3Switch);
+				_loc2_.SetPlatform(this._platform, this._ps3Switch);
 				this._buttons.push(_loc2_);
 				this._buttonMap[_loc2_] = buttons[_loc3_];
 				_loc3_++;
@@ -225,6 +225,6 @@ class BottomButtons extends MovieClip
 	function ButtonClick(event)
 	{
 		var _loc2_ = event.target;
-		this.dispatchEvent({type:BottomButtons.BUTTON_CLICKED,target:this,data:this._buttonMap[_loc2_]});
+		this.dispatchEvent({type:BottomButtons.BUTTON_CLICKED, target:this, data:this._buttonMap[_loc2_]});
 	}
 }

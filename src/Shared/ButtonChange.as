@@ -30,11 +30,11 @@ class Shared.ButtonChange extends gfx.events.EventDispatcher
 	function SetPlatform(aSetPlatform, aSetSwapPS3)
 	{
 		this.iCurrPlatform = aSetPlatform;
-		this.dispatchEvent({target:this,type:"platformChange",aPlatform:aSetPlatform,aSwapPS3:aSetSwapPS3});
+		this.dispatchEvent({target:this, type:"platformChange", aPlatform:aSetPlatform, aSwapPS3:aSetSwapPS3});
 	}
 
 	function SetPS3Swap(aSwap)
 	{
-		this.dispatchEvent({target:this,type:"SwapPS3Button",Boolean:aSwap});
+		this.dispatchEvent({target:this, type:"SwapPS3Button", Boolean:aSwap});
 	}
 }

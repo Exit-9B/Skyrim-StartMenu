@@ -23,8 +23,8 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 	function CrossPlatformButtons()
 	{
 		super();
-		this.textField.onChanged = Shared.Proxy.create(this,this.Reposition);
-		gfx.io.GameDelegate.call("myLog",["CrossPlatformButtons::CrossPlatformButtons"]);
+		this.textField.onChanged = Shared.Proxy.create(this, this.Reposition);
+		gfx.io.GameDelegate.call("myLog", ["CrossPlatformButtons::CrossPlatformButtons"]);
 	}
 
 	function onLoad()
@@ -34,12 +34,12 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 		{
 			this._parent.onButtonLoad(this);
 		}
-		gfx.io.GameDelegate.call("myLog",["CrossPlatformButtons::onLoad"]);
+		gfx.io.GameDelegate.call("myLog", ["CrossPlatformButtons::onLoad"]);
 	}
 
 	function SetPlatform(aiPlatform, aSwapPS3)
 	{
-		gfx.io.GameDelegate.call("myLog",["CrossPlatformButtons::SetPlatform"]);
+		gfx.io.GameDelegate.call("myLog", ["CrossPlatformButtons::SetPlatform"]);
 		if (aiPlatform != undefined)
 		{
 			this.CurrentPlatform = aiPlatform;
@@ -70,20 +70,20 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 			case Shared.ButtonChange.PLATFORM_PC:
 				if (this.PCButton != "None")
 				{
-					this.ButtonArt_mc = this.attachMovie(this.PCButton,"ButtonArt",this.getNextHighestDepth());
+					this.ButtonArt_mc = this.attachMovie(this.PCButton, "ButtonArt", this.getNextHighestDepth());
 				}
 				if (this.PCButtonSecondary != null)
 				{
-					this.ButtonArtSecondary_mc = this.attachMovie(this.PCButtonSecondary,"ButtonArtSecondary",this.getNextHighestDepth());
+					this.ButtonArtSecondary_mc = this.attachMovie(this.PCButtonSecondary, "ButtonArtSecondary", this.getNextHighestDepth());
 				}
 				break;
 			case Shared.ButtonChange.PLATFORM_PC_GAMEPAD:
 			case Shared.ButtonChange.PLATFORM_360:
 			case Shared.ButtonChange.PLATFORM_SCARLETT:
-				this.ButtonArt_mc = this.attachMovie(this.XBoxButton,"ButtonArt",this.getNextHighestDepth());
+				this.ButtonArt_mc = this.attachMovie(this.XBoxButton, "ButtonArt", this.getNextHighestDepth());
 				if (this.XBoxButtonSecondary != null)
 				{
-					this.ButtonArtSecondary_mc = this.attachMovie(this.XBoxButtonSecondary,"ButtonArtSecondary",this.getNextHighestDepth());
+					this.ButtonArtSecondary_mc = this.attachMovie(this.XBoxButtonSecondary, "ButtonArtSecondary", this.getNextHighestDepth());
 				}
 				break;
 			case Shared.ButtonChange.PLATFORM_PS3:
@@ -91,7 +91,7 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 			default:
 				_loc2_ = this.PS3Button;
 				_loc3_ = this.PS3ButtonSecondary;
-				gfx.io.GameDelegate.call("myLog",[String(_loc2_)]);
+				gfx.io.GameDelegate.call("myLog", [String(_loc2_)]);
 				if (this.PS3Swapped)
 				{
 					if (_loc2_ == "PS3_A")
@@ -236,18 +236,18 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 						_loc3_ = "PS5_Start";
 					}
 				}
-				gfx.io.GameDelegate.call("myLog",[String(_loc2_)]);
-				this.ButtonArt_mc = this.attachMovie(_loc2_,"ButtonArt",this.getNextHighestDepth());
+				gfx.io.GameDelegate.call("myLog", [String(_loc2_)]);
+				this.ButtonArt_mc = this.attachMovie(_loc2_, "ButtonArt", this.getNextHighestDepth());
 				if (this.ButtonArt_mc == undefined)
 				{
-					this.ButtonArt_mc = this.attachMovie(_loc5_,"ButtonArt",this.getNextHighestDepth());
+					this.ButtonArt_mc = this.attachMovie(_loc5_, "ButtonArt", this.getNextHighestDepth());
 				}
 				if (_loc3_ != null)
 				{
-					this.ButtonArtSecondary_mc = this.attachMovie(_loc3_,"ButtonArtSecondary",this.getNextHighestDepth());
+					this.ButtonArtSecondary_mc = this.attachMovie(_loc3_, "ButtonArtSecondary", this.getNextHighestDepth());
 					if (this.ButtonArtSecondary_mc == undefined)
 					{
-						this.ButtonArtSecondary_mc = this.attachMovie(_loc4_,"ButtonArtSecondary",this.getNextHighestDepth());
+						this.ButtonArtSecondary_mc = this.attachMovie(_loc4_, "ButtonArtSecondary", this.getNextHighestDepth());
 					}
 				}
 		}
@@ -263,11 +263,11 @@ class Components.CrossPlatformButtons extends gfx.controls.Button
 		var _loc2_ = null;
 		if (this.PCArtSecondary != undefined)
 		{
-			_loc2_ = {PCArt:this.PCButton,XBoxArt:this.XBoxButton,PS3Art:this.PS3Button,PCArtSecondary:this.PCButtonSecondary,XBoxArtSecondary:this.XBoxButtonSecondary,PS3ArtSecondary:this.PS3ButtonSecondary};
+			_loc2_ = {PCArt:this.PCButton, XBoxArt:this.XBoxButton, PS3Art:this.PS3Button, PCArtSecondary:this.PCButtonSecondary, XBoxArtSecondary:this.XBoxButtonSecondary, PS3ArtSecondary:this.PS3ButtonSecondary};
 		}
 		else
 		{
-			_loc2_ = {PCArt:this.PCButton,XBoxArt:this.XBoxButton,PS3Art:this.PS3Button};
+			_loc2_ = {PCArt:this.PCButton, XBoxArt:this.XBoxButton, PS3Art:this.PS3Button};
 		}
 		return _loc2_;
 	}

@@ -16,7 +16,7 @@ class Shared.Proxy
 		var _loc4_ = function()
 		{
 			var _loc2_ = arguments.concat(aParameters);
-			fFunction.apply(oTarget,_loc2_);
+			fFunction.apply(oTarget, _loc2_);
 		};
 		return _loc4_;
 	}

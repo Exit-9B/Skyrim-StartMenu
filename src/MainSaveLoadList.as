@@ -7,7 +7,7 @@ class MainSaveLoadList extends Shared.BSScrollingList
 
 	function SetEntry(aEntryClip, aEntryObject)
 	{
-		super.SetEntry(aEntryClip,aEntryObject);
+		super.SetEntry(aEntryClip, aEntryObject);
 		if (aEntryObject.fileNum != undefined)
 		{
 			if (aEntryObject.fileNum < 10)
@@ -32,12 +32,12 @@ class MainSaveLoadList extends Shared.BSScrollingList
 	function moveSelectionUp()
 	{
 		super.moveSelectionUp();
-		gfx.io.GameDelegate.call("PlaySound",["UIMenuFocus"]);
+		gfx.io.GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 	}
 
 	function moveSelectionDown()
 	{
 		super.moveSelectionDown();
-		gfx.io.GameDelegate.call("PlaySound",["UIMenuFocus"]);
+		gfx.io.GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 	}
 }

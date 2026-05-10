@@ -310,31 +310,32 @@ class Shared.BSScrollingList extends MovieClip
 
 	function UpdateList()
 	{
-		var _loc6_ = this.GetClipByIndex(0)._y;
-		var _loc5_ = 0;
-		for (var _loc2_ = 0; _loc2_ < this.iScrollPosition; _loc2_++)
+		var y_start = this.GetClipByIndex(0)._y;
+		for (var i = 0; i < this.iScrollPosition; i++)
 		{
-			this.EntriesA[_loc2_].clipIndex = undefined;
+			this.EntriesA[i].clipIndex = undefined;
 		}
 		this.iListItemsShown = 0;
-		var _loc3_;
-		for (var _loc2_ = this.iScrollPosition; _loc2_ < this.EntriesA.length && this.iListItemsShown < this.iMaxItemsShown && _loc5_ <= this.fListHeight; _loc2_++)
+		var y_offset = 0;
+		for (var i = this.iScrollPosition;
+			i < this.EntriesA.length && this.iListItemsShown < this.iMaxItemsShown && y_offset <= this.fListHeight;
+			i++)
 		{
-			_loc3_ = this.GetClipByIndex(this.iListItemsShown);
-			this.SetEntry(_loc3_, this.EntriesA[_loc2_]);
-			this.EntriesA[_loc2_].clipIndex = this.iListItemsShown;
-			_loc3_.itemIndex = _loc2_;
-			_loc3_._y = _loc6_ + _loc5_;
-			_loc3_._visible = true;
-			_loc5_ += _loc3_._height;
-			if (_loc5_ <= this.fListHeight && this.iListItemsShown < this.iMaxItemsShown)
+			var entryClip = this.GetClipByIndex(this.iListItemsShown);
+			this.SetEntry(entryClip,this.EntriesA[i]);
+			this.EntriesA[i].clipIndex = this.iListItemsShown;
+			entryClip.itemIndex = i;
+			entryClip._y = y_start + y_offset;
+			entryClip._visible = true;
+			y_offset += entryClip._height;
+			if (y_offset <= this.fListHeight && this.iListItemsShown < this.iMaxItemsShown)
 			{
-				this.iListItemsShown = this.iListItemsShown + 1;
+				this.iListItemsShown++;
 			}
 		}
-		for (var _loc4_ = this.iListItemsShown; _loc4_ < this.iMaxItemsShown; _loc4_++)
+		for (var i = this.iListItemsShown; i < this.iMaxItemsShown; i++)
 		{
-			this.GetClipByIndex(_loc4_)._visible = false;
+			this.GetClipByIndex(i)._visible = false;
 		}
 		if (this.ScrollUp != undefined)
 		{

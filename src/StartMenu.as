@@ -424,7 +424,7 @@ class StartMenu extends MovieClip
 
 	function ShowCharacterSelectionHint(abFlag)
 	{
-		CharacterSelectionHint._visible = false;
+		CharacterSelectionHint._visible = abFlag;
 	}
 
 	function ShowSky10UpsellBanner(abFlag)

@@ -1,0 +1,261 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="SettingsPanel" itemID="69f48e7d-00000398" linkageExportForAS="true" linkageIdentifier="SettingsPanel" linkageClassName="SettingsPanel" lastModified="1778412175" lastUniqueIdentifier="15">
+  <timeline>
+    <DOMTimeline name="SettingsPanel">
+      <layers>
+        <DOMLayer name="Layer 1" color="#EA71CB">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MouseButton" name="BackMouseButton" centerPoint3DX="312.6" centerPoint3DY="757.85">
+                  <matrix>
+                    <Matrix tx="237.6" ty="743.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   XBoxArt = "360_B";
+   disableConstraints = false;
+   disabled = false;
+   disableFocus = false;
+   labelID = "$Back";
+   PCArt = "Tab";
+   PS3Art = "PS3_B";
+   toggle = false;
+   visible = true;
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 2" color="#EB03EE">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MouseButton" name="StartMouseButton" centerPoint3DX="162.6" centerPoint3DY="757.85">
+                  <matrix>
+                    <Matrix tx="87.6" ty="743.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   XBoxArt = "360_Start";
+   disableConstraints = false;
+   disabled = false;
+   disableFocus = false;
+   labelID = "$Start Game";
+   PCArt = "Space";
+   PS3Art = "PS3_Start";
+   toggle = false;
+   visible = true;
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 3" color="#FFC4DA">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GamepadButton" name="BackGamepadButton" centerPoint3DX="326.35" centerPoint3DY="758.1">
+                  <matrix>
+                    <Matrix tx="237.6" ty="743.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   XBoxArt = "360_B";
+   disableConstraints = false;
+   disabled = false;
+   disableFocus = false;
+   labelID = "$Back";
+   PCArt = "Tab";
+   PS3Art = "PS3_B";
+   toggle = false;
+   visible = true;
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#E191E5">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="GamepadButton" name="StartGamepadButton" centerPoint3DX="176.35" centerPoint3DY="758.1">
+                  <matrix>
+                    <Matrix tx="87.6" ty="743.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   XBoxArt = "360_Start";
+   disableConstraints = false;
+   disabled = false;
+   disableFocus = false;
+   labelID = "$Start Game";
+   PCArt = "Space";
+   PS3Art = "PS3_Start";
+   toggle = false;
+   visible = true;
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 5" color="#FDF89E">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 6" color="#A8B77F">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 7" color="#B09AC8">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 8" color="#E77E79" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SettingsList" name="List_mc" centerPoint3DX="168.95" centerPoint3DY="551.4">
+                  <matrix>
+                    <Matrix tx="20" ty="395"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   textOption = "Shrink To Fit";
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 9" color="#F9C044">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 10" color="#A4A9B2">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.592156862745098"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#999999" alpha="0.4"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!7155 16552|7111 16552!7111 16552/7111 90!7111 90|7155 90"/>
+                    <Edge fillStyle0="1" edges="!7155 90/7156 90!7156 90/7156 16552!7156 16552/7155 16552!6712 7784/550 7784!550 7784/550 7744!550 7744/6712 7744!6712 7744/6712 7784"/>
+                    <Edge fillStyle1="1" edges="!215 1/215 0!215 0/7217 0!7217 0/7217 16693!7217 16693/0 16693!0 16693/0 1!0 1/215 1"/>
+                    <Edge fillStyle0="2" fillStyle1="1" edges="!25 16552|69 16552!69 16552|69 74!69 74|25 74"/>
+                    <Edge fillStyle0="2" edges="!25 74|25 16552"/>
+                    <Edge fillStyle1="1" edges="!25 74|24 74!24 74|24 16552!24 16552|25 16552"/>
+                    <Edge fillStyle0="2" edges="!7155 16552/7155 90"/>
+                    <Edge cubics="!7156 90(;7156,90 7156,16552 7156,16552p7156 90q7156 16552);"/>
+                    <Edge cubics="!0 1(;0,1 215,1 215,1q0 1 215 1);"/>
+                    <Edge cubics="!215 1(;215,1 215,0 215,0q215 1 215 0);"/>
+                    <Edge cubics="!215 0(;215,0 7217,0 7217,0q215 0 7217 0);"/>
+                    <Edge cubics="!7217 16693(;7217,16693 0,16693 0,16693q7217 16693 0 16693);"/>
+                    <Edge cubics="!7217 0(;7217,0 7217,16693 7217,16693q7217 0 7217 16693);"/>
+                    <Edge cubics="!24 74(;24,74 24,16552 24,16552q24 74 24 16552);"/>
+                    <Edge cubics="!0 16693(;0,16693 0,1 0,1q0 16693 0 1);"/>
+                    <Edge cubics="!25 74(;25,74 25,16552 25,16552q25 74 25 16552);"/>
+                    <Edge cubics="!69 16552(;69,16552 69,74 69,74q69 16552 69 74);"/>
+                    <Edge cubics="!25 74(;25,74 24,74 24,74q25 74 24 74);"/>
+                    <Edge cubics="!24 16552(;24,16552 25,16552 25,16552q24 16552 25 16552);"/>
+                    <Edge cubics="!7155 90(;7155,90 7155,16552 7155,16552p7155 90q7155 16552);"/>
+                    <Edge cubics="!7155 90(;7155,90 7156,90 7156,90q7155 90 7156 90);"/>
+                    <Edge cubics="!69 74(;69,74 25,74 25,74q69 74 25 74);"/>
+                    <Edge cubics="!7156 16552(;7156,16552 7155,16552 7155,16552q7156 16552 7155 16552);"/>
+                    <Edge cubics="!25 16552(;25,16552 69,16552 69,16552q25 16552 69 16552);"/>
+                    <Edge cubics="!7111 16552(;7111,16552 7111,90 7111,90p7111 16552 7111 90);"/>
+                    <Edge cubics="!7111 90(;7111,90 7155,90 7155,90q7111 90 7155 90);"/>
+                    <Edge cubics="!7155 16552(;7155,16552 7111,16552 7111,16552q7155 16552 7111 16552);"/>
+                    <Edge cubics="!550 7784(;550,7784 550,7744 550,7744q550 7784 550 7744);"/>
+                    <Edge cubics="!6712 7744(;6712,7744 6712,7784 6712,7784p6712 7744 6712 7784);"/>
+                    <Edge cubics="!550 7744(;550,7744 6712,7744 6712,7744p550 7744q6712 7744);"/>
+                    <Edge cubics="!6712 7784(;6712,7784 550,7784 550,7784p6712 7784 550 7784);"/>
+                  </edges>
+                </DOMShape>
+                <DOMDynamicText name="HelpText" width="330.05" height="236.25" includeOutlines="true" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="16.3" ty="145.25"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>&#xD;&#xD;&#xD;&#xD;&#xD;&#xD;&#xD;&#xD;&#xD;Option Description</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" rotation="true" letterSpacing="0.8" lineSpacing="2.25" size="18" face="$EverywhereFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="44.9992520943067" blurX="2" blurY="2" distance="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="textField" width="328.45" height="45.5" includeOutlines="true" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="18.8" ty="686.8"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>&#xD;Start a New Game?</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" rotation="true" letterSpacing="0.8" lineSpacing="2.25" size="18" face="$EverywhereFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="44.9992520943067" blurX="2" blurY="2" distance="2" strength="1.5"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -13,6 +13,9 @@ class StartMenu extends MovieClip
 	var ConfirmPanel_mc;
 	var DLCList_mc;
 	var DLCPanel;
+  var DefaultGamepadButton;
+  var DefaultMouseButton;
+  var DefaultSettingsButton;
 	var DeleteButton;
 	var DeleteMouseButton;
 	var DeleteSaveButton;
@@ -35,6 +38,9 @@ class StartMenu extends MovieClip
 	var SaveLoadConfirmText;
 	var SaveLoadListHolder;
 	var SaveLoadPanel_mc;
+	var SettingsList;
+	var SettingsListHolder;
+	var SettingsPanel_mc;
 	var VersionText;
 	var _BottomButtons_mc;
 	var _Header_tf;
@@ -68,6 +74,8 @@ class StartMenu extends MovieClip
 	static var DLC_STATE = "DLC";
 	static var MARKETPLACE_CONFIRM_STATE = "MarketplaceConfirm";
 	static var LOGIN_STATE = "Login";
+	static var SETTINGS_STATE = "Settings";
+	static var DEFAULT_SETTINGS_CONFIRM_STATE = "DefaultSettingsConfirm";
 
 	static var START_ANIM_STR = "StartAnim";
 	static var END_ANIM_STR = "EndAnim";
@@ -90,6 +98,7 @@ class StartMenu extends MovieClip
 
 	var PS3Switch = false;
 	var _codeObjInitialized = false;
+	var bPrefsChanged = false;
 
 	static var PLATFORM_PC_KBMOUSE = 0;
 	static var PLATFORM_PC_GAMEPAD = 1;
@@ -112,6 +121,8 @@ class StartMenu extends MovieClip
 		hasContinueButton = false;
 		MainList = MainListHolder.List_mc;
 		SaveLoadListHolder = SaveLoadPanel_mc;
+		SettingsListHolder = SettingsPanel_mc;
+		SettingsList = SettingsListHolder.List_mc;
 		DLCList_mc = DLCPanel.DLCList;
 		_LoginHolder_mc = LoginHolder_mc;
 		_Sky10UpSell = MainListHolder.Sky10SelectionHint_mc;
@@ -119,6 +130,7 @@ class StartMenu extends MovieClip
 		_Sky10UpSellBG = MainListHolder.bg_Sky10;
 		ShowSky10UpsellBanner(false);
 		DeleteSaveButton = DeleteButton;
+		DefaultSettingsButton = DefaultGamepadButton;
 		ChangeUserButton = ChangeUserButton;
 		MarketplaceButton = DLCPanel.MarketplaceButton;
 		MarketplaceButton._visible = false;
@@ -214,7 +226,7 @@ class StartMenu extends MovieClip
 		GamerIconLoader = new MovieClipLoader();
 		GamerIconLoader.addListener(this);
 		GameDelegate.addCallBack("sendMenuProperties", this, "setupMainMenu");
-		GameDelegate.addCallBack("ConfirmNewGame", this, "ShowConfirmScreen");
+		GameDelegate.addCallBack("ConfirmNewGame", this, "ConfirmNewGame");
 		GameDelegate.addCallBack("ConfirmContinue", this, "ShowConfirmScreen");
 		GameDelegate.addCallBack("FadeOutMenu", this, "DoFadeOutMenu");
 		GameDelegate.addCallBack("FadeInMenu", this, "DoFadeInMenu");
@@ -226,6 +238,7 @@ class StartMenu extends MovieClip
 		GameDelegate.addCallBack("OnSaveDataEventLoadSUCCESS", this, "OnSaveDataEventLoadSUCCESS");
 		GameDelegate.addCallBack("OnSaveDataEventLoadCANCEL", this, "OnSaveDataEventLoadCANCEL");
 		GameDelegate.addCallBack("onStartButtonProcessFinished", this, "onStartButtonProcessFinished");
+		GameDelegate.addCallBack("SettingsSaved", this, "onSettingsSaved");
 		MainList.addEventListener("itemPress", this, "onMainButtonPress");
 		MainList.addEventListener("listPress", this, "onMainListPress");
 		MainList.addEventListener("listMovedUp", this, "onMainListMoveUp");
@@ -249,12 +262,19 @@ class StartMenu extends MovieClip
 		SaveLoadListHolder.List_mc.addEventListener("listPress", this, "onSaveLoadListPress");
 		DeleteSaveButton._alpha = ALPHA_AVAILABLE;
 		DeleteMouseButton._alpha = ALPHA_AVAILABLE;
+    DefaultSettingsButton._alpha = ALPHA_AVAILABLE;
+    DefaultMouseButton._alpha = ALPHA_AVAILABLE;
 		MarketplaceButton._alpha = ALPHA_DISABLED;
 		DeleteSaveButton._x = - DeleteSaveButton.textField.textWidth - LOADING_ICON_OFFSET;
 		DeleteMouseButton._x = DeleteSaveButton._x;
+    DefaultSettingsButton._x = DeleteSaveButton._x;
+    DefaultMouseButton._x = DefaultSettingsButton._x;
 		ChangeUserButton._x = - ChangeUserButton.textField.textWidth - LOADING_ICON_OFFSET;
 		DLCList_mc._visible = false;
 		CharacterSelectionHint.addEventListener("OnMousePressCharacterChange", Proxy.create(this, OnMousePressCharacterChange));
+		SettingsListHolder.addEventListener("settingHighlighted", this, "onSettingHighlight");
+		SettingsListHolder.addEventListener("OnSettingsPanelStartClicked", Proxy.create(this, OnSettingsPanelStartClicked));
+		SettingsListHolder.addEventListener("OnSettingsPanelBackClicked", Proxy.create(this, OnSettingsPanelBackClicked));
 	}
 
 	function setupMainMenu()
@@ -351,7 +371,7 @@ class StartMenu extends MovieClip
 				StartState(MAIN_STATE);
 			}
 		}
-		else if (currentState == SAVE_LOAD_STATE || currentState == SAVE_LOAD_CONFIRM_STATE || currentState == DELETE_SAVE_CONFIRM_STATE)
+		else if (currentState == SAVE_LOAD_STATE || currentState == SAVE_LOAD_CONFIRM_STATE || currentState == DELETE_SAVE_CONFIRM_STATE || currentState == SETTINGS_STATE || currentState == DEFAULT_SETTINGS_CONFIRM_STATE)
 		{
 			StartState(MAIN_STATE);
 		}
@@ -424,7 +444,7 @@ class StartMenu extends MovieClip
 
 	function ShowCharacterSelectionHint(abFlag)
 	{
-		CharacterSelectionHint._visible = abFlag;
+		CharacterSelectionHint._visible = false;
 	}
 
 	function ShowSky10UpsellBanner(abFlag)
@@ -479,6 +499,8 @@ class StartMenu extends MovieClip
 		ShowChangeUserButtonHelp(strNewState == MAIN_STATE);
 		ShowCharacterSelectionHint(strNewState == SAVE_LOAD_STATE);
 		SaveLoadListHolder.ShowSelectionButtons(strNewState == SAVE_LOAD_STATE || strNewState == CHARACTER_SELECTION_STATE);
+    ShowDefaultButtonHelp(strNewState == SETTINGS_STATE);
+		SettingsListHolder.ShowSelectionButtons(strNewState == SETTINGS_STATE);
 		strCurrentState = strNewState;
 		ChangeStateFocus(strNewState);
 	}
@@ -495,9 +517,6 @@ class StartMenu extends MovieClip
 
 	function handleInput(details, pathToFocus)
 	{
-		var _loc5_;
-		var _loc4_;
-		var _loc3_;
 		if (IsPlatformSony() && currentState == PRESS_START_STATE)
 		{
 			if (GlobalFunc.IsKeyPressed(details))
@@ -509,7 +528,12 @@ class StartMenu extends MovieClip
 		{
 			if (GlobalFunc.IsKeyPressed(details) && ShouldProcessInputs)
 			{
-				if (details.navEquivalent == NavigationCode.ENTER)
+				if ((details.navEquivalent == NavigationCode.GAMEPAD_START) &&
+					strCurrentState == SETTINGS_STATE && MainList.selectedEntry.index == NEW_INDEX)
+				{
+					onStartPress();
+				}
+				else if (details.navEquivalent == NavigationCode.ENTER)
 				{
 					onAcceptPress();
 				}
@@ -521,21 +545,23 @@ class StartMenu extends MovieClip
 				{
 					if (IsPlatformSony())
 					{
-						_loc5_ = SaveLoadListHolder.selectedEntry;
-						if (_loc5_ != undefined)
+						var id;
+						var flags;
+						var entry = SaveLoadListHolder.selectedEntry;
+						if (entry != undefined)
 						{
-							_loc4_ = _loc5_.flags;
-							if (_loc4_ == undefined)
+							flags = entry.flags;
+							if (flags == undefined)
 							{
-								_loc4_ = 0;
+								flags = 0;
 							}
-							_loc3_ = _loc5_.id;
-							if (_loc3_ == undefined)
+							id = entry.id;
+							if (id == undefined)
 							{
-								_loc3_ = 4294967295;
+								id = 4294967295;
 							}
 						}
-						GameDelegate.call("ORBISDeleteSave", [_loc3_, _loc4_]);
+						GameDelegate.call("ORBISDeleteSave", [id, flags]);
 					}
 					else
 					{
@@ -546,6 +572,10 @@ class StartMenu extends MovieClip
 				{
 					GameDelegate.call("PlaySound", ["UIMenuCancel"]);
 					EndState();
+				}
+				else if ((details.navEquivalent == NavigationCode.GAMEPAD_Y || details.code == 84) && strCurrentState == SETTINGS_STATE)
+				{
+          ConfirmDefaultSettings();
 				}
 				else if ((details.navEquivalent == NavigationCode.GAMEPAD_X || details.code == 88) && currentState == MAIN_STATE)
 				{
@@ -579,9 +609,40 @@ class StartMenu extends MovieClip
 		GameDelegate.call("PlaySound", ["UIMenuFocus"]);
 	}
 
+	function onMouseButtonDefaultSettingsClick()
+	{
+		if (DefaultSettingsButton._alpha == ALPHA_AVAILABLE)
+		{
+      ConfirmDefaultSettings();
+		}
+	}
+
+	function onMouseButtonDefaultRollOver()
+	{
+		GameDelegate.call("PlaySound", ["UIMenuFocus"]);
+	}
+
 	function onStartButtonProcessFinished()
 	{
 		EndState(PRESS_START_STATE);
+	}
+
+	function onStartPress()
+	{
+		if (MainList.selectedEntry.index == NEW_INDEX)
+		{
+			GameDelegate.call("SaveSettings", []);
+		}
+	}
+
+	function onSettingsSaved()
+	{
+		bPrefsChanged = false;
+		if (MainList.selectedEntry.index == NEW_INDEX)
+		{
+			GameDelegate.call("PlaySound", ["UIStartNewGame"]);
+			FadeOutAndCall("StartNewGame");
+		}
 	}
 
 	function onAcceptPress()
@@ -628,6 +689,12 @@ class StartMenu extends MovieClip
 				GameDelegate.call("PlaySound", ["UIMenuOK"]);
 				GameDelegate.call("OpenMarketplace", []);
 				StartState(MAIN_STATE);
+				break;
+			case DEFAULT_SETTINGS_CONFIRM_STATE:
+				GameDelegate.call("PlaySound", ["UIMenuOK"]);
+				SettingsListHolder.ResetSettingsToDefaults();
+				EndState();
+				break;
 			default:
 				return;
 		}
@@ -676,6 +743,8 @@ class StartMenu extends MovieClip
 			case DELETE_SAVE_CONFIRM_STATE:
 			case DLC_STATE:
 			case MARKETPLACE_CONFIRM_STATE:
+			case SETTINGS_STATE:
+			case DEFAULT_SETTINGS_CONFIRM_STATE:
 				GameDelegate.call("PlaySound", ["UIMenuCancel"]);
 				EndState();
 			default:
@@ -839,7 +908,8 @@ class StartMenu extends MovieClip
 		ButtonRect.AcceptMouseButton._visible = aiPlatform == 0;
 		ButtonRect.CancelMouseButton._visible = aiPlatform == 0;
 		_Sky10UpSell.SetPlatform(aiPlatform, abPS3Switch);
-		var _loc4_ = DeleteSaveButton._visible;
+		var deleteButtonVisible = DeleteSaveButton._visible;
+    var defaultButtonVisible = DefaultSettingsButton._visible;
 		if (aiPlatform == PLATFORM_PC_KBMOUSE)
 		{
 			DeleteSaveButton._visible = false;
@@ -849,20 +919,45 @@ class StartMenu extends MovieClip
 			DeleteSaveButton = DeleteMouseButton;
 			DeleteSaveButton.onPress = Proxy.create(this, onMouseButtonDeleteSaveClick);
 			DeleteSaveButton.addEventListener("rollOver", Proxy.create(this, onMouseButtonDeleteRollOver));
-		}
-		else if (aiPlatform == PLATFORM_PC_GAMEPAD && DeleteSaveButton == DeleteMouseButton)
-		{
-			DeleteSaveButton._visible = false;
-			DeleteSaveButton = DeleteButton;
-			DeleteSaveButton.onPress = undefined;
-			DeleteMouseButton.removeEventListeners("rollOver", Proxy.create(this, onMouseButtonDeleteRollOver));
+
+			DefaultSettingsButton._visible = false;
+			DefaultMouseButton.label = DefaultSettingsButton.label;
+			DefaultMouseButton._x = DefaultGamepadButton._x;
+			DefaultMouseButton.trackAsMenu = true;
+			DefaultSettingsButton = DefaultMouseButton;
+			DefaultSettingsButton.onPress = Proxy.create(this, onMouseButtonDefaultSettingsClick);
+			DefaultSettingsButton.addEventListener("rollOver", Proxy.create(this, onMouseButtonDefaultRollOver));
 		}
 		else
-		{
-			DeleteMouseButton._visible = false;
-		}
-		ShowDeleteButtonHelp(_loc4_);
+    {
+      if (aiPlatform == PLATFORM_PC_GAMEPAD && DeleteSaveButton == DeleteMouseButton)
+      {
+        DeleteSaveButton._visible = false;
+        DeleteSaveButton = DeleteButton;
+        DeleteSaveButton.onPress = undefined;
+        DeleteMouseButton.removeEventListeners("rollOver", Proxy.create(this, onMouseButtonDeleteRollOver));
+      }
+      else
+      {
+        DeleteMouseButton._visible = false;
+      }
+
+      if (aiPlatform == PLATFORM_PC_GAMEPAD && DefaultSettingsButton == DefaultMouseButton)
+      {
+        DefaultSettingsButton._visible = false;
+        DefaultSettingsButton = DefaultGamepadButton;
+        DefaultSettingsButton.onPress = undefined;
+        DefaultMouseButton.removeEventListeners("rollOver", Proxy.create(this, onMouseButtonDefaultRollOver));
+      }
+      else
+      {
+        DefaultMouseButton._visible = false;
+      }
+    }
+		ShowDeleteButtonHelp(deleteButtonVisible);
+    ShowDefaultButtonHelp(defaultButtonVisible);
 		DeleteSaveButton.SetPlatform(aiPlatform, abPS3Switch);
+		DefaultSettingsButton.SetPlatform(aiPlatform, abPS3Switch);
 		ChangeUserButton.SetPlatform(aiPlatform, abPS3Switch);
 		MarketplaceButton.SetPlatform(aiPlatform, abPS3Switch);
 		MainListHolder.SelectionArrow._visible = aiPlatform != 0;
@@ -880,6 +975,7 @@ class StartMenu extends MovieClip
 		}
 		iPlatform = aiPlatform;
 		SaveLoadListHolder.SetPlatform(aiPlatform, abPS3Switch);
+		SettingsListHolder.SetPlatform(aiPlatform, abPS3Switch);
 		PS3Switch = abPS3Switch;
 		MainList.SetPlatform(aiPlatform, abPS3Switch);
 	}
@@ -950,8 +1046,10 @@ class StartMenu extends MovieClip
 			_MessageOfTheDay_mc.visible = _Motd_tf.text.length > 1;
 		}
 		ShowDeleteButtonHelp(false);
+		ShowDefaultButtonHelp(false);
 		ShowChangeUserButtonHelp(false);
 		SaveLoadListHolder.ShowSelectionButtons(false);
+		SettingsListHolder.ShowSelectionButtons(false);
 		strCurrentState = strStateName + START_ANIM_STR;
 		gotoAndPlay(strCurrentState);
 		FocusHandler.instance.setFocus(this, 0);
@@ -982,6 +1080,10 @@ class StartMenu extends MovieClip
 		{
 			SaveLoadListHolder.ShowSelectionButtons(true);
 		}
+		else if (strCurrentState == DEFAULT_SETTINGS_CONFIRM_STATE)
+		{
+			SettingsListHolder.ShowSelectionButtons(true);
+		}
 	}
 
 	function ChangeStateFocus(strNewState)
@@ -1000,14 +1102,36 @@ class StartMenu extends MovieClip
 				this.iLoadDLCListTimerID = setInterval(this, "DoLoadDLCList", 500);
 				FocusHandler.instance.setFocus(DLCList_mc, 0);
 				break;
+			case SETTINGS_STATE:
+				FocusHandler.instance.setFocus(SettingsListHolder.List_mc, 0);
+				SettingsListHolder.List_mc.disableSelection = false;
+				break;
 			case MAIN_CONFIRM_STATE:
 			case SAVE_LOAD_CONFIRM_STATE:
 			case DELETE_SAVE_CONFIRM_STATE:
 			case PRESS_START_STATE:
 			case MARKETPLACE_CONFIRM_STATE:
+			case DEFAULT_SETTINGS_CONFIRM_STATE:
 				FocusHandler.instance.setFocus(ButtonRect, 0);
+				break;
 			default:
 				return;
+		}
+	}
+
+	function ConfirmNewGame(astrConfirmText)
+	{
+		SettingsList.entryList = [];
+		GameDelegate.call("RequestNewGameOptions", [SettingsList.entryList]);
+		if (SettingsList.entryList.length > 0)
+		{
+			SettingsListHolder.InvalidateData(astrConfirmText);
+			SetPlatform(iPlatform, PS3Switch);
+			StartState(SETTINGS_STATE);
+		}
+		else
+		{
+			ShowConfirmScreen(astrConfirmText);
 		}
 	}
 
@@ -1071,6 +1195,14 @@ class StartMenu extends MovieClip
 		}
 	}
 
+	function onSettingHighlight(event)
+	{
+		if (iPlatform == 0)
+		{
+			GameDelegate.call("PlaySound", ["UIMenuFocus"]);
+		}
+	}
+
 	function ConfirmLoadGame(event)
 	{
 		SaveLoadListHolder.List_mc.disableSelection = true;
@@ -1087,12 +1219,26 @@ class StartMenu extends MovieClip
 		StartState(DELETE_SAVE_CONFIRM_STATE);
 	}
 
+  function ConfirmDefaultSettings()
+  {
+    SettingsListHolder.List_mc.disableSelection = true;
+    SaveLoadConfirmText.textField.SetText("$Reset settings to default values?");
+    SetPlatform(iPlatform, PS3Switch);
+    StartState(DEFAULT_SETTINGS_CONFIRM_STATE);
+  }
+
 	function ShowDeleteButtonHelp(abFlag)
 	{
 		DeleteSaveButton.disabled = !abFlag;
 		DeleteSaveButton._visible = abFlag;
 		VersionText._visible = !abFlag;
 	}
+
+  function ShowDefaultButtonHelp(abFlag)
+  {
+    DefaultSettingsButton.disabled = !abFlag;
+    DefaultSettingsButton._visible = abFlag;
+  }
 
 	function ShowChangeUserButtonHelp(abFlag)
 	{
@@ -1185,6 +1331,16 @@ class StartMenu extends MovieClip
 	}
 
 	function OnSaveLoadPanelBackClicked()
+	{
+		onCancelPress();
+	}
+
+	function OnSettingsPanelStartClicked()
+	{
+		onStartPress();
+	}
+
+	function OnSettingsPanelBackClicked()
 	{
 		onCancelPress();
 	}

@@ -1,10 +1,12 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" nextSceneIdentifier="36" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveHasPrompted="true">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" width="1280" height="720" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" nextSceneIdentifier="122" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveHasPrompted="true">
      <folders>
           <DOMFolderItem name="Buttons" itemID="69f3e891-0000037d"/>
+          <DOMFolderItem name="Fonts" itemID="4ee5f951-0000022a" isExpanded="true"/>
      </folders>
      <fonts>
-          <DOMFontItem name="$EverywhereMediumFont" itemID="69f37a1a-0000037c" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereMediumFont" linkageURL="gfxfontlib.swf" font="Futura-Condensed-Normal" size="0" id="2" sourceLastImported="1777564186" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿˆ˜–—‘’‚“”„†‡•…‰‹›€™" embedRanges="1|2|3|4|5"/>
-          <DOMFontItem name="$EverywhereFont" itemID="69f37a15-0000037a" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereFont" linkageURL="gfxfontlib.swf" font="Futura-CondensedLight-Normal" size="0" id="1" sourceLastImported="1777564181" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿˆ˜–—‘’‚“”„†‡•…‰‹›€™" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="Fonts/$EverywhereFont" itemID="69f37a15-0000037a" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereFont" linkageURL="gfxfontlib.swf" font="Futura-CondensedLight-Normal" size="0" id="6" sourceLastImported="1777564181" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿˆ˜–—‘’‚“”„†‡•…‰‹›€™" embedRanges="1|2|3|4|5"/>
+          <DOMFontItem name="Fonts/$EverywhereBoldFont" itemID="4ec85994-000018ed" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereBoldFont" linkageURL="gfxfontlib.swf" font="FuturaStd-CondensedBold" bold="true" size="0" id="4" sourceLastImported="1321755960" embedRanges="1|2|4|3"/>
+          <DOMFontItem name="Fonts/$EverywhereMediumFont" itemID="69f37a1a-0000037c" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageIdentifier="$EverywhereMediumFont" linkageURL="gfxfontlib.swf" font="Futura-Condensed-Normal" size="0" id="2" sourceLastImported="1777564186" embeddedCharacters="¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿˆ˜–—‘’‚“”„†‡•…‰‹›€™" embedRanges="1|2|3|4|5"/>
      </fonts>
      <media>
           <DOMBitmapItem name="Bitmap 532.png" itemID="69f37a00-00000004" sourceLastImported="1777564107" externalFileSize="1719" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Bitmap 532.png" bitmapDataHRef="M 1 1777564107.dat" frameRight="2560" frameBottom="2560"/>
@@ -381,6 +383,7 @@
           <Include href="Buttons/Symbol 519.xml" itemIcon="1" loadImmediate="false" itemID="69f37a00-0000017d" lastModified="1777564107"/>
           <Include href="Buttons/Symbol 520.xml" itemID="69f37a00-0000017e" lastModified="1777564107"/>
           <Include href="CharacterSelectHintButtons.xml" itemID="69f3eae1-00000531" lastModified="1777593057"/>
+          <Include href="checkBox.xml" loadImmediate="false" itemID="6a008034-0000055f" lastModified="1778417716"/>
           <Include href="ConfirmText.xml" loadImmediate="false" itemID="69f3ec22-00000558" lastModified="1777593378"/>
           <Include href="DLCList.xml" itemID="69f3eb27-0000053e" lastModified="1777593127"/>
           <Include href="DLCListEntry.xml" loadImmediate="false" itemID="69f3f255-00000575" lastModified="1777594965"/>
@@ -407,10 +410,12 @@
           <Include href="Message_bg.xml" itemIcon="1" loadImmediate="false" itemID="69f3f0b3-00000569" lastModified="1777594547"/>
           <Include href="MessageOfTheDay.xml" loadImmediate="false" itemID="69f3eec1-0000055e" lastModified="1777594049"/>
           <Include href="MouseButton.xml" itemID="69f3eaec-00000533" lastModified="1777593068"/>
+          <Include href="OptionStepperArrowBtn.xml" itemID="69fa6d1c-000003d5" lastModified="1778020681"/>
           <Include href="PlayerInfoText.xml" loadImmediate="false" itemID="69f3ef0f-0000055f" lastModified="1777594127"/>
+          <Include href="Rect (Sprite 395).xml" loadImmediate="false" itemID="4fcccb2d-00000538" lastModified="1338821427"/>
           <Include href="SaveLoadItem.xml" loadImmediate="false" itemID="69f3eba6-00000550" lastModified="1777593254"/>
           <Include href="SaveLoadItem_bg.xml" loadImmediate="false" itemID="69f3ecd5-0000055b" lastModified="1777593557"/>
-          <Include href="SaveLoadPanel.xml" itemID="69f3eaf1-00000534" lastModified="1777593073"/>
+          <Include href="SaveLoadPanel.xml" itemID="69f3eaf1-00000534" lastModified="1778412023"/>
           <Include href="ScreenshotHolder.xml" loadImmediate="false" itemID="69f3ef53-00000562" lastModified="1777594195"/>
           <Include href="ScreenShotHolderRect.xml" itemID="69f3ead7-00000530" lastModified="1777593047"/>
           <Include href="ScrollBar_thumb.xml" itemID="69f3eb01-00000537" lastModified="1777593089"/>
@@ -420,8 +425,24 @@
           <Include href="ScrollIndicator_downArrow.xml" itemID="69f3eb14-00000539" lastModified="1777593108"/>
           <Include href="ScrollIndicator_upArrow.xml" itemID="69f3eb0a-00000538" lastModified="1777593098"/>
           <Include href="SelectionArrow.xml" loadImmediate="false" itemID="69f3eccb-0000055a" lastModified="1777593547"/>
+          <Include href="SettingsList.xml" itemID="69f48eff-000003a5" lastModified="1778327419"/>
+          <Include href="SettingsOptionItem.xml" itemID="69f4e3af-0000189a" lastModified="1778417719"/>
+          <Include href="SettingsOptionStepper.xml" itemID="69f61742-0000078b" lastModified="1778020037"/>
+          <Include href="SettingsPanel.xml" itemID="69f48e7d-00000398" lastModified="1778412175"/>
+          <Include href="SettingsScrollbar.xml" itemID="69f61763-0000078c" lastModified="1778078878"/>
+          <Include href="SettingsScrollBar_thumb.xml" itemID="69fa6cf7-000003d4" lastModified="1778020671"/>
+          <Include href="Shape 394.xml" itemIcon="1" loadImmediate="false" itemID="4ee20823-000000e8" lastModified="1323436067"/>
+          <Include href="Shape 420.xml" itemIcon="1" loadImmediate="false" itemID="4ee20823-00000105" lastModified="1323436067"/>
+          <Include href="Shape 422.xml" itemIcon="1" loadImmediate="false" itemID="4ee20823-00000108" lastModified="1323436067"/>
+          <Include href="Shape 496.xml" itemIcon="1" loadImmediate="false" itemID="4ee20823-0000010b" lastModified="1323436067"/>
+          <Include href="Shape 499.xml" itemIcon="1" loadImmediate="false" itemID="4ee20823-00000102" lastModified="1323436067"/>
+          <Include href="Shape 505.xml" itemIcon="1" loadImmediate="false" itemID="4ee20823-000000fd" lastModified="1323436067"/>
+          <Include href="Shape 507.xml" itemIcon="1" loadImmediate="false" itemID="4ee20823-000000ff" lastModified="1323436067"/>
           <Include href="Sky10Text.xml" loadImmediate="false" itemID="69f3f170-0000056d" lastModified="1777594736"/>
-          <Include href="StartMenuObj.xml" itemID="69f3eb2d-00000541" lastModified="1777630139"/>
+          <Include href="Sprite 425.xml" loadImmediate="false" itemID="4ee20823-00000109" lastModified="1778417577"/>
+          <Include href="Sprite 506.xml" loadImmediate="false" itemID="4ee20823-000000fc" lastModified="1338820141"/>
+          <Include href="Sprite 508.xml" loadImmediate="false" itemID="4ee20823-000000fe" lastModified="1338820139"/>
+          <Include href="StartMenuObj.xml" itemID="69f3eb2d-00000541" lastModified="1778410772"/>
           <Include href="StatusIcon.xml" itemID="69f3eaf5-00000535" lastModified="1777593077"/>
           <Include href="TitlePrompt.xml" loadImmediate="false" itemID="69f3f103-0000056c" lastModified="1777594627"/>
           <Include href="upArrow.xml" loadImmediate="false" itemID="69f3ebfa-00000554" lastModified="1777593338"/>
@@ -472,25 +493,25 @@ stop();
      </timelines>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="1406" publishTime="1777674736"/>
-          <PublishItem publishSize="5494" publishTime="1777674736"/>
-          <PublishItem publishSize="86696" publishTime="1777630163"/>
-          <PublishItem publishSize="5498" publishTime="1777629717"/>
-          <PublishItem publishSize="1402" publishTime="1777629709"/>
-          <PublishItem publishSize="5491" publishTime="1777629709"/>
-          <PublishItem publishSize="5498" publishTime="1777594796"/>
-          <PublishItem publishSize="1374" publishTime="1777593244"/>
-          <PublishItem publishSize="5500" publishTime="1777593228"/>
-          <PublishItem publishSize="1405" publishTime="1777593195"/>
-          <PublishItem publishSize="1374" publishTime="1777593174"/>
-          <PublishItem publishSize="1405" publishTime="1777593172"/>
-          <PublishItem publishSize="5500" publishTime="1777593172"/>
-          <PublishItem publishSize="1400" publishTime="1777593129"/>
-          <PublishItem publishSize="893" publishTime="1777593118"/>
-          <PublishItem publishSize="1370" publishTime="1777593019"/>
-          <PublishItem publishSize="1400" publishTime="1777593018"/>
-          <PublishItem publishSize="5491" publishTime="1777593018"/>
-          <PublishItem publishSize="893" publishTime="1777592714"/>
-          <PublishItem publishSize="1369" publishTime="1777592710"/>
+          <PublishItem publishSize="1401" publishTime="1778417573"/>
+          <PublishItem publishSize="5494" publishTime="1778417573"/>
+          <PublishItem publishSize="94526" publishTime="1778412184"/>
+          <PublishItem publishSize="94521" publishTime="1778411950"/>
+          <PublishItem publishSize="94526" publishTime="1778411860"/>
+          <PublishItem publishSize="94517" publishTime="1778411479"/>
+          <PublishItem publishSize="1403" publishTime="1778411450"/>
+          <PublishItem publishSize="5490" publishTime="1778411450"/>
+          <PublishItem publishSize="94508" publishTime="1778410792"/>
+          <PublishItem publishSize="94495" publishTime="1778410654"/>
+          <PublishItem publishSize="5487" publishTime="1778410557"/>
+          <PublishItem publishSize="1403" publishTime="1778410529"/>
+          <PublishItem publishSize="5490" publishTime="1778410529"/>
+          <PublishItem publishSize="94498" publishTime="1778370982"/>
+          <PublishItem publishSize="94498" publishTime="1778370497"/>
+          <PublishItem publishSize="94509" publishTime="1778370343"/>
+          <PublishItem publishSize="94475" publishTime="1778370211"/>
+          <PublishItem publishSize="1403" publishTime="1778370182"/>
+          <PublishItem publishSize="5489" publishTime="1778370182"/>
+          <PublishItem publishSize="94471" publishTime="1778346855"/>
      </publishHistory>
 </DOMDocument>

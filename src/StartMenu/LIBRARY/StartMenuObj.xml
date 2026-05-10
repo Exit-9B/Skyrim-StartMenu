@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StartMenuObj" itemID="69f3eb2d-00000541" linkageExportForAS="true" linkageIdentifier="StartMenuObj" linkageClassName="StartMenu" lastModified="1777630139">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="StartMenuObj" itemID="69f3eb2d-00000541" linkageExportForAS="true" linkageIdentifier="StartMenuObj" linkageClassName="StartMenu" lastModified="1778410772" lastUniqueIdentifier="22">
   <timeline>
-    <DOMTimeline name="StartMenuObj" currentFrame="40">
+    <DOMTimeline name="StartMenuObj" currentFrame="148">
       <layers>
         <DOMLayer name="Labels Layer" color="#B3FD2D">
           <frames>
@@ -112,12 +112,24 @@
             <DOMFrame index="106" duration="6" keyMode="9728">
               <elements/>
             </DOMFrame>
-            <DOMFrame index="112" name="DLCEndAnim" labelType="name" keyMode="9728">
+            <DOMFrame index="112" duration="8" name="DLCEndAnim" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="120" duration="7" name="SettingsStartAnim" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="127" duration="8" name="DefaultSettingsConfirmStartAnim" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="135" duration="8" name="DefaultSettingsConfirmEndAnim" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="143" name="SettingsEndAnim" labelType="name" keyMode="9728">
               <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Script Layer" color="#DEA3B8" current="true" isSelected="true">
+        <DOMLayer name="Script Layer" color="#DEA3B8">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <Actionscript>
@@ -358,7 +370,39 @@ stop();
             <DOMFrame index="112" duration="7" keyMode="9728">
               <elements/>
             </DOMFrame>
-            <DOMFrame index="119" keyMode="9728">
+            <DOMFrame index="119" duration="7" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[this.currentState = StartMenu.MAIN_STATE;
+stop();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="126" duration="8" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[this.currentState = StartMenu.SETTINGS_STATE;
+stop();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="134" duration="8" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[this.currentState = StartMenu.DEFAULT_SETTINGS_CONFIRM_STATE;
+stop();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="142" duration="7" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[this.currentState = StartMenu.SETTINGS_STATE;
+stop();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="149" keyMode="9728">
               <Actionscript>
                 <script><![CDATA[this.currentState = StartMenu.MAIN_STATE;
 stop();
@@ -370,7 +414,7 @@ stop();
         </DOMLayer>
         <DOMLayer name="Layer 3" color="#9347D5">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMDynamicText name="Error_NeedUpdateOrbis" width="463.95" height="11.95" renderAsHTML="true">
                   <matrix>
@@ -391,7 +435,7 @@ stop();
         </DOMLayer>
         <DOMLayer name="Layer 4" color="#CAC87F">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMDynamicText name="Error_AgeRestrictOrbis" width="462.95" height="11.95" renderAsHTML="true">
                   <matrix>
@@ -412,7 +456,7 @@ stop();
         </DOMLayer>
         <DOMLayer name="Layer 5" color="#9607F4">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMDynamicText name="Error_NotSignedInOrbis" width="462.95" height="11.95" renderAsHTML="true">
                   <matrix>
@@ -433,7 +477,7 @@ stop();
         </DOMLayer>
         <DOMLayer name="Layer 6" color="#A1CBA1">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="LoginHolder" name="LoginHolder_mc" centerPoint3DX="-1280" centerPoint3DY="-720">
                   <matrix>
@@ -449,7 +493,7 @@ stop();
         </DOMLayer>
         <DOMLayer name="Layer 7" color="#88FCA7">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="LoginButtonRect" name="BottomButtons_mc" centerPoint3DX="-1234" centerPoint3DY="-697">
                   <matrix>
@@ -1212,7 +1256,61 @@ stop();
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
-            <DOMFrame index="112" duration="8" keyMode="9728">
+            <DOMFrame index="112" duration="15" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ConfirmText" name="SaveLoadConfirmText" centerPoint3DX="108" centerPoint3DY="12.95">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="127" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ConfirmText" name="SaveLoadConfirmText" centerPoint3DX="-232" centerPoint3DY="-52.05">
+                  <matrix>
+                    <Matrix tx="-340" ty="-65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="134" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ConfirmText" name="SaveLoadConfirmText" centerPoint3DX="-310.2" centerPoint3DY="-52.05">
+                  <matrix>
+                    <Matrix tx="-418.2" ty="-65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="141" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ConfirmText" name="SaveLoadConfirmText" selected="true" centerPoint3DX="-232" centerPoint3DY="-52.05">
+                  <matrix>
+                    <Matrix tx="-340" ty="-65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="142" duration="8" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="ConfirmText" name="SaveLoadConfirmText" centerPoint3DX="108" centerPoint3DY="12.95">
                   <transformationPoint>
@@ -1536,7 +1634,7 @@ stop();
             </DOMFrame>
             <DOMFrame index="46" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" centerPoint3DX="-21.25" centerPoint3DY="-15.6">
+                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" selected="true" centerPoint3DX="-21.25" centerPoint3DY="-15.6">
                   <matrix>
                     <Matrix tx="-160" ty="-30"/>
                   </matrix>
@@ -1641,7 +1739,7 @@ stop();
             </DOMFrame>
             <DOMFrame index="53" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" centerPoint3DX="-226.25" centerPoint3DY="-15.6">
+                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" selected="true" centerPoint3DX="-226.25" centerPoint3DY="-15.6">
                   <matrix>
                     <Matrix tx="-365" ty="-30"/>
                   </matrix>
@@ -1962,7 +2060,7 @@ stop();
             </DOMFrame>
             <DOMFrame index="75" duration="22" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" centerPoint3DX="138.75" centerPoint3DY="14.4">
+                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" selected="true" centerPoint3DX="138.75" centerPoint3DY="14.4">
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
@@ -1974,7 +2072,7 @@ stop();
             </DOMFrame>
             <DOMFrame index="97" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" centerPoint3DX="-301.25" centerPoint3DY="-25.6">
+                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" selected="true" centerPoint3DX="-301.25" centerPoint3DY="-25.6">
                   <matrix>
                     <Matrix tx="-440" ty="-40"/>
                   </matrix>
@@ -2194,7 +2292,61 @@ stop();
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
-            <DOMFrame index="112" duration="8" keyMode="9728">
+            <DOMFrame index="112" duration="15" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" centerPoint3DX="138.75" centerPoint3DY="14.4">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="127" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" centerPoint3DX="-21.25" centerPoint3DY="-15.6">
+                  <matrix>
+                    <Matrix tx="-160" ty="-30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="134" duration="7" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" centerPoint3DX="-248.25" centerPoint3DY="-15.6">
+                  <matrix>
+                    <Matrix tx="-387" ty="-30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="141" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" selected="true" centerPoint3DX="-21.25" centerPoint3DY="-15.6">
+                  <matrix>
+                    <Matrix tx="-160" ty="-30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="142" duration="8" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="ButtonRect" name="ButtonRect" centerPoint3DX="138.75" centerPoint3DY="14.4">
                   <transformationPoint>
@@ -2474,7 +2626,7 @@ stop();
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
-            <DOMFrame index="89" duration="31" keyMode="9728">
+            <DOMFrame index="89" duration="61" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="SaveLoadPanel" name="SaveLoadPanel_mc" centerPoint3DX="177" centerPoint3DY="417.3">
                   <transformationPoint>
@@ -2709,11 +2861,105 @@ stop();
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
-            <DOMFrame index="29" duration="91" keyMode="9728">
+            <DOMFrame index="29" duration="121" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="MainConfirmPanel" name="ConfirmPanel_mc" centerPoint3DX="119.6" centerPoint3DY="417.3">
                   <transformationPoint>
                     <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Settings Panel" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="120" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SettingsPanel" name="SettingsPanel_mc" selected="true" centerPoint3DX="180.4" centerPoint3DY="417.3">
+                  <transformationPoint>
+                    <Point x="180.4" y="417.3"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="120" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SettingsPanel" name="SettingsPanel_mc" centerPoint3DX="-64.6" centerPoint3DY="-356.7">
+                  <matrix>
+                    <Matrix tx="-245" ty="-774"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="180.4" y="417.3"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="126" duration="15" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SettingsPanel" selected="true" centerPoint3DX="-314.6" centerPoint3DY="-356.7">
+                  <matrix>
+                    <Matrix tx="-495" ty="-774"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="180.4" y="417.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="141" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SettingsPanel" centerPoint3DX="-314.6" centerPoint3DY="-356.7">
+                  <matrix>
+                    <Matrix tx="-495" ty="-774"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="180.4" y="417.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="142" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SettingsPanel" centerPoint3DX="-314.6" centerPoint3DY="-356.7">
+                  <matrix>
+                    <Matrix tx="-495" ty="-774"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="180.4" y="417.3"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="148" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SettingsPanel" name="SettingsPanel_mc" centerPoint3DX="-64.6" centerPoint3DY="-356.7">
+                  <matrix>
+                    <Matrix tx="-245" ty="-774"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="180.4" y="417.3"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="149" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="SettingsPanel" name="SettingsPanel_mc" centerPoint3DX="180.4" centerPoint3DY="417.3">
+                  <transformationPoint>
+                    <Point x="180.4" y="417.3"/>
                   </transformationPoint>
                   <color>
                     <Color alphaMultiplier="0"/>
@@ -2860,7 +3106,7 @@ stop();
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
-            <DOMFrame index="14" duration="106" keyMode="9728">
+            <DOMFrame index="14" duration="136" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="MainListHolder" name="MainListHolder" centerPoint3DX="30" centerPoint3DY="-175.75">
                   <matrix>
@@ -3083,7 +3329,7 @@ stop();
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
-            <DOMFrame index="14" duration="106" keyMode="9728">
+            <DOMFrame index="14" duration="136" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="TitlePrompt" centerPoint3DX="212.95" centerPoint3DY="-165.4">
                   <matrix>
@@ -3306,7 +3552,7 @@ stop();
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
-            <DOMFrame index="119" keyMode="9728">
+            <DOMFrame index="119" duration="31" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="DLCPanel" name="DLCPanel" centerPoint3DX="-207.5" centerPoint3DY="-356.7">
                   <matrix>
@@ -3323,7 +3569,7 @@ stop();
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 15" color="#D13ECA">
+        <DOMLayer name="Layer 15" color="#D13ECA" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" duration="8" keyMode="9728">
               <elements>
@@ -4018,11 +4264,80 @@ stop();
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
+            <DOMFrame index="120" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MessageOfTheDay" name="MessageOfTheDay_mc" centerPoint3DX="-1147.25" centerPoint3DY="-592.85">
+                  <matrix>
+                    <Matrix tx="-1280" ty="-720"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="126" duration="15" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MessageOfTheDay" name="MessageOfTheDay_mc" centerPoint3DX="-1147.25" centerPoint3DY="-592.85">
+                  <matrix>
+                    <Matrix tx="-1280" ty="-720"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="141" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MessageOfTheDay" name="MessageOfTheDay_mc" centerPoint3DX="-1147.25" centerPoint3DY="-592.85">
+                  <matrix>
+                    <Matrix tx="-1280" ty="-720"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="142" duration="6" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MessageOfTheDay" name="MessageOfTheDay_mc" centerPoint3DX="-1147.25" centerPoint3DY="-592.85">
+                  <matrix>
+                    <Matrix tx="-1280" ty="-720"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="148" duration="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="MessageOfTheDay" name="MessageOfTheDay_mc" centerPoint3DX="-1147.25" centerPoint3DY="-592.85">
+                  <matrix>
+                    <Matrix tx="-1280" ty="-720"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
           </frames>
         </DOMLayer>
         <DOMLayer name="Layer 16" color="#93FCF3">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="LoadingContentMessage" name="LoadingContentMessage" centerPoint3DX="-583.85" centerPoint3DY="-328.95">
                   <matrix>
@@ -4038,7 +4353,7 @@ stop();
         </DOMLayer>
         <DOMLayer name="Layer 17" color="#CA60CF">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="MouseButton" name="DeleteMouseButton" centerPoint3DX="-74" centerPoint3DY="-16.3">
                   <matrix>
@@ -4062,13 +4377,35 @@ stop();
 ]]></script>
                   </Actionscript>
                 </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="MouseButton" name="DefaultMouseButton" centerPoint3DX="-74" centerPoint3DY="-16.3">
+                  <matrix>
+                    <Matrix tx="-149" ty="-30.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   XBoxArt = "360_Y";
+   disableConstraints = false;
+   disabled = false;
+   disableFocus = false;
+   labelID = "$Defaults";
+   PCArt = "T";
+   PS3Art = "PS3_Y";
+   toggle = false;
+   visible = true;
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
               </elements>
             </DOMFrame>
           </frames>
         </DOMLayer>
         <DOMLayer name="Layer 18" color="#F5846E">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="GamerTagWidget" name="GamerTagWidget_mc" centerPoint3DX="-851.65" centerPoint3DY="-664.05">
                   <matrix>
@@ -4084,7 +4421,7 @@ stop();
         </DOMLayer>
         <DOMLayer name="Layer 19" color="#70DE6D">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="GamepadButton" name="ChangeUserButton" centerPoint3DX="-61.25" centerPoint3DY="-16.05">
                   <matrix>
@@ -4114,7 +4451,7 @@ stop();
         </DOMLayer>
         <DOMLayer name="Layer 20" color="#817193">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="GamepadButton" name="DeleteButton" centerPoint3DX="-61.25" centerPoint3DY="-16.05">
                   <matrix>
@@ -4138,13 +4475,35 @@ stop();
 ]]></script>
                   </Actionscript>
                 </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="GamepadButton" name="DefaultGamepadButton" centerPoint3DX="-61.25" centerPoint3DY="-16.05">
+                  <matrix>
+                    <Matrix tx="-150" ty="-30.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <Actionscript>
+                    <script><![CDATA[onClipEvent(construct){
+   XBoxArt = "360_Y";
+   disableConstraints = false;
+   disabled = true;
+   disableFocus = true;
+   labelID = "$Defaults";
+   PCArt = "T";
+   PS3Art = "PS3_Y";
+   toggle = false;
+   visible = false;
+}
+]]></script>
+                  </Actionscript>
+                </DOMSymbolInstance>
               </elements>
             </DOMFrame>
           </frames>
         </DOMLayer>
         <DOMLayer name="Layer 21" color="#1F9FE9">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMDynamicText name="VersionText" fontRenderingMode="standard" width="81" height="14.4" isSelectable="false">
                   <matrix>
@@ -4165,7 +4524,7 @@ stop();
         </DOMLayer>
         <DOMLayer name="Layer 22" color="#4FA78E">
           <frames>
-            <DOMFrame index="0" duration="120" keyMode="9728">
+            <DOMFrame index="0" duration="150" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="Logo" name="Logo_mc" centerPoint3DX="-910.65" centerPoint3DY="55">
                   <matrix>

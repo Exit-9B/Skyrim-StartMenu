@@ -239,6 +239,7 @@ class StartMenu extends MovieClip
 		GameDelegate.addCallBack("OnSaveDataEventLoadCANCEL", this, "OnSaveDataEventLoadCANCEL");
 		GameDelegate.addCallBack("onStartButtonProcessFinished", this, "onStartButtonProcessFinished");
 		GameDelegate.addCallBack("SettingsSaved", this, "onSettingsSaved");
+		GameDelegate.addCallBack("RefreshSettingsList", this, "RefreshSettingsList");
 		MainList.addEventListener("itemPress", this, "onMainButtonPress");
 		MainList.addEventListener("listPress", this, "onMainListPress");
 		MainList.addEventListener("listMovedUp", this, "onMainListMoveUp");
@@ -1121,7 +1122,6 @@ class StartMenu extends MovieClip
 
 	function ConfirmNewGame(astrConfirmText)
 	{
-		SettingsList.entryList = [];
 		GameDelegate.call("RequestNewGameOptions", [SettingsList.entryList]);
 		if (SettingsList.entryList.length > 0)
 		{
@@ -1132,6 +1132,16 @@ class StartMenu extends MovieClip
 		else
 		{
 			ShowConfirmScreen(astrConfirmText);
+		}
+	}
+
+	function RefreshSettingsList()
+	{
+		if (MainList.selectedEntry.index == NEW_INDEX)
+		{
+			GameDelegate.call("RequestNewGameOptions", [SettingsList.entryList]);
+			SettingsListHolder.InvalidateData();
+			SetPlatform(iPlatform, PS3Switch);
 		}
 	}
 

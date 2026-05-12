@@ -103,11 +103,13 @@ class SettingsPanel extends MovieClip
 	function InvalidateData(astrConfirmText)
 	{
 		List_mc.InvalidateData();
-		textField.SetText(astrConfirmText);
+		if (astrConfirmText != undefined) {
+			textField.SetText(astrConfirmText);
 
-		var numEntries = List_mc.entryList.length;
-		List_mc.selectedIndex = (numEntries == 1 || iPlatform != 0) ? 0 : -1;
-		textField._visible = true;
+			var numEntries = List_mc.entryList.length;
+			List_mc.selectedIndex = (numEntries == 1 || iPlatform != 0) ? 0 : -1;
+			textField._visible = true;
+		}
 	}
 
 	function ResetSettingsToDefaults()

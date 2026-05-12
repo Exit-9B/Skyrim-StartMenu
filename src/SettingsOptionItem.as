@@ -282,8 +282,8 @@ class SettingsOptionItem extends MovieClip
 
 	function DoOptionChange(): Void
 	{
+		_parent.onValueChange(MovieClip(this).itemIndex, value);
 		GameDelegate.call("OptionChange", [ID, value]);
 		GameDelegate.call("PlaySound", ["UIMenuPrevNext"]);
-		_parent.onValueChange(MovieClip(this).itemIndex, value);
 	}
 }

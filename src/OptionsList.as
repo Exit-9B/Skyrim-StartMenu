@@ -4,7 +4,6 @@ import gfx.ui.InputDetails;
 class OptionsList extends Shared.BSScrollingList
 {
 	var bAllowValueOverwrite: Boolean;
-	var iMinScrollPosition: Number = 0;
 
 	function OptionsList()
 	{

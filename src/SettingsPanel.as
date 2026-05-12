@@ -33,7 +33,7 @@ class SettingsPanel extends MovieClip
 		SettingsList_mc = List_mc;
 		HelpText.text = "";
 		HelpText.verticalAlign = "bottom";
-    textField.verticalAlign = "bottom";
+		textField.verticalAlign = "bottom";
 	}
 
 	function onLoad()

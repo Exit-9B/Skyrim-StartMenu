@@ -13,9 +13,9 @@ class StartMenu extends MovieClip
 	var ConfirmPanel_mc;
 	var DLCList_mc;
 	var DLCPanel;
-  var DefaultGamepadButton;
-  var DefaultMouseButton;
-  var DefaultSettingsButton;
+	var DefaultGamepadButton;
+	var DefaultMouseButton;
+	var DefaultSettingsButton;
 	var DeleteButton;
 	var DeleteMouseButton;
 	var DeleteSaveButton;
@@ -262,13 +262,13 @@ class StartMenu extends MovieClip
 		SaveLoadListHolder.List_mc.addEventListener("listPress", this, "onSaveLoadListPress");
 		DeleteSaveButton._alpha = ALPHA_AVAILABLE;
 		DeleteMouseButton._alpha = ALPHA_AVAILABLE;
-    DefaultSettingsButton._alpha = ALPHA_AVAILABLE;
-    DefaultMouseButton._alpha = ALPHA_AVAILABLE;
+		DefaultSettingsButton._alpha = ALPHA_AVAILABLE;
+		DefaultMouseButton._alpha = ALPHA_AVAILABLE;
 		MarketplaceButton._alpha = ALPHA_DISABLED;
 		DeleteSaveButton._x = - DeleteSaveButton.textField.textWidth - LOADING_ICON_OFFSET;
 		DeleteMouseButton._x = DeleteSaveButton._x;
-    DefaultSettingsButton._x = DeleteSaveButton._x;
-    DefaultMouseButton._x = DefaultSettingsButton._x;
+		DefaultSettingsButton._x = DeleteSaveButton._x;
+		DefaultMouseButton._x = DefaultSettingsButton._x;
 		ChangeUserButton._x = - ChangeUserButton.textField.textWidth - LOADING_ICON_OFFSET;
 		DLCList_mc._visible = false;
 		CharacterSelectionHint.addEventListener("OnMousePressCharacterChange", Proxy.create(this, OnMousePressCharacterChange));
@@ -499,7 +499,7 @@ class StartMenu extends MovieClip
 		ShowChangeUserButtonHelp(strNewState == MAIN_STATE);
 		ShowCharacterSelectionHint(strNewState == SAVE_LOAD_STATE);
 		SaveLoadListHolder.ShowSelectionButtons(strNewState == SAVE_LOAD_STATE || strNewState == CHARACTER_SELECTION_STATE);
-    ShowDefaultButtonHelp(strNewState == SETTINGS_STATE);
+		ShowDefaultButtonHelp(strNewState == SETTINGS_STATE);
 		SettingsListHolder.ShowSelectionButtons(strNewState == SETTINGS_STATE);
 		strCurrentState = strNewState;
 		ChangeStateFocus(strNewState);
@@ -575,7 +575,7 @@ class StartMenu extends MovieClip
 				}
 				else if ((details.navEquivalent == NavigationCode.GAMEPAD_Y || details.code == 84) && strCurrentState == SETTINGS_STATE)
 				{
-          ConfirmDefaultSettings();
+					ConfirmDefaultSettings();
 				}
 				else if ((details.navEquivalent == NavigationCode.GAMEPAD_X || details.code == 88) && currentState == MAIN_STATE)
 				{
@@ -613,7 +613,7 @@ class StartMenu extends MovieClip
 	{
 		if (DefaultSettingsButton._alpha == ALPHA_AVAILABLE)
 		{
-      ConfirmDefaultSettings();
+			ConfirmDefaultSettings();
 		}
 	}
 
@@ -909,7 +909,7 @@ class StartMenu extends MovieClip
 		ButtonRect.CancelMouseButton._visible = aiPlatform == 0;
 		_Sky10UpSell.SetPlatform(aiPlatform, abPS3Switch);
 		var deleteButtonVisible = DeleteSaveButton._visible;
-    var defaultButtonVisible = DefaultSettingsButton._visible;
+		var defaultButtonVisible = DefaultSettingsButton._visible;
 		if (aiPlatform == PLATFORM_PC_KBMOUSE)
 		{
 			DeleteSaveButton._visible = false;
@@ -929,33 +929,33 @@ class StartMenu extends MovieClip
 			DefaultSettingsButton.addEventListener("rollOver", Proxy.create(this, onMouseButtonDefaultRollOver));
 		}
 		else
-    {
-      if (aiPlatform == PLATFORM_PC_GAMEPAD && DeleteSaveButton == DeleteMouseButton)
-      {
-        DeleteSaveButton._visible = false;
-        DeleteSaveButton = DeleteButton;
-        DeleteSaveButton.onPress = undefined;
-        DeleteMouseButton.removeEventListeners("rollOver", Proxy.create(this, onMouseButtonDeleteRollOver));
-      }
-      else
-      {
-        DeleteMouseButton._visible = false;
-      }
+		{
+			if (aiPlatform == PLATFORM_PC_GAMEPAD && DeleteSaveButton == DeleteMouseButton)
+			{
+				DeleteSaveButton._visible = false;
+				DeleteSaveButton = DeleteButton;
+				DeleteSaveButton.onPress = undefined;
+				DeleteMouseButton.removeEventListeners("rollOver", Proxy.create(this, onMouseButtonDeleteRollOver));
+			}
+			else
+			{
+				DeleteMouseButton._visible = false;
+			}
 
-      if (aiPlatform == PLATFORM_PC_GAMEPAD && DefaultSettingsButton == DefaultMouseButton)
-      {
-        DefaultSettingsButton._visible = false;
-        DefaultSettingsButton = DefaultGamepadButton;
-        DefaultSettingsButton.onPress = undefined;
-        DefaultMouseButton.removeEventListeners("rollOver", Proxy.create(this, onMouseButtonDefaultRollOver));
-      }
-      else
-      {
-        DefaultMouseButton._visible = false;
-      }
-    }
+			if (aiPlatform == PLATFORM_PC_GAMEPAD && DefaultSettingsButton == DefaultMouseButton)
+			{
+				DefaultSettingsButton._visible = false;
+				DefaultSettingsButton = DefaultGamepadButton;
+				DefaultSettingsButton.onPress = undefined;
+				DefaultMouseButton.removeEventListeners("rollOver", Proxy.create(this, onMouseButtonDefaultRollOver));
+			}
+			else
+			{
+				DefaultMouseButton._visible = false;
+			}
+		}
 		ShowDeleteButtonHelp(deleteButtonVisible);
-    ShowDefaultButtonHelp(defaultButtonVisible);
+		ShowDefaultButtonHelp(defaultButtonVisible);
 		DeleteSaveButton.SetPlatform(aiPlatform, abPS3Switch);
 		DefaultSettingsButton.SetPlatform(aiPlatform, abPS3Switch);
 		ChangeUserButton.SetPlatform(aiPlatform, abPS3Switch);
@@ -1219,13 +1219,13 @@ class StartMenu extends MovieClip
 		StartState(DELETE_SAVE_CONFIRM_STATE);
 	}
 
-  function ConfirmDefaultSettings()
-  {
-    SettingsListHolder.List_mc.disableSelection = true;
-    SaveLoadConfirmText.textField.SetText("$Reset settings to default values?");
-    SetPlatform(iPlatform, PS3Switch);
-    StartState(DEFAULT_SETTINGS_CONFIRM_STATE);
-  }
+	function ConfirmDefaultSettings()
+	{
+		SettingsListHolder.List_mc.disableSelection = true;
+		SaveLoadConfirmText.textField.SetText("$Reset settings to default values?");
+		SetPlatform(iPlatform, PS3Switch);
+		StartState(DEFAULT_SETTINGS_CONFIRM_STATE);
+	}
 
 	function ShowDeleteButtonHelp(abFlag)
 	{
@@ -1234,11 +1234,11 @@ class StartMenu extends MovieClip
 		VersionText._visible = !abFlag;
 	}
 
-  function ShowDefaultButtonHelp(abFlag)
-  {
-    DefaultSettingsButton.disabled = !abFlag;
-    DefaultSettingsButton._visible = abFlag;
-  }
+	function ShowDefaultButtonHelp(abFlag)
+	{
+		DefaultSettingsButton.disabled = !abFlag;
+		DefaultSettingsButton._visible = abFlag;
+	}
 
 	function ShowChangeUserButtonHelp(abFlag)
 	{

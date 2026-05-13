@@ -1143,7 +1143,6 @@ class StartMenu extends MovieClip
 		{
 			GameDelegate.call("RequestNewGameOptions", [SettingsList.entryList]);
 			SettingsListHolder.InvalidateData();
-			SetPlatform(iPlatform, PS3Switch);
 		}
 	}
 

@@ -58,6 +58,7 @@ class StartMenu extends MovieClip
 	var iLoadDLCContentMessageTimerID;
 	var iLoadDLCListTimerID;
 	var iPlatform;
+	var iRefreshTimerID;
 	var onEnterFrame;
 	var shouldProcessInputs;
 	var strCurrentState;
@@ -1139,6 +1140,15 @@ class StartMenu extends MovieClip
 
 	function RefreshSettingsList()
 	{
+		if (iRefreshTimerID == null)
+			iRefreshTimerID = setInterval(this, "DoRefreshSettingsList", 5);
+	}
+
+	function DoRefreshSettingsList()
+	{
+		clearInterval(iRefreshTimerID);
+		delete iRefreshTimerID;
+
 		if (MainList.selectedEntry.index == NEW_INDEX)
 		{
 			GameDelegate.call("RequestNewGameOptions", [SettingsList.entryList]);

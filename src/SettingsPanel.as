@@ -115,9 +115,10 @@ class SettingsPanel extends MovieClip
 	function ResetSettingsToDefaults()
 	{
 		for (var i: String in List_mc.entryList) {
-			if (List_mc.entryList[i].defaultVal != undefined) {
-				List_mc.entryList[i].value = List_mc.entryList[i].defaultVal;
-				GameDelegate.call("OptionChange", [List_mc.entryList[i].ID, List_mc.entryList[i].value]);
+			var entryObject: Object = List_mc.entryList[i];
+			if (entryObject.defaultVal != undefined && entryObject.defaultVal != entryObject.value) {
+				entryObject.value = entryObject.defaultVal;
+				GameDelegate.call("OptionChange", [entryObject.ID, entryObject.value]);
 			}
 		}
 		List_mc.bAllowValueOverwrite = true;

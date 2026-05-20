@@ -1126,9 +1126,7 @@ class StartMenu extends MovieClip
 		GameDelegate.call("RequestNewGameOptions", [SettingsList.entryList]);
 		if (SettingsList.entryList.length > 0)
 		{
-			SettingsListHolder.List_mc.bAllowValueOverwrite = true;
 			SettingsListHolder.InvalidateData(astrConfirmText);
-			SettingsListHolder.List_mc.bAllowValueOverwrite = false;
 			SetPlatform(iPlatform, PS3Switch);
 			StartState(SETTINGS_STATE);
 		}
@@ -1141,7 +1139,7 @@ class StartMenu extends MovieClip
 	function RefreshSettingsList()
 	{
 		if (iRefreshTimerID == null)
-			iRefreshTimerID = setInterval(this, "DoRefreshSettingsList", 5);
+			iRefreshTimerID = setInterval(this, "DoRefreshSettingsList", 1);
 	}
 
 	function DoRefreshSettingsList()

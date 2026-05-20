@@ -102,7 +102,10 @@ class SettingsPanel extends MovieClip
 
 	function InvalidateData(astrConfirmText)
 	{
+		List_mc.bAllowValueOverwrite = true;
 		List_mc.InvalidateData();
+		List_mc.bAllowValueOverwrite = false;
+
 		if (astrConfirmText != undefined) {
 			textField.SetText(astrConfirmText);
 

@@ -50,7 +50,7 @@
    disabled = false;
    disableFocus = false;
    labelID = "$Start Game";
-   PCArt = "Space";
+   PCArt = "Enter";
    PS3Art = "PS3_Start";
    toggle = false;
    visible = true;
@@ -110,7 +110,7 @@
    disabled = false;
    disableFocus = false;
    labelID = "$Start Game";
-   PCArt = "Space";
+   PCArt = "Enter";
    PS3Art = "PS3_Start";
    toggle = false;
    visible = true;

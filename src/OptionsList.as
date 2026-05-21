@@ -51,7 +51,7 @@ class OptionsList extends Shared.BSScrollingList
 	function handleInput(details: InputDetails, pathToFocus: Array): Boolean
 	{
 		if (GlobalFunc.IsKeyPressed(details)) {
-			if (details.code == Key.SPACE) {
+			if (details.code == Key.ENTER) {
 				_parent.OnStartClicked();
 				return true;
 			}

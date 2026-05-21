@@ -282,85 +282,85 @@ class StartMenu extends MovieClip
 	function setupMainMenu()
 	{
 		trace("StartMenu::setupMainMenu" + iPlatform.toString() + ", PS3Switch = " + PS3Switch.toString());
-		var _loc11_ = 0;
-		var _loc5_ = 1;
-		var _loc7_ = 2;
-		var _loc14_ = 3;
-		var _loc8_ = 4;
-		var _loc16_ = 5;
-		var _loc13_ = 6;
-		var _loc9_ = 7;
-		var _loc10_ = 8;
-		var _loc12_ = 9;
-		var _loc15_ = 10;
-		var _loc18_ = 11;
-		var _loc17_ = 12;
-		var _loc6_ = 13;
-		var _loc4_ = NEW_INDEX;
+		var allowQuitIdx: Number = 0;
+		var hasSaveGameIdx: Number = 1;
+		var versionIdx: Number = 2;
+		var isConsoleIdx: Number = 3;
+		var showSky10UpsellIdx: Number = 4;
+		var allowDLCIdx: Number = 5;
+		var allowHelpIdx: Number = 6;
+		var allowModManagerIdx: Number = 7;
+		var allowCreationsIdx: Number = 8;
+		var skipLoginIdx: Number = 9;
+		var _loc15_: Number = 10;
+		var allowTransferDataIdx: Number = 11;
+		var showCreationsIconIdx: Number = 12;
+		var canAccessCreationClubIdx: Number = 13;
+		var selectedIndex: Number = NEW_INDEX;
 		if (MainList.entryList.length > 0)
 		{
-			_loc4_ = MainList.centeredEntry.index;
+			selectedIndex = MainList.centeredEntry.index;
 		}
 		MainList.ClearList();
-		if (arguments[_loc5_])
+		if (arguments[hasSaveGameIdx])
 		{
 			hasContinueButton = true;
 			MainList.entryList.push({text:"$CONTINUE", index:CONTINUE_INDEX, disabled:false, showIcon:false});
-			if (_loc4_ == NEW_INDEX)
+			if (selectedIndex == NEW_INDEX)
 			{
-				_loc4_ = CONTINUE_INDEX;
+				selectedIndex = CONTINUE_INDEX;
 			}
 		}
 		MainList.entryList.push({text:"$NEW", index:NEW_INDEX, disabled:false, showIcon:false});
-		MainList.entryList.push({text:"$LOAD", disabled:!arguments[_loc5_], index:LOAD_INDEX, showIcon:false});
-		if (arguments[_loc18_] && iPlatform == PLATFORM_PROSPERO)
+		MainList.entryList.push({text:"$LOAD", disabled:!arguments[hasSaveGameIdx], index:LOAD_INDEX, showIcon:false});
+		if (arguments[allowTransferDataIdx] && iPlatform == PLATFORM_PROSPERO)
 		{
 			MainList.entryList.push({text:"$TRANSFER DATA", index:PS5_DATA_TRANSFER_INDEX, disabled:false, showIcon:false});
 		}
-		if (arguments[_loc16_] == true)
+		if (arguments[allowDLCIdx] == true)
 		{
 			MainList.entryList.push({text:"$DOWNLOADABLE CONTENT", index:DLC_INDEX, disabled:false, showIcon:false});
 		}
-		if (arguments[_loc10_])
+		if (arguments[allowCreationsIdx])
 		{
-			MainList.entryList.push({text:"$CREATIONS",disabled:!arguments[_loc6_], index:CREATION_CLUB_INDEX, showIcon:arguments[_loc17_]});
+			MainList.entryList.push({text:"$CREATIONS", disabled:!arguments[canAccessCreationClubIdx], index:CREATION_CLUB_INDEX, showIcon:arguments[showCreationsIconIdx]});
 		}
-		_UserCanAccessCreationClub = arguments[_loc6_];
+		_UserCanAccessCreationClub = arguments[canAccessCreationClubIdx];
 		trace("StartMenu::setupMainMenu Can access Marketplace = " + _UserCanAccessCreationClub.toString());
 		MainList.GetClipByIndex(CREATION_CLUB_INDEX).alpha = !(_UserCanAccessCreationClub && this._CClubAllowedByBnet) ? DISABLED_GREY_OUT_ALPHA : 100;
 		ShowSky10UpsellBanner(false);
-		if (arguments[_loc8_] == true)
+		if (arguments[showSky10UpsellIdx] == true)
 		{
 			ShowSky10UpsellBanner(true);
 		}
 		if (!arguments[_loc15_])
 		{
 		}
-		if (arguments[_loc9_])
+		if (arguments[allowModManagerIdx])
 		{
 			MainList.entryList.push({text:"$MOD MANAGER", disabled:false, index:MOD_INDEX, showIcon:false});
 		}
 		MainList.entryList.push({text:"$CREDITS", index:CREDITS_INDEX, disabled:false, showIcon:false});
-		if (arguments[_loc11_])
+		if (arguments[allowQuitIdx])
 		{
 			MainList.entryList.push({text:"$QUIT", index:QUIT_INDEX, disabled:false, showIcon:false});
 		}
-		if (arguments[_loc13_])
+		if (arguments[allowHelpIdx])
 		{
 			MainList.entryList.push({text:"$HELP", index:HELP_INDEX, disabled:false, showIcon:false});
 		}
 		for (var _loc3_ = 0; _loc3_ < MainList.entryList.length; _loc3_++)
 		{
-			if (MainList.entryList[_loc3_].index == _loc4_)
+			if (MainList.entryList[_loc3_].index == selectedIndex)
 			{
 				MainList.RestoreScrollPosition(_loc3_, false);
 			}
 		}
 		MainList.InvalidateData();
-		_NeedsLoginScreen = !arguments[_loc12_];
+		_NeedsLoginScreen = !arguments[skipLoginIdx];
 		if (currentState == undefined)
 		{
-			if (arguments[_loc14_])
+			if (arguments[isConsoleIdx])
 			{
 				StartState(PRESS_START_STATE);
 			}
@@ -377,9 +377,9 @@ class StartMenu extends MovieClip
 		{
 			StartState(MAIN_STATE);
 		}
-		if (arguments[_loc7_] != undefined)
+		if (arguments[versionIdx] != undefined)
 		{
-			VersionText.SetText("v " + arguments[_loc7_]);
+			VersionText.SetText("v " + arguments[versionIdx]);
 		}
 		else
 		{

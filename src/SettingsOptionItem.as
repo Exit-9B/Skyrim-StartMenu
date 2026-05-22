@@ -170,7 +170,7 @@ class SettingsOptionItem extends MovieClip
 					break;
 
 				case 2:
-					if (details.navEquivalent == NavigationCode.ENTER && details.code != Key.ENTER) {
+					if (details.navEquivalent == NavigationCode.ENTER) {
 						ToggleCheckbox();
 						bhandledInput = true;
 					}

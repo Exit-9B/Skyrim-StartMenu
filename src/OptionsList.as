@@ -1,5 +1,6 @@
 import Shared.GlobalFunc;
 import gfx.ui.InputDetails;
+import gfx.ui.NavigationCode;
 
 class OptionsList extends Shared.BSScrollingList
 {
@@ -51,7 +52,7 @@ class OptionsList extends Shared.BSScrollingList
 	function handleInput(details: InputDetails, pathToFocus: Array): Boolean
 	{
 		if (GlobalFunc.IsKeyPressed(details)) {
-			if (details.code == Key.ENTER) {
+			if (details.navEquivalent == NavigationCode.ENTER && skse.GetLastKeycode(true) == 28) {
 				_parent.OnStartClicked();
 				return true;
 			}
